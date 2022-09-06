@@ -3,7 +3,9 @@
 
 <HEAD>
     <meta charset="UTF-8">
-    <title>네이버 요약 뉴스</title>
+    <title>네이버 요약뉴스</title>
+    <!-- 구글웹폰트 불러오기(CDN) -->
+    <link href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&display=swap" rel="stylesheet">
     <!-- 스타일시트 인터널방식 -->
     <style>
         /* 스타일시트를 사용하는 영역 */
@@ -126,7 +128,7 @@
 
                 참고)
                 https://www.w3schools.com/css/cssfont.asp
-                
+
                 __________________________________________
                 [ 웹 색상표기법 ]
 
@@ -180,6 +182,24 @@
             /* 글자 중앙 */ 
 
         }
+        /* 타이틀 */
+        header h1{ 
+            /* 글자크기 fz */
+            font-size: 50px;
+            /* 글자두께 fw*/
+            font-weight: normal;
+            /* 글자체 ff */
+            font-family: 'Black And White Picture', sans-serif;
+            /* font-family: san-serif, "궁서", "굴림", "돋움"; */
+            /* 글자색 c*/
+            color: limegreen;
+            /* 글자자간 ls */
+            letter-spacing: 2px;
+            /* 글자줄간격 lh */
+            line-height: 1;
+            /* 글자단어간격 ws */
+            word-spacing: 10px;
+        } 
 
         /* 메인영역 이미지 */
         main img {
