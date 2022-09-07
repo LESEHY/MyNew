@@ -16,3 +16,9 @@
 /* @import url(파일주소); */
 @import url(common.css);
 
+/* 메인영역박스 */
+.main{
+    /* 패딩 p15 */
+    padding: 15px;
+    
+}
