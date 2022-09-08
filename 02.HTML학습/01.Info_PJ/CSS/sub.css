@@ -223,8 +223,23 @@
     margin-right: 15px;
     
 }
-
 /* 주해박스 */
+/* .desc 앞에 .main 부모를 쓴 이유는?
+기존 셋팅 .main article에서 설정한 값이 우선하기 때문에 이것 보다 우선하도록 상위 부모를 씀! */
 .main .desc{
-    padding: 55px;
+    /* 보더 하단 bdb */
+    border-bottom: 2px dashed #ccc;
+    /* 패딩 하단 pb */
+    padding-bottom: 40px;
+    /* 마진 하단 mb */
+    margin-bottom: 20px;
+}
+
+/* 주해박스 small요소*/
+.desc small{
+    /* 전체 패딩적용위해 블록박스변경 */
+    display: block;
+    /* 패딩 p - 위아래 양쪽 */
+    padding: 0 20px;
+
 }
