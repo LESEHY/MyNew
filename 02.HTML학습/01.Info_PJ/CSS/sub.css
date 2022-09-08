@@ -333,9 +333,14 @@
 
 
 /*  
-    [ 자식요소 순번 선택하기 ] 
-    -> 태그가 한종류일때
+    [ 자식요소 순번 선택하기 가상요소] 
+    -> 태그가 한종류일때 (예: ul>li, ol>li)
     :first-child 첫번째 자식요소
     :nth-child(n) n번째 자식요소 (n은 1부터)
     :last-child 마지막째 자식요소
+
+    -> 태그가 여러종류일 때 (예: dl>dt+dd)
+    :first-of-type 첫번째 자식요소
+    :nth-of-type(n) n번째 자식요소 (n은 1부터)
+    :last-of-type 마지막째 자식요소
 */
