@@ -109,5 +109,42 @@
     border-bottom: 2px solid #ccc;
 }
     
+/* i요소 변경 */
+.arti i{
+    /* 글자스타일 노멀 fsn */
+    font-style: normal;
+    /* 글자 두껍게 fwb*/
+    font-weight: bold;
+}
+/* q요소 변경 */
+.arti q{
+    /* 글자색 c */
+    color: darkmagenta;
+    /* 글자두껍게 fwb*/
+    font-weight: bold;
+}
+
+/* Del 요소 변경 */
+.arti del{
+    /* 글자색 c */
+    color: lightgray;
+}
+
 /* 2-5. 기자정보 */
+.rinfo{ 
+    /* 패딩 P */
+    padding: 10px;
+    /* 글자크기 fz */
+    font-size: 14px;
+}
 /* 2-6. 기사원문 */
+.org a{
+    /* 패딩 P */
+    padding: 10px;
+    /* 글자크기 fz */
+    font-size: 14px;
+    /* 글자색 c */
+    color: lightseagreen;
+    /* 글자밑줄없앰 tdn */
+    text-decoration: none;
+}
