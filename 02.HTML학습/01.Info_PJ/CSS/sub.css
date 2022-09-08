@@ -179,6 +179,17 @@
     margin: 0;
     /* 패딩 p */
     padding: 5px;
+    /* float설정으로 망가진 부모박스는 
+    overflowe:hidden으로 막아준다(자식의 크기인식) */
+    /* 넘치는 자식요소 숨기기 oh */
+    overflow: hidden;
+
+    /* 글자설정 */
+    /* font: 스타일, 두께, 크기/줄간격, 글자체 */
+    font: 17px/1.5 'Nanum Gothic';
+    /* 글자정렬 ta */
+    text-align: justify;
+    /* justify 양쪽정렬 */
 
 
 }
@@ -203,6 +214,10 @@
     
     */
 
+    /* 둥근모서리 brad */
+    border-radius: 5px;
+    /* 오른쪽 마진 mr10*/
+    margin-right: 15px;
     
 }
 
