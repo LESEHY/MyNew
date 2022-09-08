@@ -186,10 +186,13 @@
 
     /* 글자설정 */
     /* font: 스타일, 두께, 크기/줄간격, 글자체 */
-    font: 17px/1.5 'Nanum Gothic';
+    font: 17px/1.7 'Nanum Gothic';
     /* 글자정렬 ta */
     text-align: justify;
     /* justify 양쪽정렬 */
+
+    /* 들여쓰기 ti */
+    text-indent: 20px;
 
 
 }
@@ -221,3 +224,7 @@
     
 }
 
+/* 주해박스 */
+.main .desc{
+    padding: 55px;
+}
