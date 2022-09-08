@@ -310,3 +310,21 @@
     /* 순서를 표시하는 종류가 많다! */
 }
 
+/* 분야별 뉴스 dt */
+.secnews{
+    font-family: 'Black And White picture', sans-serif;
+    margin-top: 30px;
+    padding-left: 19px;
+    font-size: 22px;
+}
+
+/* dt 순서별 글자색 변경 */
+
+
+/*  
+    [ 자식요소 순번 선택하기 ] 
+    -> 태그가 한종류일때
+    :first-child 첫번째 자식요소
+    :nth-child(n) n번째 자식요소 (n은 1부터)
+    :last-child 마지막째 자식요소
+*/
