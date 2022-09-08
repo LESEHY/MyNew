@@ -266,3 +266,47 @@
     /* 글자색 c */
     color: darkorange;
 }
+
+/* 메인 컨텐츠 아래 a요소
+주의사항 - 글자색, 밑줄은 반드시 a요소에서 처리할 것! */
+.main a{
+    /* 글자색 c */
+    color: #222;
+    /* 글자데코 tdn  밑줄없앰*/
+    text-decoration: none;
+    /* 글자크기 fz */
+    font-size: 17px;
+    /* 글자체 ff*/
+    font-family: "Naunm Gothic";
+    /* 줄간격 lh */
+    line-height: 2.5;
+    /* 자간 ls */
+    letter-spacing: -1px;
+
+}
+
+/* a요소 마우스 오버시 */
+/* 가상클래스 :hover */
+.main a:hover{
+    /* 글자색 c */
+    color: greenyellow;
+    /* 글자그림자 ts*/
+    text-shadow:1px 1px 1px #000;
+    /* text-shadow: x축 y축 경계흐림 색; */
+    
+}
+
+/* ul, ol 블릿, 숫자 타입변경 */
+.main ul{
+    /* 리스트타입 lst */
+    list-style-type: square;
+    /* square 사각형, disc 원형, circle 빈원  */
+
+}
+
+.main ol{
+    list-style-type: upper-roman;
+    /* upper-roman 로마자 대문자 */
+    /* 순서를 표시하는 종류가 많다! */
+}
+
