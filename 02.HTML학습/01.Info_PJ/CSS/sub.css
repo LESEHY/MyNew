@@ -147,4 +147,6 @@
     color: lightseagreen;
     /* 글자밑줄없앰 tdn */
     text-decoration: none;
+    /* 보더 bd */
+    border: 1px dashed lightblue;
 }
