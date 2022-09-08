@@ -310,6 +310,17 @@
     /* 순서를 표시하는 종류가 많다! */
 }
 
+/* li 순서별 글자색 변경하기 */
+.main ul li:first-child a{
+    color: red;
+}
+.main ul li:nth-child(2) a{
+    color: blue;
+}
+.main ul li:last-child a{
+    color: purple;
+}
+
 /* 분야별 뉴스 dt */
 .secnews{
     font-family: 'Black And White picture', sans-serif;
