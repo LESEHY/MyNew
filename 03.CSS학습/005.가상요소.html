@@ -68,6 +68,22 @@
         }
 
         /* 맨뒤 추가요소 ::after */
+        h2::after {
+            content: '';
+            /* content 빈값은 마치 <span>태그를 쓴것과 비슷 */
+            display: inline-block;
+            /* display를 block을 쓰면 <div>태그를 쓴것과 비슷함!
+            그러나 여기서 디자인적용과 한줄에 오는 방법으로 inline-block을 씀*/
+            width: 40px;
+            height: 60px;
+            /* 인라인요소간 세로정렬 vam*/
+            vertical-align: middle;
+            /* 왼쪽마진 m120 */
+            margin-left: 20px;
+            /* 배경: 색이반고윙/크 */
+            background: url(./imgs/bg_logo_a_01.png) no-repeat center/100%;
+            outline: 2px dashed red;
+        }
 
 
 
