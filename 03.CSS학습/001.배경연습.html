@@ -50,7 +50,18 @@
                 세로 - top, centerm bottom - bgp*/
                 background-position: right bottom;
 
-        }
+                /* 6. 배경크기: 가로 세로 
+                가로와 세로중 한쪽만 셋팅하면 이미지가 비율유지!
+                auto 값 -> 세로값만 셋팅됨! 가로는 자동
+                값 auto -> 가로값만 셋팅됨! 세로는 자동
+                값을 하나만 쓰면 가로값만 셋팅한 것과 같음! 
+                
+                특정값 쓰기
+                1) contain 모두 보이게 박스에 채움 (빈틈있음)
+                2) cover 비율을 유지하면서 박스를 채움(빈틈없음)
+                -bgz */
+                background-size: 150px auto;
+        } 
     </style>
 </head>
 
