@@ -5,6 +5,16 @@
     <meta charset="UTF-8">
     <title>001.배경연습</title>
     <style>
+        html,body{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            /* 기본 높이값이 auto 즉, 내용만큼 늘어남
+            보이는 화면에 기준하여 높이 채우기 함
+                body의 부모는? HTML
+                html의 부모는? window 즉, 보이는 화면! */
+        }
+
         body {
             /* 전체 배경넣기는 body에 할것! html에 하지마! */
 
@@ -25,8 +35,14 @@
             /* background-repeat: repeat-y; */
 
             /* 4. 배경고정: fixed 스크롤이 있는 경우 배경이 보이는 화면에 고정된다! bga */
-            background-attachment: fixed;
-            height: 4000px;
+            /* background-attachment: fixed;
+            height: 4000px; */
+
+            /* 5. 배경위치 : 가로 세로
+                값 - px, % 수치단위 
+                가로 - left, center, right
+                세로 - top, centerm bottom - bgp*/
+                background-position: right bottom;
 
         }
     </style>
