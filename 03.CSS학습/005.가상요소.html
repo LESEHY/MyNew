@@ -178,13 +178,18 @@
             font-size: 50px;
             color: hotpink;
         }
+        dd.story p:last-of-type span{
+            color: blue;
+        }
 
 
         /* 기타 가상요소 ::selection */
         /* 드래그 선택시 글자색 배경색 설정변경! */
-        dd.story p:last-of-type span{
-            color: blue;
+        ::selection{
+            color: gray;
+            background-color: lime;
         }
+        /* ::selection만 쓰면 전체가 다 적용됨! 특정선택자::selection으로 쓰면 자식태그로 싸지 않은 글자만 적용됨 */
     </style>
 </head>
 
