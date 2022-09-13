@@ -82,7 +82,18 @@
             margin-left: 20px;
             /* 배경: 색이반고윙/크 */
             background: url(./imgs/bg_logo_a_01.png) no-repeat center/100%;
-            outline: 2px dashed red;
+            /* 둥근모서리 brad */
+            backdrop-filter: 5px;
+            /* 테두리 (보더) bd */
+            border: 2px solid #ccc;
+            /* 박스 그림자
+            box-shadow: x y blur spread 색 
+            box-shadow: x위치 y위치 경계흐림 그림자크기 그림자색 
+            맨 앞에 inset을 쓰면 내부그림자*/
+            box-shadow: inset 4px 4px 2px black;
+            
+
+            /* outline: 2px dashed red; */
         }
 
 
