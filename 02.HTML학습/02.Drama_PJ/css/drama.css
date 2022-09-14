@@ -72,3 +72,15 @@ html,body{
 #drama tbody tr:nth-child(even) td{
     background-color: whitesmoke;
 }
+
+/* 본문(tbody)의 첫번째 td (번호항목) 중앙정렬 */
+#drama tbody td:first-child{
+   /* 글자중앙정렬 tac */
+   text-align: center;
+}
+/* 하단부분(tfoot) */
+#drama tfoot td{
+    text-align: center;
+    padding: 45px 0;
+}
+
