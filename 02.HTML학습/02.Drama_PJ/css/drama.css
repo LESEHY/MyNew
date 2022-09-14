@@ -99,3 +99,15 @@ html,body{
     /* 글자데코 스타일 : 물결모양 */
     text-decoration-style: wavy;
 }
+
+/* 하단 페이징 링크 처리 */
+#drama tfoot a{
+    color: #222;
+    /* 밑줄없앰 */
+    text-decoration: none;
+} 
+
+/* 하단 페이징 오버시 */
+#drama tfoot a:hover{
+    color: darkkhaki;
+}
