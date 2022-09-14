@@ -118,11 +118,15 @@ div.gubun{
     margin: 0 auto;
     /* 마진 아래 */
     margin-bottom: 100px;
+    /* float으로 망가짐 방지 */
+    overflow: hidden;
 }
 /* 구분테이블 */
 table#gubun{
     font-size: 20px;
     border: 1px solid #999;
+    /* 오른쪽 끝으로 flr */
+    float: right;
 }
 /* 구분테이블 td */
 #gubun td{
