@@ -84,3 +84,18 @@ html,body{
     padding: 45px 0;
 }
 
+/* 드라마명 링크 처리 */
+#drama tbody a{
+    color: #222;
+    /* 밑줄없앰 */
+    text-decoration: none;
+} 
+
+/* 드라마명 오버시 */
+#drama tbody a:hover{
+    color: darkturquoise;
+    /* 글자데코 : 밑줄 */
+    text-decoration: underline;
+    /* 글자데코 스타일 : 물결모양 */
+    text-decoration-style: wavy;
+}
