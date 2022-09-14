@@ -12,3 +12,9 @@ body * {
     outline: 2px dashed gray;
 }
 
+/* 컨텐츠 파트 최상위 부모 */
+body{
+    /* 한번에 배경주기 + 여러개주기 */
+    /* background: 색이반고윙/크 */
+    background: url(../images/bg_mainvisual.jpg) no-repeat center/cover;
+}
