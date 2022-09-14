@@ -103,7 +103,6 @@ html,body{
 /* 하단 페이징 링크 처리 */
 #drama tfoot a{
     color: #222;
-    /* 밑줄없앰 */
     text-decoration: none;
 } 
 
@@ -111,3 +110,32 @@ html,body{
 #drama tfoot a:hover{
     color: darkkhaki;
 }
+
+/* 구분테이블 박스 */
+div.gubun{
+    /* 가로 크기 w */
+    width: 1000px;
+    margin: 0 auto;
+    /* 마진 아래 */
+    margin-bottom: 100px;
+}
+/* 구분테이블 */
+table#gubun{
+    font-size: 20px;
+    border: 1px solid #999;
+}
+/* 구분테이블 td */
+#gubun td{
+    padding: 10px;
+}
+/* 구분테이블 첫번째 tr의 첫번째 td의 오른쪽 점선 넣기 */
+#gubun tr:first-child td:first-child{
+    /* 보더 오른쪽 bdr */
+    border-right: 1px dotted #999;
+}
+
+/* 구분테이블 두번째 tr부터 마지막 tr까지 즉, 앞에 tr이 있는 td형제요소만 선택하여 보더 상단 넣기 앞에 tr이 있는 tr->tr+tr*/
+#gubun tr+tr td{
+    border-top: 1px dotted #999;
+}
+
