@@ -23,3 +23,43 @@ html,body{
     border-collapse: collapse;
 }
 
+/* 드라마 리스트 테이블 */
+#drama{
+    font-size: 24px;
+    /* 블록or테이블 가로중앙정렬 - 마.영.오!*/
+    margin: 0 auto;
+    /* 가로크기 w */
+    width: 1000px
+    /* 테이블 width지정이 없으면 내용만큼 늘어남! 좁으면 아래로 내용이 줄바꿈됨 */
+
+}
+/* 테이블 제목 */
+#drama caption{
+    font-size: 35px;
+    /* 글자두께 */
+    font-weight: bold;
+    /* 자간 ls */
+    letter-spacing: 5px;
+    /* 패딩: 위 양쪽 아래 p */
+    padding: 50px 0 20px;
+}
+
+/* td와 th 패딩 */
+#drama td,
+#drama th{
+    padding: 8px 10;
+    /* 위아래 양쪽 */
+}
+
+/* td에 밑줄넣기 - 테이블 본문에만 적용 */
+#drama tbody td{
+    /* 보더 아래 bdb */
+    border-bottom: 1px solid #ccc;
+
+}
+/* th에 윗줄, 아랫줄 두꺼운 보더 넣기  */
+#drama th{
+    /* 보더 위 bdt */
+    border-top: 2px solid #555;
+    border-bottom: 2px solid #555;
+}
