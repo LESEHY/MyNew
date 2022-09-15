@@ -101,6 +101,25 @@ body {
 
 /* 캐릭터 설명박스 */
 .cd{
+    /* 높이값 설정 h */
+    height: 250px;
+    /* 넘치는 내용요소 자동스크롤*/
+    overflow: auto;
+    /* 
+        overflow 속성
+        => 넘치는 요소 처리속성
+        - visible 넘쳐도보임(기본값)
+        - hidden 넘치는 요소 숨기기
+        - scroll 스크롤바생김
+            (x,y 두방향 모두생김)
+            overflow=y로 새야 y만 생김
+        - auto 내용넘치면 자동으로 
+            y축 스크롤만 생김
+    */
+
+    /* 마진 상단 */
+    margin-top: 15px;
+    
     /* 배경 : 색이반고윙/크 */
     background: url(../images/eachBG.jpg) no-repeat center/cover;
 }
@@ -123,4 +142,7 @@ body {
     /* 줄간격 */
     line-height: 1.6;
     padding: 10px;
+    /* 양쪽정렬 justfy */
+    text-align: justify;
 }
+
