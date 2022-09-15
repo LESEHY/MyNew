@@ -105,12 +105,14 @@ body {
     background: url(../images/eachBG.jpg) no-repeat center/cover;
 }
 
+/* 'Gugi'
+'Noto Serif KR' */
 /* 캐릭터 설명 타이틀 */
 .cd h3{
-
+    font-family: 'Gugi';
 }
 
 /* 캐릭터 설명 문단 */
 .cd p{
-    
+    font-family: 'Noto Serif KR';
 }
