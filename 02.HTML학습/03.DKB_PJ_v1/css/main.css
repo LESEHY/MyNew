@@ -105,14 +105,22 @@ body {
     background: url(../images/eachBG.jpg) no-repeat center/cover;
 }
 
-/* 'Gugi'
-'Noto Serif KR' */
 /* 캐릭터 설명 타이틀 */
 .cd h3{
     font-family: 'Gugi';
+    font-size: 24px;
+    /* 글자두께 보통 */
+    font-weight: normal;
+    padding: 15px 10px 5px;
+    /* 자간 */
+    letter-spacing: -1px;
 }
 
 /* 캐릭터 설명 문단 */
 .cd p{
     font-family: 'Noto Serif KR';
+    font-size: 18px;
+    /* 줄간격 */
+    line-height: 1.6;
+    padding: 10px;
 }
