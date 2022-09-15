@@ -96,6 +96,6 @@ body {
 
 /* 마우스 오버시 처리 2
 마지막 이미지 숨기기*/
-.cat:hover .ci figcaption img:first-child{
+.cat:hover .ci figcaption img:last-child{
     display: none;
 }
