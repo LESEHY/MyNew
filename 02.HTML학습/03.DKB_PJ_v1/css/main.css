@@ -39,7 +39,7 @@ body {
 .cbx {
     width: 90%; /* 가로크기 w */
     margin: 0 auto;
-    margin-top: 200px; /* 마진탑 mt */
+    margin-top: 500px; /* 마진탑 mt */
 }
 
 /* 자식요소의 float해제 설정 가상요소 after로! */
@@ -64,5 +64,4 @@ body {
 .cat img {
     width: 100%; /* 박스를 채움 */
   
-
 }
