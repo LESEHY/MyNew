@@ -73,6 +73,7 @@ body {
 
     /* 이미지를 위로 올려 겹치게 하려면? 포지션을 안쓰고는 마진을 마이너스로 준다! */
     margin-top: -20px;
+    /* %의 기준은? 원래 박스 높이값  */
 }
 
 /* 캐릭터 이름이미지 고통 */
@@ -84,5 +85,17 @@ body {
 
 /* 캐릭터 이름 이미지 첫 번째 이미지 (진한 이미지) 숨기기 */
 .ci figcaption img:first-child{
+    display: none;
+}
+/* 캐릭터 박스 .cat에 오버시 */
+/* 마우스 오버시 처리 1 
+첫 번째 이미지 보이기 (원래 inline)*/
+.cat:hover .ci figcaption img:first-child{
+    display: inline;
+}
+
+/* 마우스 오버시 처리 2
+마지막 이미지 숨기기*/
+.cat:hover .ci figcaption img:first-child{
     display: none;
 }
