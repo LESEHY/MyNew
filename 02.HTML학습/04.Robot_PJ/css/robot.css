@@ -1,6 +1,12 @@
 @charset "utf-8";
 /* 로봇 PJ CSS - robot.css */
 
+/* 공사중표시 */
+body *{
+    outline: 2px dashed lime;
+
+}
+
 /* 초기화 */
 html,body,h1,h2,h3,ul,ol{
     margin: 0;
@@ -10,9 +16,28 @@ html,body,h1,h2,h3,ul,ol{
 /* 전체 배경 */
 body{
     /* 스크롤확인용 */
-    height: 3000px;
+    /* height: 3000px; */
 
     /* 배경: 색이반고윙/크 */
     background: url(../images/bg.jpg) no-repeat fixed top/cover;
-    
 }
+
+/* 공통class */
+/* 메탈소재 1 배경 */
+.mt1{
+    background: url(../images/metal01.jpg) no-repeat center/cover;
+}
+
+/* 메탈소재 2 배경 */
+.mt2{
+    background: url(../images/metal02.jpg) no-repeat center/cover;
+}
+
+/* 2-1-1. 로봇머리 */
+.head{
+    width: 250px;
+    height: 250px;
+
+}
+/* 왼눈 */
+/* 오른눈 */
