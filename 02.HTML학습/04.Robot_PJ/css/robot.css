@@ -181,6 +181,16 @@ body {
         radial-gradient(farthest-side at 25px 25px, white,#333);
 }
 
+/* 왼쪽가상요소 위치 */
+.arm.a1::before{
+    left: -10px;
+}
+
+/* 오른쪽가상요소 위치 */
+.arm.a2::before{
+    right: -10px;
+}
+
 /* 
     [ 배경이미지에 있다! 뭐가?그라데이션이!! ]
     background=image : 선형/원형 그라데이션 설정;
