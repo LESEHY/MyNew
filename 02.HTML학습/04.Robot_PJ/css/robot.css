@@ -179,3 +179,25 @@ body {
 .a2{
     right: -50px;
 }
+
+/* 다리 공통 */
+.leg{
+    position: absolute;
+    top: 100%;
+    /* 부모높이값 만큼 100% 밀기 */
+    width: 70px;
+    height: 300px;
+    background-size: 100%;
+    background-repeat: repeat-y;
+}
+
+/* 왼다리 */
+.l1{
+   left: 0;
+   /* 안써도 기본방향이 left임 */
+}
+
+/* 오른다리 */
+.l2{
+    right: 0px;
+}
