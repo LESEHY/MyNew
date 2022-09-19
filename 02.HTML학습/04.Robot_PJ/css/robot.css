@@ -219,6 +219,27 @@ body {
     -> 색상 뒤에 비율을 안쓰면 등분할 됨.
 */
 
+/* 가상요소로 손그림자 주기 */
+.arm::after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -25px;
+    width: 20px;
+    height: 40px;
+    background-color: #000;
+}
+
+/* 왼손 그림자 위치 */
+.arm.a1::after{
+    left: 12px;
+}
+
+/* 오른손 그림자 위치 */
+.arm.a2::after{
+    right: 12px;
+}
+
 /* 왼팔 */
 .a1 {
     left: -60px;
