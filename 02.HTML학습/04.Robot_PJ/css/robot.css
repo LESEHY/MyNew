@@ -112,9 +112,9 @@ body {
 /* 귀 공통 */
 .ear {
     position: absolute;
-    top: 80px;
+    top: 41px;
     width: 60px;
-    height: 90px;
+    height: 182px;
 }
 
 /* 왼 귀 */
@@ -149,7 +149,7 @@ body {
     bottom: -28px;
     left: -2%;
     width: 104%;
-    height: 150px;
+    height: 104px;
     /* 선형 그라데이션 */
     background-image: linear-gradient(gray, lightskyblue, darkgray);
 }
