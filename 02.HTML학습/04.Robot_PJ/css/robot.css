@@ -54,7 +54,7 @@ body {
     height: 250px;
     margin: 0 auto;
     /* 둥근모서리 : 왼위 오른위 오른아래 왼아래(시계방향) */
-    border-radius: 50% 50% 25px 25px;
+    border-radius: 50px 50px 25px 25px;
 
 }
 
@@ -131,9 +131,11 @@ body {
 /* 왼 귀 */
 .er1{
     left: -60px;
+    border-radius: 30px 0 0 30px;
 }
 
 /* 오른 귀 */
 .er2{
     right: -60px;
+    border-radius: 0 30px 30px 0;
 }
