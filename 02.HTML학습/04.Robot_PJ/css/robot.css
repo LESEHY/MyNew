@@ -213,11 +213,11 @@ body {
 /* 왼 어깨 */
 .s1{
     left: -80px;
-    border-radius: 25px 0 0 25px;
+    border-radius: 50% 0 0 0;
 }
 
 /* 오른 어깨 */
 .s2{
     right: -80px;
-    border-radius: 0 25px 25px 0;
+    border-radius: 0 50% 0 0;
 }
