@@ -233,13 +233,13 @@ body {
 /* 왼손 그림자 위치 */
 .arm.a1::after{
     left: 12px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 /* 오른손 그림자 위치 */
 .arm.a2::after{
     right: 12px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 /* 왼팔 */
