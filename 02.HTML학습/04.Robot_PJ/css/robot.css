@@ -170,6 +170,20 @@ body {
     background-repeat: repeat-y;
 }
 
+/* 가상요소로 손만들기 */
+.arm::before{
+    content: '';
+    /* 블록요소 느낌! */
+    display: block;
+    position: absolute;
+    bottom: -25px;
+    
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: blue;
+}
+
 /* 왼팔 */
 .a1{
     left: -60px;
