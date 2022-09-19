@@ -53,6 +53,8 @@ body {
     width: 250px;
     height: 250px;
     margin: 0 auto;
+    /* 둥근모서리 : 왼위 오른위 오른아래 왼아래(시계방향) */
+    border-radius: 50% 50% 25px 25px;
 
 }
 
@@ -65,12 +67,20 @@ body {
 
     /* 배경공통 */
 
+    /* 배경색 */
+    background-color: white;
     /* 배경반복 : 반복안함 */
     background-repeat: no-repeat;
-    /* 배경위치 중앙 */
+    /* 배경위치 : 중앙 */
     background-position: center;
     /* 배경크기 : 채움 */
     background-size: 100% 100%;
+  
+
+    /* 둥근모서리: 50% 원 */
+    border-radius: 50%;
+    /* 보더 이중선 */
+    border: 4px double black;
 }
 
 /* 왼눈 */
@@ -94,7 +104,9 @@ body {
     left: 99px;
     width: 50px;
     height: 70px;
-    background: url(../images/nose.jpg) no-repeat center/cover; 
+    background: url(../images/nose.jpg) no-repeat 0/110% 100%; 
+    /* 둥근 모서리 */
+    border-radius: 30px;
 }
 
 /* 입 */
@@ -104,5 +116,5 @@ body {
     bottom: 17px;
     width: 96px;
     height: 41px;
-    background: url(../images/mouth.png) no-repeat center/cover;
+    background: url(../images/mouth.png) no-repeat 0/100% 100%;
 }
