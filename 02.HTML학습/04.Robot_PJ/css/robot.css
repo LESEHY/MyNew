@@ -228,18 +228,22 @@ body {
     width: 20px;
     height: 40px;
     background-color: #000;
+    border-radius: 10px;
+    /* 클리핑 기법을 사용하여 그림자를 사용하여 삼각형으로 만들자! -> 다각형 클리핑
+    clip-path: polygon(x1, y1, x2, y2,....) 
+    -> 소괄호를 비울 수 없다
+    -> 각 좌표는 x,y좌표 하나는 띄어쓰기로 다른 좌표는 콤마로 구분한다. */
+    clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
 }
 
 /* 왼손 그림자 위치 */
 .arm.a1::after{
     left: 12px;
-    border-radius: 10px;
 }
 
 /* 오른손 그림자 위치 */
 .arm.a2::after{
     right: 12px;
-    border-radius: 10px;
 }
 
 /* 왼팔 */
