@@ -140,4 +140,42 @@ body {
     border-radius: 0 30px 30px 0;
 }
 
-/* 로봇 몸 */
+/********2-1-2. 로봇몸통********/
+.body{
+    position: relative;
+    /* 부모자격 - 자식요소 앱솔루트*/
+    width: 250px;
+    height: 310px;
+    margin: 0 auto;
+    /* 마진상단  */
+    margin-top: 50px;
+}
+
+/* 목 */
+.neck{
+    position: absolute;
+    top: -50px;
+    left: 90px;
+    width: 60px;
+    height: 50px;
+}
+
+/* 팔 공통 */
+.arm{
+    position: absolute;
+    width: 50px;
+    height: 250px;
+    /* 배경셋팅 변경 */
+    background-size: 100%;
+    background-repeat: repeat-y;
+}
+
+/* 왼팔 */
+.a1{
+    left: -50px;
+}
+
+/* 오른팔 */
+.a2{
+    right: -50px;
+}
