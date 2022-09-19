@@ -8,13 +8,7 @@ body * {
 }
 
 /* 초기화 */
-html,
-body,
-h1,
-h2,
-h3,
-ul,
-ol {
+html,body,h1,h2,h3,ul,ol {
     margin: 0;
     padding: 0;
 }
@@ -23,7 +17,6 @@ ol {
 body {
     /* 스크롤확인용 */
     /* height: 3000px; */
-
     /* 배경: 색이반고윙/크 */
     background: url(../images/bg.jpg) no-repeat fixed top/cover;
 }
@@ -55,7 +48,6 @@ body {
     margin: 0 auto;
     /* 둥근모서리 : 왼위 오른위 오른아래 왼아래(시계방향) */
     border-radius: 50px 50px 25px 25px;
-
 }
 
 /* 눈 공통 */
@@ -75,8 +67,6 @@ body {
     background-position: center;
     /* 배경크기 : 채움 */
     background-size: 100% 100%;
-  
-
     /* 둥근모서리: 50% 원 */
     border-radius: 50%;
     /* 보더 이중선 */
@@ -104,7 +94,7 @@ body {
     left: 99px;
     width: 50px;
     height: 70px;
-    background: url(../images/nose.jpg) no-repeat 0/110% 100%; 
+    background: url(../images/nose.jpg) no-repeat 0/110% 100%;
     /* 둥근 모서리 */
     border-radius: 30px;
 }
@@ -119,9 +109,8 @@ body {
     background: url(../images/mouth.png) no-repeat 0/100% 100%;
 }
 
-
 /* 귀 공통 */
-.ear{
+.ear {
     position: absolute;
     top: 80px;
     width: 60px;
@@ -129,19 +118,19 @@ body {
 }
 
 /* 왼 귀 */
-.er1{
+.er1 {
     left: -60px;
     border-radius: 30px 0 0 30px;
 }
 
 /* 오른 귀 */
-.er2{
+.er2 {
     right: -60px;
     border-radius: 0 30px 30px 0;
 }
 
 /********2-1-2. 로봇몸통********/
-.body{
+.body {
     position: relative;
     /* 부모자격 - 자식요소 앱솔루트*/
     width: 250px;
@@ -152,7 +141,7 @@ body {
 }
 
 /* 목 */
-.neck{
+.neck {
     position: absolute;
     top: -50px;
     left: 90px;
@@ -161,7 +150,7 @@ body {
 }
 
 /* 팔 공통 */
-.arm{
+.arm {
     position: absolute;
     width: 50px;
     height: 250px;
@@ -171,25 +160,24 @@ body {
 }
 
 /* 가상요소로 손만들기 */
-.arm::before{
+.arm::before {
     content: '';
     /* 블록요소 느낌! */
     display: block;
     position: absolute;
     bottom: -25px;
-    
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    /* background-color: darkgray; */
-
     /* 선형 그라데이션 */
     background-image:
-     /*linear-gradient(red, blue);  */
-    /* linear-gradient(to right, red, blue); */
-    /* linear-gradient(to right, red 5%, blue 10%, blue 80%, yellow 5%); */
-    linear-gradient(45deg, red, blue, yellow);
-    
+        /*linear-gradient(red, blue);  */
+        /* linear-gradient(to right, red, blue); */
+        /* linear-gradient(to right, red 5%, blue 10%, blue 80%, yellow 5%); */
+        /* linear-gradient(45deg, red, blue, yellow); */
+        /* 원형 그라데이션 */
+        /* radial-gradient(red, blue, yellow); */
+        radial-gradient(circle, red, blue, yellow);
 }
 
 /* 
@@ -203,20 +191,34 @@ body {
     -> 방향 또는 각도를 사용, 안쓰면 to bottom이 기본값
     -> 색상을 쓰고 뒤에 필요한 경우 비율을 사용
     -> 색상 뒤에 비율을 안쓰면 등분할 됨.
+
+    2. 원형 그라데이션
+    radial-gradient(옵션, 색1 비율%, 색2 비율%,...)
+    1) 옵션: circle - 원형, 안쓰면 박스크기에 맞춤
+    2) 세밀한 옵션: 특정위치를 중심으로 빛반사효과
+        ->>세부옵션 at 가로위치 세로위치
+        ->> 세부옵션 종류 4가지:
+            (1) closest-side  (2) farthest-side
+            (3) closest-corner  (4) fathest-corner
+        예) background-image:
+            readial-gradient(closeet-side at 30px 15px, white, blue)
+            
+    -> 색상을 쓰고 뒤에 필요한 경우 비율을 사용
+    -> 색상 뒤에 비율을 안쓰면 등분할 됨.
 */
 
 /* 왼팔 */
-.a1{
+.a1 {
     left: -60px;
 }
 
 /* 오른팔 */
-.a2{
+.a2 {
     right: -60px;
 }
 
 /* 다리 공통 */
-.leg{
+.leg {
     position: absolute;
     top: 100%;
     /* 부모높이값 만큼 100% 밀기 */
@@ -227,18 +229,18 @@ body {
 }
 
 /* 왼다리 */
-.l1{
-   left: 0;
-   /* 안써도 기본방향이 left임 */
+.l1 {
+    left: 0;
+    /* 안써도 기본방향이 left임 */
 }
 
 /* 오른다리 */
-.l2{
+.l2 {
     right: 0px;
 }
 
 /* 어깨 공통 */
-.shd{
+.shd {
     position: absolute;
     top: -30px;
     width: 90px;
@@ -246,13 +248,13 @@ body {
 }
 
 /* 왼 어깨 */
-.s1{
+.s1 {
     left: -80px;
     border-radius: 50% 0 0 0;
 }
 
 /* 오른 어깨 */
-.s2{
+.s2 {
     right: -80px;
     border-radius: 0 50% 0 0;
 }
