@@ -4,11 +4,11 @@
 /* 웹폰트 */
 @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Open+Sans&family=Orbitron:wght@500&family=Roboto:wght@300&display=swap');
 
-/* 공사중표시 */
+/* 공사중표시
 body * {
     outline: 2px dashed lime;
 
-}
+} */
 
 /* 초기화 */
 html,body,h1,h2,h3,ul,ol {
@@ -457,6 +457,16 @@ font-family: 'Roboto', sans-serif; */
     font-family: 'Orbitron';
     font-size: 30px;
     color: orange;
+}
+
+.dcbx .my{
+    display: block;
+}
+
+.dcbx .my::first-letter{
+    font-size: 30px;
+    color: pink;
+
 }
 
 /**** 3. 하단영역 ****/
