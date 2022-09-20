@@ -68,8 +68,11 @@
         /* 원 */
         span {
             position: relative;
+            top: 0;
             left: 0;
-            /* 현재위치로 부터 이동! */
+            /* 현재위치로 부터 이동! 
+            트랜지션에 초기값이 나오는 경우가 있음!
+            초기값이 없으면 변경 애니가 적용되지 않음!!*/
             display: block;
             width: 200px;
             height: 200px;
@@ -77,24 +80,7 @@
             background-color: #ff0;
             border-radius: 50%;
         }
-        #tr4 span{
-            position: relative;
-            left: 0;
-            /* 현재위치로 부터 이동! */
-            display: block;
-            width: 200px;
-            height: 200px;
-            border: none;
-            background-color: transparent;
-        }
-        #tr4 span b{
-            display: block;
-            width: 200px;
-            height: 200px;
-            border: 5px solid #000;
-            background-color: #ff0;
-            border-radius: 50%;
-        }
+        
 
 
         /* #tr1에 트랜지션 설정 */
@@ -154,11 +140,15 @@
             transition:
             left 5s ease-in-out,
             background-color 2s ease-out 4s,
-            border-radius 3s linear 5s;
+            border-radius 3s linear 5s,
+            top 1s ease-in-out 8s;
         }
         /* 오버시 span 변경 */
         #tr4:hover span{
-
+            left: 70%;
+            background-color: darkorchid;
+            border-radius: 0;
+            top: -100px;
         }
        
         
