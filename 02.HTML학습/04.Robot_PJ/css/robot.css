@@ -368,5 +368,24 @@ body {
     height: 116%;
     /* 기본보더없앰 */
     border: none;
-   
+}
+
+/**** 2-2. 로봇설명박스 ****/
+.dcbx{
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 200px;
+    /* 반투명 배경색 */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    padding: 15px 30px;
+    border: 3px solid #fff;
+    border-radius: 20px; 
+    /* 박스 그림자
+    - 콤마로 연결하면 다중셋팅가능
+    - inset(내부그림자) */
+    box-shadow: inset 0 0 20px darkblue, 
+    inset 0 0 50px 10px cyan;
+
 }
