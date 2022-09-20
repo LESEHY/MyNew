@@ -499,9 +499,9 @@ font-family: 'Roboto', sans-serif; */
 /* 2-2-1. 로봇제목 */
 .dcbx h2{
     position: sticky;
-    top: 0;
+    top: 5px;
     /* top값을 지정하면 보이는 화면에 위치를 고정한다 */
-    
+
     font-family: 'Black Ops One';
     text-align: center;
     font-size: 35px;
