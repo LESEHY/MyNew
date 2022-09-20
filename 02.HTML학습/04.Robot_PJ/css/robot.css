@@ -53,7 +53,7 @@ font-family: 'Roboto', sans-serif; */
     position: fixed;
     top: 50px;
     left: 50px;
-    
+
     width: 200px;
     height: 200px;
     color: aquamarine;
@@ -70,6 +70,27 @@ font-family: 'Roboto', sans-serif; */
 
     /* 배경풀셋팅: 색이반고윙/크 */
     background: pink url(../images/robot_03.png) no-repeat center 10px/140px;
+}
+
+/* 1-2. 내용링크 */
+.link{
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    /* 부모는? 보이는 화면 window */
+}
+
+.link a{
+    /* a요소에서 글자색, 밑줄처리함! */
+    color: lightseagreen;
+    text-decoration: none;
+    font: 50px 'Open Sans';
+    text-shadow: 2px 2px 4px black;
+}
+
+.link a:hover{
+    color: lightcoral;
+    text-decoration: overline underline;
 }
 
 /* 2-1. 로봇박스 */
