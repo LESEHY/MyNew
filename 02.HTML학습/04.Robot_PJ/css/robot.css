@@ -458,3 +458,13 @@ font-family: 'Roboto', sans-serif; */
     font-size: 30px;
     color: orange;
 }
+
+/**** 3. 하단영역 ****/
+.info{
+    padding: 50px;
+    text-align: center;
+    color: #fff;
+    font: 30px 'Black Ops One';
+    text-shadow: 2px 2px 2px #000;
+    background-color: rgba(0, 0, 0, 0.5);
+}
