@@ -243,8 +243,9 @@
         /* 1. 보거미 처음상태(돌아옴) */
         /* Y축 0도로 돌아옴 - 0.4초 기다림 */
         #trans10 img:last-child{
-            transition: transform .4s .4s;
-            /* 돌아올 때 0.4초 후 돈다! */
+            transition: transform .4s ease-out .4s;
+            /* 돌아올 때 0.4초 후 돈다!
+            마지막에 천천히 ease-out */
         }
 
 
@@ -252,15 +253,17 @@
         /* Y축 90도회전 - 회전후 안보임*/
         #trans10:hover img:last-child{
             transform: rotateY(90deg);
-            transition: transform .4s ;
+            transition: transform ease-in .4s ;
+            /* 처음에만 천천히 */
+
         }
 
         /* 3. 유정이 처음상태(돌아옴) */
         /* 처음에 이미 Y축 90도 회전상태 - 안보임 */
         #trans10 img:first-child{
             transform: rotateY(90deg);
-            transition: transform .4s ;
-            /* 돌아갈 때는 기다림없이 바로회전! */
+            transition: transform .4s ease-in;
+            /* 돌아갈 때는 기다림없이 바로회전! 처음에 천천히 ease-in */
         }
 
         /* 4. 유정이 오버상태 */
@@ -268,8 +271,8 @@
         - 보거미 0.4초 돌동안 기다렸가 0.4초돌기 */
         #trans10:hover img:first-child{
             transform: rotateY(0deg);
-            transition: transform .4s .4s;
-            /* 0.4초후 돈다! */
+            transition: transform .4s ease-out .4s;
+            /* 0.4초후 돈다! 마지막에 천천히 ease-out*/
         }
 
 
