@@ -110,6 +110,19 @@
     transform: scale(2);
 }
 
+/* 로고애니 키프레임 */
+@keyframes logoAni {
+    /* 초기설정이 from 이므로 생략! */
+    to{
+        /* 원래 위치와 크기로! */
+        top: 50px;
+        left: 50px;
+        transform: scale(1);
+        
+    }
+    
+}
+
 /* 2. 로봇머리 */
 .head{
     top: -500px;
