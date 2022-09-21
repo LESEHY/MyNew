@@ -154,6 +154,16 @@
     /* top값에 %가 적용 안되는 이유: 
     부모박스에 높이값이 auto 
     즉, 지정하지 않아서 적용안됨. 특정크기를 주면 적용! */
+
+    animation: headAni 2s ease-out 2.5s forwards;
+}
+
+/* 로봇머리 등장 키프레임 */
+@keyframes headAni {
+    to{
+        /* 원래 위치로! */
+        top: 0;
+    }
 }
 
 /* 3. 로봇몸 */
@@ -164,6 +174,8 @@
     /* 애니메이션: 이시이지반방마 */
     animation: bodyAni 2s ease-out 2s forwards;
 }
+
+
 
 /* 로봇 몸 등장 키프레임 */
 @keyframes bodyAni {
