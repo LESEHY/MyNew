@@ -192,6 +192,9 @@
             - skew(x축, y축)
             - 각도가 양수/음수에 따라 기울임 방향달라짐                
         */
+        #trans7:hover img{
+            transform: skewX(-30deg);
+        }
 
 
         /* 
@@ -201,13 +204,25 @@
             - scaleX(배수), scaleY(배수) - x,y축별
             - 값이 0이면 사라짐
         */
-
+        #trans8:hover img{
+            transform: scale(2);
+        }
+        
+        #trans8 img{
+            transform: scale(.5);
+        }
 
         /* 
             9. 복합적용하기
             transform: 속성1 속성2 속성3 .....;
         */
+        #trans9:hover img{
+            /* 다중트랜스폼 */
+            transform: scale(5) translate(-200%, -100%) rotateX(1200deg) skewX(50deg) rotate(5300deg);
 
+            /* 트랜지션 */
+            transition-duration: 20s;
+        }
 
         /* 
             10. 앞뒤로 있는 이미지 뒤집기
