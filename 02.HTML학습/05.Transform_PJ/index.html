@@ -128,7 +128,9 @@
             - % 단위를 쓸 경우 기준은 요소의 width
             - 이동방향: + 는 오른쪽, - 는 왼쪽
           */
-
+            #trans3:hover img{
+                transform: translateX(-100%);
+            }
 
         /* 
             4. translateY(거리) - Y축이동
@@ -138,7 +140,9 @@
             - % 단위를 쓸 경우 기준은 요소의 height
             - 이동방향: + 는 아랫쪽, - 는 윗쪽
           */
-
+            #trans4:hover img{
+                transform: translateY(100%);
+            }
 
         /* 
             5. translate(X축거리,Y축거리) - X,Y축이동
@@ -150,7 +154,9 @@
             - 이동방향: + 는 오른쪽/아랫쪽, 
                         - 는 왼쪽/윗쪽
           */
-
+            #trans5:hover img{
+                transform: translate(-100%, -100%);
+            }
 
         /* 
             6. rotate(각도deg) - 원형회전
@@ -159,10 +165,26 @@
             - 기본회전축은 정중앙
                 (변경가능: transform-origin)
            */
-
+            #trans6:hover img{
+                transform: rotate(360deg);
+                /* 트랜지션 시간 늘리기 */
+                transition-duration: 3s;
+            }
 
         /* 회전축 변경하기 */
-
+            #trans6 img{
+                transform-origin: 100px  100px;
+                
+                /* 
+                    트랜스폼 축변경 속성 
+                    transform-origin: 가로 세로;    
+                    -가로값: left, right, center, 몇px, 몇%
+                    -세로값: top, bottom, center, 몇px, 몇%
+                    -기본값: 가로, 세로, center임!
+                */
+                
+                
+            }
 
         /* 
             7. skew - x,y축 기울임
