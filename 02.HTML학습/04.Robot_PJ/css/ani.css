@@ -121,11 +121,17 @@
         top: 50px;
         left: 50px;
         transform: scale(1);
-
-        
-        
     }
-    
+} /* 키프레임 */
+
+/* 흔들기 로고애니 키프레임 */
+@keyframes logoAni2 {
+    0%{
+        transform: rotate(20deg);
+    }   
+    100%{
+        transform: rotate(-20deg);
+    }   
 }
 
 /* 2. 로봇머리 */
