@@ -205,7 +205,20 @@
 
 /* 설명링크, 위로이동버튼, TV 등장 공통 키프레임 */
 @keyframes opaAni {
-    to{
+    /* 보였다 안보였다 */
+    20%{
+        opacity: 1;
+    }
+    40%{
+        opacity: 0;
+    }
+    60%{
+        opacity: 1;
+    }
+    80%{
+        opacity: 0;
+    }
+    100%{
         opacity: 1;
     }
 } /* 키프레임! */
