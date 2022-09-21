@@ -102,9 +102,9 @@
         -> transform: translate(-50%, -50%)
         즉, 현재 위치에서 내 크기의 절반만큼 왼쪽, 윗쪽으로 이동!
     */
-    top: 50%;
+    /* top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
 }
 
 /* 2. 로봇머리 */
