@@ -108,6 +108,9 @@
 
     /* 트랜스폼 스케일 */
     transform: scale(2);
+
+    /* 애니메이션: 이시이지반방마 */
+    animation: logoAni 2s ease-in-out 1s forwards;
 }
 
 /* 로고애니 키프레임 */
@@ -118,6 +121,8 @@
         top: 50px;
         left: 50px;
         transform: scale(1);
+
+        
         
     }
     
