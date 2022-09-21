@@ -110,7 +110,11 @@
     transform: scale(2);
 
     /* 애니메이션: 이시이지반방마 */
-    animation: logoAni 2s ease-in-out 1s forwards;
+    animation:
+    /* 중앙에서 왼쪽위로 이동애니 */
+    logoAni 2s ease-in-out 1s forwards,
+    /* 이동후 반복회전애니 */
+    logoAni2 .5s ease-in-out 3s infinite alternate;
 }
 
 /* 로고애니 키프레임 */
@@ -132,7 +136,10 @@
     100%{
         transform: rotate(-20deg);
     }   
-}
+} /* 키프레임 */
+
+
+
 
 /* 2. 로봇머리 */
 .head{
