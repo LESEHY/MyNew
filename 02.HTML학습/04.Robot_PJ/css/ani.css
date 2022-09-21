@@ -195,3 +195,17 @@
 .btnTop{
     opacity: 0;
 }
+
+/* 6. TV */
+.tv{
+    opacity: 0;
+    /* 애니메이션: 이시이지반방마 */
+    animation: opaAni .5s linear 4s forwards;
+}
+
+/* 설명링크, 위로이동버튼, TV 등장 공통 키프레임 */
+@keyframes opaAni {
+    to{
+        opacity: 1;
+    }
+} /* 키프레임! */
