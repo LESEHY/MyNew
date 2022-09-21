@@ -101,7 +101,15 @@
         /* 
             2. rotateX(각도deg) - X축회전
         */
+            #trans2 img{
+                transform: rotateX(180deg);
+                filter: blur(2px); 
+            }
 
+            #trans2:hover img{
+                transform: rotateX(0deg);
+                filter: blur(0px);
+            }
 
         /* 
             [ CSS 필터속성 ]
