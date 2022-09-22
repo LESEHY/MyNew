@@ -7,10 +7,10 @@
 @import url(core.css);
 @import url(common.css);
 
-/* 공사중 표시 */
+/* 공사중 표시
 body * {
     outline: 2px dashed gray;
-}
+} */
 
 /* 컨텐츠 파트 최상위 부모 */
 body {
@@ -144,7 +144,7 @@ body {
 
     /* 배경 : 색이반고윙/크 */
     background: url(../images/eachBG.jpg) no-repeat center/cover;
-    
+
     border-radius: 20px 5px 5px 20px;
 
     /* 트랜지션 : 속시이지trs  */
