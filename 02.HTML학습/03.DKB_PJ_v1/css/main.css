@@ -104,6 +104,11 @@ body {
 
 /* 캐릭터 설명박스 */
 .cd{
+    position: absolute;
+    /* 가로크기 설정안한 경우 auto이며
+    이는 앱솔루트일 때 부모를 찾음!
+    -> .cat 부모자격 부여! */
+
     /* 높이값 설정 h */
     height: 0/* -> .cat에 마우스 오버시 250px; */;
     /* 넘치는 내용요소 자동스크롤*/
@@ -127,7 +132,7 @@ body {
     background: url(../images/eachBG.jpg) no-repeat center/cover;
 
     /* 트랜지션 : 속시이지trs  */
-    transition: hegiht .4s ease-in-out;
+    transition: height .4s ease-in-out;
 }
 /* 캐릭터 박스에 오버시 ,cd 높이값 변경 */
 .cat:hover .cd{
