@@ -67,6 +67,8 @@ body {
 
 /* 캐릭터 이미지박스 */
 .ci{
+    /* 하단패딩 - 아래설명박스와 간격 */
+    padding-bottom: 15px;
     transition: margin-top .4s ease-out;
 }
 
@@ -137,14 +139,17 @@ body {
             y축 스크롤만 생김
     */
 
-    /* 마진 상단 */
-    margin-top: 15px;
+    /* 마진 상단 -> 오버시 떨림문제 -> .ci 하단패딩대체
+    margin-top: 15px; */
 
     /* 배경 : 색이반고윙/크 */
     background: url(../images/eachBG.jpg) no-repeat center/cover;
+    
+    border-radius: 20px 5px 5px 20px;
 
     /* 트랜지션 : 속시이지trs  */
     transition: height .4s ease-in-out;
+    
 }
 /* 캐릭터 박스에 오버시 ,cd 높이값 변경 */
 .cat:hover .cd{
