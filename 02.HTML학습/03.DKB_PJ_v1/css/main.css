@@ -65,6 +65,16 @@ body {
     /* left값은 "나는 왼쪽에 너는 오른쪽에 올라와!" */
 }
 
+/* 캐릭터 이미지박스 */
+.ci{
+    transition: margin-top .4s ease-out;
+}
+
+/* .cat에 마우스 오버시 .ci 마진탑 변경 */
+.cat:hover .ci{
+    margin-top: -50%;
+}
+
 /*캐릭터 이미지
 -.ci의 직계자식 img만 선택! */
 .ci > img {
