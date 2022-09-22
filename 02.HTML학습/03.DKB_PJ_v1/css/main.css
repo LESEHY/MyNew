@@ -125,6 +125,13 @@ body {
 
     /* 배경 : 색이반고윙/크 */
     background: url(../images/eachBG.jpg) no-repeat center/cover;
+
+    /* 트랜지션 : 속시이지trs  */
+    transition: hegiht .4s ease-in-out;
+}
+/* 캐릭터 박스에 오버시 ,cd 높이값 변경 */
+.cat:hover .cd{
+    height: 250px;
 }
 
 /* 캐릭터 설명 타이틀 */
