@@ -399,7 +399,11 @@
             // 3-8. 전체 배경색 변경
             // 대상: body
             // JS에서 body는 특별히 취급해서
-            // document.getElementsByTagName('body').item(0)
+            // document.body 라고 선택함!
+            var 바디 = document.body;
+            바디.style.backgroundColor = "gray";
+            바디.style.transition = "5s 3s";
+
            
             
 
