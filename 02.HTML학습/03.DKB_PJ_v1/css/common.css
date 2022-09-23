@@ -29,6 +29,10 @@
 
 }
 /* 가상요소로 float 지우기 */
+.blink ul::after{
+    content: '';
+    
+}
 
 .blink li{
     float: left;
