@@ -64,7 +64,12 @@
     font-style: normal;
     text-align: center;
     line-height: 2;
-    
+
+    /* 박스셋팅 */
+    width: 804px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 4px double #222;
 }
 
 
