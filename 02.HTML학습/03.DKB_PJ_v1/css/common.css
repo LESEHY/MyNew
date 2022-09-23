@@ -80,6 +80,9 @@
 }
 
 /* sns메뉴 */
+.sns{
+    margin-top: -5px;
+}
 .sns li{
     width: 30px;
     height: 30px;
