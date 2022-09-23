@@ -31,7 +31,8 @@
 /* 가상요소로 float 지우기 */
 .blink ul::after{
     content: '';
-    
+    display: block;
+    clear: both;
 }
 
 .blink li{
