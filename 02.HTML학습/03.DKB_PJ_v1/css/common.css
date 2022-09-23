@@ -25,6 +25,10 @@
     padding-top: 5px;
 }
 /* 하단링크 리스트 */
+.blink ul{
+
+}
+
 .blink li{
     float: left;
 }
