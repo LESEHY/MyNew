@@ -51,7 +51,7 @@
 /* 마우스 오버시 a */
 .blink a:hover{
     color: red;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 
