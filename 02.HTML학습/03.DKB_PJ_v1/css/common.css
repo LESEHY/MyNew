@@ -17,6 +17,7 @@
 
 /* 속박스 */
 .info{   
+    position: relative; /* 부모자격(.brand) */
     height: 241px;
 }
 /* 3-1. 하단링크 */
@@ -75,6 +76,24 @@
 /* 3-3. 하단로고 */
 .blogo{
     text-align: center;
+}
+
+/* 3-4. 바로가기 */
+.brand {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    /* 부모는 = .info */
+}
+
+/* 선택박스 */
+#sel{
+    color: #222;
+    font-weight: bold; /* 두껍게 */
+    font-size: 14px;
+
+    padding: 8px;
+    
 }
 
 
