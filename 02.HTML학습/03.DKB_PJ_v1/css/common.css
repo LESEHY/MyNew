@@ -11,6 +11,7 @@
 
 /* 속박스 */
 .top{
+    position: relative; /* 부모자격(.tmenu) */
     height: 128px;  
 }
 
@@ -30,6 +31,7 @@
 .gnb{
     width: 574px;
     margin: 0 auto;
+    margin-top: 25px;
 }
 /* GNB 상위메뉴 li */
 .gnb>ul>li{
@@ -40,6 +42,13 @@
 .gnb>ul>li>a{
     font-size: 17px;
     line-height: 2.5;
+}
+
+/* 1-2. sns메뉴 */
+.tmenu{
+    position: absolute; /* 부모는 .top */
+    top: 20px;
+    right: 0;
 }
 
 /************************** 3. 하단영역 **************************/
