@@ -58,7 +58,7 @@ body {
     position: relative;
     width: 24%; /* 가로크기 4등분 : 25% - 1%(양쪽마진) */
 
-    margin: 0 .5; /* 양쪽마진 : 위아래0 양쪽 0.5% */
+    margin: 0 .5%; /* 양쪽마진 : 위아래0 양쪽 0.5% */
     /* 보통 0.5%와 같이 0.소수점은 앞에 0 생략가능! */
 
     float: left; /* 블록박스를 옆으로 흐르게 */
@@ -124,7 +124,7 @@ body {
     -> .cat 부모자격 부여! */
 
     /* 높이값 설정 h */
-    height: 0/* -> .cat에 마우스 오버시 250px; */;
+    height: 0;/* -> .cat에 마우스 오버시 250px; */
     /* 넘치는 내용요소 자동스크롤*/
     overflow: auto;
     /* 
@@ -148,7 +148,7 @@ body {
     border-radius: 20px 5px 5px 20px;
 
     /* 트랜지션 : 속시이지trs  */
-    transition: height .4s ease-in-out;
+    transition: height .4s ease-out;
     
 }
 /* 캐릭터 박스에 오버시 ,cd 높이값 변경 */
