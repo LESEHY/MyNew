@@ -35,7 +35,18 @@
 
 
 .blink li{
+    /* 옆으로 흐르게 */
     float: left;
+    /* 양쪽패딩 */
+    padding: 0 15px;
+}
+/* 글자셋팅 */
+.blink a{
+    color: #222;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 2.8;
+    
 }
 
 
