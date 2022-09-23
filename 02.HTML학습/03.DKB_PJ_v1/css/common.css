@@ -83,6 +83,9 @@
 .sns li{
     width: 30px;
     height: 30px;
+    /* 배경이미지로 sns아이콘 넣기(스프라이츠)  */
+    background: url(../images/icons.png) no-repeat;
+
 }
 
 
