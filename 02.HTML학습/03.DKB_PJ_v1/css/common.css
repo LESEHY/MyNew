@@ -40,8 +40,17 @@
 }
 /* GNB 하위메뉴 a */
 .gnb>ul>li>a{
+    /* 디스플레이 변경 */
+    display: block;
+
     font-size: 17px;
     line-height: 2.5;
+}
+
+/* 가상요소로 하단바 만들기 */
+.gnb>ul>li>a::after{
+    content: '';
+    display: block;
 }
 
 /* 1-2. sns메뉴 */
