@@ -28,6 +28,7 @@
 .blink ul{
 
 }
+/* 가상요소로 float 지우기 */
 
 .blink li{
     float: left;
