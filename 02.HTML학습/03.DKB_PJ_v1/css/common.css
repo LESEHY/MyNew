@@ -64,20 +64,30 @@
     width: 100%;
 }
 
-/* 1-2. sns메뉴 */
+/* 1-2. 탑메뉴 */
 .tmenu{
     position: absolute; /* 부모는 .top */
     top: 20px;
     right: 0;
 }
-/* sns메뉴 상위 li */
+/* 탑메뉴 상위 li */
 .tmenu>ul>li{
     padding: 0 5px;
 }
-/* sns메뉴 상위 a */
+/* 탑메뉴 상위 a */
 .tmenu>ul>li>a{
     font-size: 15px;
 }
+
+/* sns메뉴 */
+.sns li{
+    width: 30px;
+    height: 30px;
+}
+
+
+
+
 /************************** 3. 하단영역 **************************/
 /* 겉박스 */
 #info{
