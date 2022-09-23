@@ -54,6 +54,19 @@
     text-decoration: underline;
 }
 
+/* 3-2. 회사정보 */
+.addr{
+    padding: 10px;
+}
+.addr address{
+    /* 글자셋팅 */
+    font-size: 14px;
+    font-style: normal;
+    text-align: center;
+    line-height: 2;
+    
+}
+
 
 
 

@@ -89,7 +89,7 @@ body {
     text-align: center;
 
     /* 이미지를 위로 올려 겹치게 하려면? 포지션을 안쓰고는 마진을 마이너스로 준다! */
-    margin-top: -20px;
+    margin-top: -40px;
     /* %의 기준은? 원래 박스 높이값  */
 }
 
