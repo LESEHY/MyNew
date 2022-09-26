@@ -171,10 +171,10 @@ body {
 /* 캐릭터 설명 문단 */
 .cd p{
     font-family: 'Noto Serif KR';
-    font-size: 18px;
+    font-size: min(1.5vw,18px);
     /* 줄간격 */
     line-height: 1.6;
-    padding: 10px;
+    padding: min(2vw,10px);
     /* 양쪽정렬 justfy */
     text-align: justify;
 }
