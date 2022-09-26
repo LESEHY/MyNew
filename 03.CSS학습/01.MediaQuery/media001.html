@@ -226,7 +226,7 @@
     /************ 미디어쿼리 적용하기 ************/
 
     /*************** 1200px 이하 ***************/
-    @media screen and(max-width:1200px) {
+    @media screen and (max-width:1200px) {
 
       /* title 변경 */
       .tit::after {
@@ -244,24 +244,106 @@
         display: inline;
       }
 
-    };
+    }
 
+    ;
     /* 1200px이하 */
 
     /***************** 1100px 이하 *****************/
+    @media screen and (max-width:1100px) {
 
+      /* title 변경 */
+      .tit::after {
+        content: "최대 1100px 이하";
+        color: blue;
+      }
+
+      /* 기존 이미지 숨기기 */
+      .screen img:nth-child(2) {
+        display: none;
+      }
+
+      /* 다음 이미지 보이기 */
+      .screen img:nth-child(3) {
+        display: inline;
+      }
+
+    }
+
+    ;
     /* 1100px 이하 */
 
     /****************** 1000px 이하 ******************/
+    @media screen and (max-width:1000px) {
+
+      /* title 변경 */
+      .tit::after {
+        content: "최대 1000px 이하";
+        color: red;
+      }
+
+      /* 기존 이미지 숨기기 */
+      .screen img:nth-child(3) {
+        display: none;
+      }
+
+      /* 다음 이미지 보이기 */
+      .screen img:nth-child(4) {
+        display: inline;
+      }
+
+    }
+
+    ;
 
     /* 1000px이하 */
 
     /*************** 900px 이하 ***************/
+    @media screen and (max-width:900px) {
 
+      /* title 변경 */
+      .tit::after {
+        content: "최대 900px 이하";
+        color: white;
+      }
+
+      /* 기존 이미지 숨기기 */
+      .screen img:nth-child(4) {
+        display: none;
+      }
+
+      /* 다음 이미지 보이기 */
+      .screen img:nth-child(5) {
+        display: inline;
+      }
+
+    }
+
+    ;
     /* 900px 이하 */
 
     /***************** 850px 이하 *****************/
+    @media screen and (max-width:850px) {
 
+      /* title 변경 */
+      .tit::after {
+        content: "최대 850px 이하";
+        color: yellow;
+      }
+
+      /* 기존 이미지 숨기기 */
+      .screen img:nth-child(5) {
+        display: none;
+      }
+
+      /* 다음 이미지 보이기 */
+      .screen img:nth-child(6) {
+        display: inline;
+      }
+
+    }
+
+    ;
     /* 850px 이하 */
 
     /****************** 830px 이하 ******************/
