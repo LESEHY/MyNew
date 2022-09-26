@@ -132,7 +132,22 @@
           .pf3{font-size: 58%;}
 
           /* 미디어쿼리 */
-         
+         @media screen and (max-width:1000px) {
+            /* root인 HTML만 글자크기를 변경하면 
+            하위의 모든 상대단위 글자는 모두 바뀐다! */
+            html{
+                font-size: 12px;
+            }
+         } /* 미디어쿼리 1000px 이하 */
+
+         @media screen and (max-width:800px) {
+            /* 부모 요소를 기준한 상대단위 요소만
+            별도로 글자크기 변경하기 */
+            .f1{
+                font-size: 50px;
+            }
+
+         }/* 미디어쿼리 800px 이하 */
           
 
 
