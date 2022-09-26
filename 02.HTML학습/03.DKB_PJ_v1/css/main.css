@@ -162,6 +162,7 @@ body {
     font-size: min(1.9vw,24px);
     /* 글자두께 보통 */
     font-weight: normal;
+    /* 위 15px 양쪽 1vw(최대값10px) 아래 5px */
     padding: 15px min(0.9vw,10px) 5px;
     /* 자간 */
     letter-spacing: -1px;
