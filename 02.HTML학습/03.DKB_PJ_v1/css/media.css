@@ -46,6 +46,14 @@
     .cat:hover{
         z-index: 1;
     }
+
+    .cd h3{
+        font-size: 3vw;
+    }
+    /* 설명박스 p요소 */
+    .cd p{
+        font-size: 2vw;
+    }
 }
 
 /* 870px 이하 */
@@ -61,5 +69,11 @@
         position: static;
     }
     /* 설명박스 타이틀 */
+    .cd h3{
+        font-size: 4vw;
+    }
     /* 설명박스 p요소 */
+    .cd p{
+        font-size: 3vw;
+    }
 }
