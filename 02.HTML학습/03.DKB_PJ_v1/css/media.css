@@ -68,7 +68,11 @@
     .top{
         height: 80px;
     }
-    
+
+    /* 캐릭터 부모박스 */
+    .cbx{
+        margin-top: 20px;
+    }
     /* 캐릭터 박스 한줄에 하나씩  */
     .cat{
         width: 99%;
@@ -86,5 +90,11 @@
     /* 설명박스 p요소 */
     .cd p{
         font-size: 3vw;
+    }
+
+    /* 하단영역 */
+    .info{
+        height: auto;
+        padding-bottom: 20px;
     }
 }
