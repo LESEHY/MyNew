@@ -123,7 +123,38 @@
       */
 
       /* 서브메뉴 */
+      .smenu{
+        position: absolute;
+        width: 200px;
+
+        /* 상위메뉴 오버시 배경색과 동일 */
+        background-color: darkblue;
+        border-radius: 0 0 5px 5px;
+      }
+      /* 서브메뉴 ol */
+      .smenu ol{
+        padding: 15px;
+      }
+      /* 서브메뉴 a */
+      .smenu a{
+        /* a요소 확장 */
+        display: block;
+
+        color: lightskyblue;
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 35px;
+
+        /* 트랜지션 */
+        transition: .2s;
+      }
       
+      /* 서브메뉴 오버시 */
+      .smenu a:hover{
+        background-color: lightskyblue;
+        color: darkblue;
+        border-radius: 50px;
+      }
 
       /* 본문내용 */
       .cont {
@@ -148,7 +179,7 @@
         <li>
           <a href="#"><span>웹개발</span></a>
           <!-- 서브메뉴 -->
-          <!-- <div class="smenu">
+          <div class="smenu">
             <ol>
               <li>
                 <a href="#">웹디자인</a>
@@ -163,7 +194,7 @@
                 <a href="#">웹+모바일</a>
               </li>
             </ol>
-          </div> -->
+          </div>
         </li>
         <li>
           <a href="#"><span>게시판</span></a>
