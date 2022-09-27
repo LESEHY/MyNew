@@ -93,6 +93,11 @@
     height: 90px;
 }
 
+/* 서브메뉴 ol요소 */
+.smenu ol{
+    padding-top: 5px;
+}
+
 /* 서브메뉴 a*/
 .smenu a{
     display: block;
