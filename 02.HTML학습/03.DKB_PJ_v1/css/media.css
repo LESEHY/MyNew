@@ -48,8 +48,18 @@
     }
 }
 
-/* 1070px 이하 */
-@media screen and (max-width:1070px) {
-    
-    
+/* 870px 이하 */
+@media screen and (max-width:870px) {
+    /* 캐릭터 박스 한줄에 하나씩  */
+    .cat{
+        width: 99%;
+
+    }
+
+    /* 설명박스 자리차지하는 포지션으로! */
+    .cd{
+        position: static;
+    }
+    /* 설명박스 타이틀 */
+    /* 설명박스 p요소 */
 }
