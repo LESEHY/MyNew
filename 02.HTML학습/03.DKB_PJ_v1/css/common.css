@@ -216,6 +216,11 @@
     display: block;
     transform: scaleX(1.5);
     /* 트랜스폼은 인라인에 안먹힘! */
+}
+/* 가상요소 기호변경 */
+.ham.on::before{
+    content: '×';
+    transform: none;
 
 }
 
