@@ -37,6 +37,11 @@
     .cbx{
         margin-top: 50px;
     }
+
+    /* 캐릭터 오버시 이미지박스 */
+    .cat:hover .ci{
+        margin-top: 0;
+    }
 }
 
 /* 1070px 이하 */
