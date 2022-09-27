@@ -122,6 +122,10 @@
     width: 1200px;
     outline: 2px dotted red;
 }
+
+.tmenu>ul{
+    float: right;
+}
 /* 탑메뉴 상위 li */
 .tmenu>ul>li{
     padding: 0 5px;
