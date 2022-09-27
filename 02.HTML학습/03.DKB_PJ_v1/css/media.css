@@ -58,6 +58,17 @@
 
 /* 870px 이하 */
 @media screen and (max-width:870px) {
+
+    /* 없어질 요소들 : 상단메뉴, gnb */
+    .tmenu, .gnb, .blink{
+        display: none;
+    }
+
+    /* 상단영역 높이값 */
+    .top{
+        height: 80px;
+    }
+    
     /* 캐릭터 박스 한줄에 하나씩  */
     .cat{
         width: 99%;
