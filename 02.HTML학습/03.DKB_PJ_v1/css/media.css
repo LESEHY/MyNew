@@ -1,3 +1,10 @@
 @charset "utf-8";
 /* 도깨비 PJ 미디어쿼리 CSS - media.css */
 
+/* 1200px 이하 */
+@media screen and (max-width:1200px) {
+    .tmenu{
+        width: 100%;
+
+    }
+} /* 1200px 이하 */
