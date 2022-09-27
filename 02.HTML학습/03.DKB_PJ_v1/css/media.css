@@ -42,6 +42,10 @@
     .cat:hover .ci{
         margin-top: 0;
     }
+    /* 캐릭터 오버시 z-index */
+    .cat:hover{
+        z-index: 1;
+    }
 }
 
 /* 1070px 이하 */
