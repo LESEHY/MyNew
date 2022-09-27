@@ -27,6 +27,16 @@
     .brand{
         display: none;
     }
+
+    /* 캐릭터 박스 한줄에 2개씩*/
+    .cat{
+        width: 49%;
+    }
+    
+    /* 캐릭터 부모박스 */
+    .cbx{
+        margin-top: 50px;
+    }
 }
 
 /* 1070px 이하 */
