@@ -5,6 +5,28 @@
 @media screen and (max-width:1200px) {
     .tmenu{
         width: 100%;
-
     }
-} /* 1200px 이하 */
+}
+
+/* 1070px 이하 */
+@media screen and (max-width:1070px) {
+    /* 상대 단위 rem글자 크기변경 위해 html변경 */
+    html{
+        font-size: 8px;
+    }
+    /* GNB메뉴 조정 */
+    .gnb{
+        width: 495px;
+        margin-top: 34px;
+    }
+    /* 하단링크 조정 */
+    .blink ul{
+        width: 680px;
+    }
+}
+
+/* 1070px 이하 */
+@media screen and (max-width:1070px) {
+    
+    
+}
