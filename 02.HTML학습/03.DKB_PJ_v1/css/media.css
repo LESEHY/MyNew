@@ -21,7 +21,11 @@
     }
     /* 하단링크 조정 */
     .blink ul{
-        width: 680px;
+        max-width: 680px;
+    }
+    /* 브랜드박스 */
+    .brand{
+        display: none;
     }
 }
 
