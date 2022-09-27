@@ -208,6 +208,9 @@
     font-size: 40px;  
     background-color: transparent;
     border: none;;
+
+    /* 처음에 안보임 */
+    display: none;
 }
 
 /* 버튼 가상요소로 기호넣기 */
