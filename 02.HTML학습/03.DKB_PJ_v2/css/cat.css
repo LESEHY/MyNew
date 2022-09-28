@@ -16,4 +16,6 @@
 .cont{
     /* 최소높이설정 : 내용넘칠경우 자동auto */
     min-height: 600px;
+    text-align: center;
 }
+/* 인물관계도 이미지 */
