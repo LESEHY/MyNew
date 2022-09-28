@@ -12,3 +12,8 @@
     outline: 1px dotted red;
 } */
 
+/* 메인 속박스 */
+.cont{
+    /* 최소높이설정 : 내용넘칠경우 자동auto */
+    min-height: 600px;
+}
