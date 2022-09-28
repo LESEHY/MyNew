@@ -30,7 +30,7 @@
             var jexp = document.querySelector("#jexp");
             
             // 2-3. 칭찬스티커 : #jshow
-            var jshow = document.querySelector("jshow");
+            var jshow = document.querySelector("#jshow");
 
             //  3. 입력값 읽어오기
             var score = jumsu.value;
@@ -292,14 +292,14 @@
     </style>
 </head>
 
-<body>
+<body>`
     <h1>JS 제어문</h1>
     <hr />
     <!-- if문 연습 -->
     <h2>if문 연습</h2>
     <h3 id="jexp">평가출력</h3>
     <label for="jumsu">점수입력:</label>
-    <input type="text" id="jumsu" placeholder="점수를 입력하세요!" maxlength="3" />
+    <input type="text" id="jumsu" placeholder="점수를 입력하세요!" maxlength="3" onkeypress="if(event.keyCode===13)jumsu()"/>
     <button class="sbtn" onclick="jumsu()">평가하기</button>
     <!-- 
         onkeypress 이벤트 속성 
