@@ -8,12 +8,46 @@
 @import url(common.css);
 
 /* 공사중 표시 */
-/* body * {
+body * {
     outline: 1px dotted red;
-} */
+}
+#cont{
+    background-color: gray;
+}
 
 /* 메인 속박스 */
 .cont{
     /* 최소높이설정 : 내용넘칠경우 자동auto */
     min-height: 600px;
+}
+
+/* 1. 타이틀 */
+.stit{
+    font-size: 5rem;
+    text-align: center;
+    padding: 40px 0 20px;
+    font-weight: normal;
+}
+/* 2. 컨텐츠박스 */
+.scont{
+    max-width: 700px;
+    min-height: 275px;
+    margin: 0 auto;
+
+    background-color: #fff;
+    border-radius: 10px;
+    border: 2px solid #777;
+    padding: 60px 15px;
+    /* 박스크기유지 : 보더, 패딩포함*/
+    box-sizing: border-box;
+}
+
+/* 입력창 공통 라벨 */
+.minput label{
+    /* 크기 디자인 적용위해 */
+    display: inline-block;
+    width: 150px;
+    font-size: 2rem;
+    font-weight: bold;
+    
 }
