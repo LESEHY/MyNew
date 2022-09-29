@@ -22,6 +22,13 @@ body *{
     background: url(../images/curtain.jpg) repeat-x;
 }
 
+/* 로고 */
+.tit{
+    font-family: 'Jua', sans-serif;
+    color: aquamarine;
+    font-size: 4rem;
+}
+
 /**************************** 2. 메인영역 ****************************/
 .cont{
     height: 788px;
