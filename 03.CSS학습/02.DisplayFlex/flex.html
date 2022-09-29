@@ -144,6 +144,7 @@
     .t1 {
       top: 50px;
       /* 플렉스박스 */
+      display: flex;
       
       /* 
         justify-content 속성:
@@ -160,7 +161,7 @@
         6) space-evenly : 
           아이템요소 양쪽과 사이간격 일정
       */
-      
+      justify-content: space-evenly;
       /* 
         align-items 속성 :
         - 진행방향의 수직 정렬 속성
@@ -175,7 +176,7 @@
           글자기준선(baseline)을 기준으로 정렬함!
           (글자의 line-height를 변경해서 적용해봄!)
       */
-
+      align-items: center;
     }
 
     /* 타이틀박스2 */
@@ -183,16 +184,18 @@
       top: 200px;
 
       /* 플렉스박스 */
-      
+      display: flex;
       /* 수직방향 정렬 글자아랫선 */
-      
+      align-items: baseline;
+      justify-content: space-between;
     }
     /* 줄간격변경 */
     .t2 li:nth-child(2){
+      line-height: 80px;
       
     }
     .t2 li:nth-child(4){
-      
+      line-height: 30px;
     }
 
     /* 타이틀박스3 */
@@ -366,13 +369,13 @@
     </ol>
 
     <!-- 타이틀박스2 -->
-    <!-- <ol class="tit t2">
+    <ol class="tit t2">
       <li>W</li>
       <li>O</li>
       <li>R</li>
       <li>L</li>
       <li>D</li>
-    </ol> -->
+    </ol>
 
     <!-- 타이틀박스3 -->
     <!-- <ol class="tit t3">
