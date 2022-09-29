@@ -46,6 +46,9 @@ body *{
 
 /**************************** 2. 메인영역 ****************************/
 .cont{
+    /* 부모자격(#screen) */
+    position: relative; 
+    
     height: 788px;
     background: url(../images/bg.jpg) no-repeat center;
 }
