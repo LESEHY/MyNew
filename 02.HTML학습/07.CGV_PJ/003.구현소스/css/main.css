@@ -60,8 +60,8 @@ body *{
     left: calc(50% - 344px);
     /* 화면이 줄어도 스크린 중앙에 위치하도록 
     left 50%밀고 스크린 크기의 절반정도를 뺌! */
-    width: 701px;
-    height: 399px;
+    width: 702px;
+    height: 397px;
     /* 부모는? .cont */
     background-color: red;
 }
