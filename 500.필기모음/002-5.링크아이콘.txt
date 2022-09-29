@@ -1,4 +1,4 @@
-[ 링크 아이콘 넣는 방법]
+[ 링크 아이콘 넣는 방법] -> 여러 사이트 중 폰트어썸에서...
 
 참고: https://www.w3schools.com/icons/default.asp
 
