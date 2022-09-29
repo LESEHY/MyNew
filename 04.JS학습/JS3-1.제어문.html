@@ -352,7 +352,26 @@
             // 1. 호출확인
             console.log("구구단을 외자!", optval);
 
+            // 2. 대상선정 : 출력대상 -> .g1
+            var tg = document.querySelector(".g1");
             
+            // 3. 구구단 만들기 : code변수에 모두 넣기
+            var code = `<h2>${optval}단</h2>`;
+
+            // 앞의 데이터를 살리기위해 +=(대입연산자)사용!
+            code += `${optval} × 1 ＝ ${optval*1} <br>`;
+            code += `${optval} × 2 ＝ ${optval*2} <br>`;
+            code += `${optval} × 3 ＝ ${optval*3} <br>`;
+            //for(시;한;증){실행코드}
+            for(var i=0;i<=9;i++){
+                code += `
+                ${optval} × ${i} ＝
+                ${optval*i} <br> `
+            }
+
+            // 4. 화면출력 : html코드를 innerHTML로 출력!
+            // 주의: innerText로 출력하면 태그가 그대로 보임!
+            tg.innerHTML = code;
            }
         /*************************************************** 
                [ for문 ]
