@@ -203,7 +203,8 @@
       top: 350px;
 
       /* 플렉스박스 */
-      
+      display: flex;
+      align-items: center;
     }
     /* 세번째 li부터 끝으로 보내기 */
     .t3 li:nth-child(3){
@@ -221,13 +222,14 @@
       height: 500px;
 
       /* 플렉스박스 */
-      
+      display: flex;
+      /* 진행방향 변경: 수직 */
       /* 진행방향의 수직정렬 중앙 */
-      
+      flex-direction: column;
     }
     /* 4번째 li부터 맨아래 끝으로 보내기 */
     .t4 li:nth-child(4){
-      
+      margin-top: auto;
       /* 보내고자 하는 요소의 마진탑을 auto
       로 설정하면 flex에서 아래쪽 끝으로 배치함 */
     }
@@ -239,13 +241,13 @@
       width: 150px;
 
       /* 플렉스박스 */
-      
+      display: flex;
     }
     /* 자식요소에 flex-shrink 설정으로 크기유지하기 */
     .t5 li{
       /* 부모박스가 줄어들때 같이 자동으로
       줄어들래? 0 아니! */
-      
+      flex-shrink: 0;
       /* 
         flex속성을 자식요소에 셋팅하지 않으면
         기본값은 아래와 같다!
@@ -266,9 +268,9 @@
       height: 250px;
 
       /* 플렉스 박스 */
-      
+      display: flex;
       /* 플렉스 랩핑설정! */
-      
+      flex-wrap: wrap;
       /********************************** 
         [ flex-wrap 속성 ]
         - 박스 가로크기 보다 아이템(자식요소)
@@ -285,7 +287,9 @@
       **********************************/
 
       /* 진행방향 수평정렬 */
-      
+      justify-content: center;
+
+      align-content: space-evenly;
       /* 
         align-content 속성:
         - 진행방향의 수직으로 정렬
@@ -321,7 +325,7 @@
       height: 200px;
 
       /* 플렉스박스 */
-      
+      display: flex;
       /* 랩핑박스 */
       
       /* 수평정렬 */
@@ -378,34 +382,34 @@
     </ol>
 
     <!-- 타이틀박스3 -->
-    <!-- <ol class="tit t3">
+    <ol class="tit t3">
       <li>L</li>
       <li>O</li>
       <li>T</li>
       <li>T</li>
       <li>E</li>
-    </ol> -->
+    </ol>
 
     <!-- 타이틀박스4 -->
-    <!-- <ol class="tit t4">
+    <ol class="tit t4">
       <li>W</li>
       <li>O</li>
       <li>R</li>
       <li>L</li>
       <li>D</li>
-    </ol> -->
+    </ol>
 
     <!-- 타이틀박스5 -->
-    <!-- <ol class="tit t5">
+    <ol class="tit t5">
       <li>W</li>
       <li>O</li>
       <li>R</li>
       <li>L</li>
       <li>D</li>
-    </ol> -->
+    </ol>
 
     <!-- 타이틀박스6 -->
-    <!-- <ol class="tit t6">
+    <ol class="tit t6">
       <li>L</li>
       <li>O</li>
       <li>T</li>
@@ -423,25 +427,25 @@
       <li>R</li>
       <li>L</li>
       <li>D</li>
-    </ol> -->
+    </ol>
 
     <!-- 타이틀박스7 -->
-    <!-- <ol class="tit t7">
+    <ol class="tit t7">
       <li>L</li>
       <li>O</li>
       <li>T</li>
       <li>T</li>
-      <li>E</li> -->
+      <li>E</li>
       
       <!-- 줄바꿈요소 -->
-      <!-- <li class="brk"></li>
+      <li class="brk"></li>
 
       <li>W</li>
       <li>O</li>
       <li>R</li>
       <li>L</li>
       <li>D</li>
-    </ol> -->
+    </ol>
 
   </div>
 
