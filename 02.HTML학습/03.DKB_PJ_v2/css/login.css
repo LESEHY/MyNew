@@ -116,7 +116,12 @@ input:focus{
     width: 20px;
     height: 20px;
     vertical-align: middle;
+    font-size: 20px;
     outline: 1px solid red;
+}
+/* 체크박스 체크 시 아이콘 변경 */
+.addbx input:checked+label{
+    font-weight: 900;
 }
 
 /* 기타 링크 구분선*/
