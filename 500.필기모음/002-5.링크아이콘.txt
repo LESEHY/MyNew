@@ -4,6 +4,8 @@
 
 1. CDN 링크를 적용할 페이지 상단에 넣는다
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+ (버전별 링크주소가 다를 수 있으므로 구글검색 추천!)
+ 예) 검색 키워드: font awesome 6 cdn
 
  2. 원하는 아이콘을 어썸 사이트에서 검색함
 https://fontawesome.com/
