@@ -133,6 +133,12 @@ body *{
     text-align: center;
     line-height: 2;
     
+    transition: top .3s ease-out;
+}
+
+/* 상위 li에 마우스 오버 시 영화정보 올라오기 */
+.mlist ul>li:hover .movtxt{
+    top: 0;
 }
 /* 영화제목만 변경 */
 .movtxt li:first-child{
