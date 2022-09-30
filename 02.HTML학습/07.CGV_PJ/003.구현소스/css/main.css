@@ -205,8 +205,19 @@ body * {
 }
 
 /* sns a요소 오버시 */
+/* 페이스북 */
 .sns a[class$=book]:hover{
     color: lightskyblue;
+
+}
+/* 트위터 */
+.sns a[class*=tw]:hover{
+    color: lightcyan;
+
+}
+/* 인스타 */
+.sns a[class^='fa-brands fa-square-in']:hover{
+    color: lightcoral;
 
 }
 /* 
@@ -218,5 +229,7 @@ body * {
                     (^ 일은 웃으면서 시작)
     [속성명$=값] -> 값이 끝나는 문자가 있으면 적용
                     ($ 일이 끝나면 돈받고 끝남)
+_______________________________________________________
+    -> 문자열이 문제가 없다면 따옴표 없이 사용가능
 */
 
