@@ -197,7 +197,16 @@ body * {
     display: block;
     width: 100%;
     height: 100%;
+
+    /* 폰트어썸 아이콘 설정 */
     font-size: 30px;
     text-align: center;
     line-height: 34px;
 }
+
+/* sns a요소 오버시 */
+.sns a[class*=facebook]:hover{
+    color: lightskyblue;
+
+}
+
