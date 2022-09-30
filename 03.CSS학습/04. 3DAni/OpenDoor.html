@@ -84,7 +84,24 @@
             transform-origin: left;
 
             animation: 
-            doorAni 2s ease-in-out infinite alternate;
+            /* 1. 닫힌 문 처음열기 애니메이션 */
+            firstAni 1s ease-in-out forwards,
+            /* 2. 열린 후 이어받아서 무한애니(처음에 1초기다림)*/
+            doorAni 2s ease-in-out 1s infinite alternate;
+
+            /* 애니메이션 멈추기 옵션 */
+            animation-play-state: paused;
+            /*
+                [ 애니메이션 작동/멈춤 속성] 
+                animation-play-state:
+                -> running : 애니메이션 작동
+                -> paused : 애니메이션 멈춤
+
+            */
+        }
+        /* 마우스 오버시 작동하기 */
+        .cont:hover .door{
+            animation-play-state: running;
         }
 
         /* 키프레임 */
@@ -94,6 +111,13 @@
             }
             to {
                 transform: rotateY(-60deg);
+            }
+        }
+        
+        /* 처음열기 애니메이션 */
+        @keyframes firstAni {
+            to {
+                transform: rotateY(60deg);
             }
         }
 
