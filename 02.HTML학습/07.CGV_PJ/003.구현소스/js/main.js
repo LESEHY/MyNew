@@ -36,5 +36,11 @@ function chgMV(){
     // 1. 호출확인
     console.log("바꿔");
     
+    // 2. 변경대상: #screen iframe
+    var tg = document.querySelector("#screen iframe");
+
+    // 3. 변경내용: 대상요소의 src속성을 변경함!
+    tg.src = 
+    `https://www.youtube.com/embed/mI9oyFMUlfg?autoplay=1`;
 
 }
