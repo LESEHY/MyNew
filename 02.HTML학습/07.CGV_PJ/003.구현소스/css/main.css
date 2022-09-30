@@ -6,23 +6,24 @@
 @import url(core.css);
 
 /* 전체배경색 */
-body{
+body {
     background-color: #000;
 }
+
 /* 공사중 표시 */
-body *{
+body * {
 
     outline: 1px dotted lime;
 }
 
 /**************************** 1. 상단영역 ****************************/
-.top{
+.top {
     height: 80px;
     background: url(../images/curtain.jpg) repeat-x;
 }
 
 /* 로고 */
-.tit{
+.tit {
     font-family: 'Jua', sans-serif;
     color: aquamarine;
     font-size: 4rem;
@@ -33,29 +34,30 @@ body *{
     text-shadow: 0 0 4px aquamarine;
 
     /* 애니메이션 */
-    animation: 
-    titAni .5s ease-in infinite alternate;
+    animation:
+        titAni .5s ease-in infinite alternate;
 }
+
 /* 타이틀 Glow 효과 애니메이션 키프레임*/
 @keyframes titAni {
-    to{
+    to {
         text-shadow: 0 0 12px aquamarine;
     }
 }
 
 /**************************** 2. 메인영역 ****************************/
-.cont{
+.cont {
     /* 부모자격(#screen) */
-    position: relative; 
+    position: relative;
 
     height: 788px;
     background: url(../images/bg.jpg) no-repeat center;
 }
 
 /* 스크린 */
-#screen{
+#screen {
     position: absolute;
-    
+
     top: 136px;
     left: calc(50% - 344px);
     /* 화면이 줄어도 스크린 중앙에 위치하도록 
@@ -67,7 +69,7 @@ body *{
 }
 
 /* 유튜브 아이프레임 */
-#screen iframe{
+#screen iframe {
     width: 100%;
     height: 100%;
     border: none;
@@ -75,7 +77,7 @@ body *{
 }
 
 /* 예고편 선택메뉴 */
-.mlist{
+.mlist {
     position: absolute;
     bottom: 67px;
     width: 100%;
@@ -85,32 +87,33 @@ body *{
 }
 
 /* 선택메뉴 ul */
-.mlist ul{
+.mlist ul {
     display: flex;
     /* 수평방향 정렬 */
     justify-content: center;
 }
 
 /* 상위 li */
-.mlist ul>li{
+.mlist ul>li {
     /* 부모자격: .movtxt */
     position: relative;
     /* 부모자격이 있는 요소가 앱솔루트 숨길 수 있다! */
     overflow: hidden;
 }
-/* 상위 li 2번째 부터 끝까지 선택 */ 
-.mlist>ul>li+li{ 
-    margin-left: 10px; 
-} 
- 
-/* 포스터 이미지 */ 
-.mlist img{ 
-    width: 99px; 
-    height: 140px; 
-} 
+
+/* 상위 li 2번째 부터 끝까지 선택 */
+.mlist>ul>li+li {
+    margin-left: 10px;
+}
+
+/* 포스터 이미지 */
+.mlist img {
+    width: 99px;
+    height: 140px;
+}
 
 /* 영화정보 박스 */
-.movtxt{
+.movtxt {
     display: flex;
     /* 플렉스 수직방향진행 */
     flex-direction: column;
@@ -132,23 +135,56 @@ body *{
     font-size: 1.4rem;
     text-align: center;
     line-height: 2;
-    
+
     transition: top .5s ease-out;
 }
 
 /* 상위 li에 마우스 오버 시 영화정보 올라오기 */
-.mlist ul>li:hover .movtxt{
+.mlist ul>li:hover .movtxt {
     top: 0;
 }
+
 /* 영화제목만 변경 */
-.movtxt li:first-child{
+.movtxt li:first-child {
     color: aqua;
     font-size: 1.7rem;
     letter-spacing: -1px;
 }
- 
+
 /**************************** 3. 하단영역 ****************************/
-.info{ 
-    height: 100px; 
-} 
- 
+.info {
+    /* 하위 직계 div만 옆으로 흐름 */
+    display: flex;
+    height: 100px;
+}
+
+/* 하단로고 */
+.info>div:first-child {
+    margin-right: 20px;
+}
+
+/* 회사주소 */
+.info address {
+    color: #ccc;
+    /* 기본이탤릭 해제 */
+    font-style: normal;
+    font-family: 'Cute Font', cursive;
+    font-size: 1.8rem;
+    line-height: 2rem;
+}
+
+/* SNS 박스 */
+.info>div:last-child {
+    /* 마지막 div만 오른쪽 끝으로 이동! */
+    margin-left: auto;
+}
+
+.sns {
+    /* 하위 li를 옆으로 흐르게 */
+    display: flex;
+}
+
+.sns li {
+    width: 34px;
+    height: 34px;
+}
