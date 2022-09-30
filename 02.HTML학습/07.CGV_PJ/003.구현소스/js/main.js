@@ -48,16 +48,19 @@ function chgMV(ele){ // ele -> 전달되는 a요소
     // 0. 전달되는 a요소의 "data-mv" 속성값 읽어오기
     var minfo = ele.getAttribute("data-mv");
     // getAttribute(속성명) -> 요소의 속성값 읽어오는 내장함수
+    // setAttribute(속성명, 값) -> 요소값셋팅 내장함수
+
     
     // 1. 호출확인
-    console.log("바꿔");
+    console.log("바꿔", minfo);
     
     // 2. 변경대상: #screen iframe
     var tg = document.querySelector("#screen iframe");
 
     // 3. 변경내용: 대상요소의 src속성을 변경함!
+    // src값 중 동영상 ID만 변수에 담긴 것으로 변경하여 반영함!
     tg.src = 
-    `https://www.youtube.com/embed/mI9oyFMUlfg?autoplay=1`;
+    `https://www.youtube.com/embed/${minfo}?autoplay=1`;
 
 }
 
