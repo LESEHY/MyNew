@@ -10,26 +10,28 @@
         @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
         /* font-family: 'Comfortaa', cursive; */
 
-        html,body{
+        html,
+        body {
             margin: 0;
             padding: 0;
         }
 
         /* 전체 배경색 */
-        body{
+        body {
             background-color: #9c0;
         }
 
         /* 전체 타이틀 */
-        .tit{
+        .tit {
             font-family: 'Comfortaa', cursive;
             font-size: 42px;
             text-align: center;
             color: #fff;
-            text-shadow: 2px 2px 2px #222; 
+            text-shadow: 2px 2px 2px #222;
         }
+
         /* 전체문부모 */
-        .cont{
+        .cont {
             position: relative;
             top: 100px;
             width: 200px;
@@ -37,8 +39,9 @@
             background-color: #900;
             margin: 0 auto;
         }
+
         /* 문프레임 */
-        .frame{
+        .frame {
             position: relative;
             top: 20px;
             width: 150px;
@@ -64,11 +67,11 @@
             -> 기본값은 center (정중앙)
 
             */
-                perspective-origin: left bottom;
+            perspective-origin: left bottom;
         }
 
         /* 문짝 */
-        .door{
+        .door {
             position: relative;
             /* 부모자격 .handle */
             width: 150px;
@@ -76,13 +79,23 @@
             background-color: #c90;
 
             /* 문회전하기 : Y축 */
-            transform: rotateY(60deg);
+            transform: rotateY(0deg);
             /* 회전축 변경 */
             transform-origin: left;
         }
 
+        /* 키프레임 */
+        @keyframes doorAni {
+            from {
+                transform: rotateY(60deg);
+            }
+            to {
+                transform: rotateY(-60deg);
+            }
+        }
+
         /* 손잡이 */
-        .handle{
+        .handle {
             position: absolute;
             top: 140px;
             right: 10px;
