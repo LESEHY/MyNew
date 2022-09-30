@@ -133,7 +133,7 @@ body *{
     text-align: center;
     line-height: 2;
     
-    transition: top .3s ease-out;
+    transition: top .5s ease-out;
 }
 
 /* 상위 li에 마우스 오버 시 영화정보 올라오기 */
