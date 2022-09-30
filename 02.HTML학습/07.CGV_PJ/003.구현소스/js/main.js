@@ -42,7 +42,12 @@ for (var i = 0; i < len; i++) {
     함수명: chgMV
     기능: iframe 영화 예고편 변경하기!
 ********************************/
-function chgMV(){
+function chgMV(ele){ // ele -> 전달되는 a요소
+    // 전달변수는 선언없이 바로 씀!
+
+    // 0. 전달되는 a요소의 "data-mv" 속성값 읽어오기
+    var minfo = ele.getAttribute("data-mv");
+    // getAttribute(속성명) -> 요소의 속성값 읽어오는 내장함수
     
     // 1. 호출확인
     console.log("바꿔");
