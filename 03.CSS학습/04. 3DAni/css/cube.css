@@ -91,7 +91,7 @@ body{
 
 /* 6. 아랫면 */
 .cube span:nth-child(6){
-    background: url(../images/img2.jpg)no-repeat center/cover;
+    background: url(../images/London_city.jpg)no-repeat center/cover;
     /* y축회전하고 화면방향(z)밀고  */
     transform: rotateX(-90deg) translateZ(150px);
 }
