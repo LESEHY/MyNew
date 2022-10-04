@@ -86,7 +86,7 @@
         function setFn() {
 
             // 1. 함수호출확인
-            console.log('이벤트 설정!');
+            // console.log('이벤트 설정!');
 
             // 2. 대상선정 : 버튼들 - .btns
             let btns = document.querySelectorAll(".btns");
@@ -95,7 +95,7 @@
 
             // 버튼개수 변수할당
             let cnt = btns.length;
-            console.log('버튼들:', btns, '/개수:', cnt);
+            // console.log('버튼들:', btns, '/개수:', cnt);
 
             // 3. 대상만큼 모두 돌아서 click이벤트 셋팅하기!
             // 이벤트 적용대상 : 버튼들 -> btns변수 : 컬렉션 담김(0부터)
@@ -134,7 +134,7 @@
             let btxt = ele.innerText;
 
             // 1. 호출확인
-            console.log('나야나', btxt);
+            // console.log('나야나', btxt);
 
             // 이미지 경로변수(이것이 버튼별 바뀜!)
             let isrc;
@@ -144,14 +144,23 @@
                 isrc = "./images/ala1.jpg";
 
             } else if (btxt === "장면1") {
-                isrc = "./images/ala2.jpg";
+                isrc = "./images/ala4.jpg";
 
             } else if (btxt === "장면2") {
                 isrc = "./images/ala3.jpg";
-                
+
             } else if (btxt === "장면3") {
-                isrc = "./images/ala4.jpg";
+                isrc = "./images/ala2.jpg";
             }
+
+            // 이미지 경로확인!
+            console.log('이미지경로:',isrc);
+
+            // 3. 대상 이미지에 src값 변경하기
+            // 대상이미지 : #scene
+            // 속성변경하기 JS내장함수 : setAttribute(속성값,값)
+            document.querySelector('#scene')
+            .setAttribute('src',isrc);
         }
     </script>
 </head>
