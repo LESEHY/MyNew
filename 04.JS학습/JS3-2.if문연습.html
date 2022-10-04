@@ -76,23 +76,36 @@
             -> 이벤트가 발생하면 함수안의 코드를 실행함!
             
         */
-         
-         
+
+
 
         /*************************************** 
             함수명: setFn
             기능: 버튼에 이벤트 설정하기
         ***************************************/
-       function setFn(){
+        function setFn() {
 
             // 1. 함수호출확인
             console.log('이벤트 설정!');
 
             // 2. 대상선정 : 버튼들 - .btns
             let btns = document.querySelectorAll(".btns");
-            console.log('버튼들:',btns);
+            // querySelectorAll()은 가져온 요소를 컬렉션집합에 담는다!
+            // 컬렉션 집합은 반드시 개별요소 접근 시 .item(n) / [n] 사용함!
+            
+            // 버튼개수 변수할당
+            let cnt = btns.length;
+            console.log('버튼들:', btns, '/개수:', cnt);
 
-       }
+            // 3. 대상만큼 모두 돌아서 click이벤트 셋팅하기!
+            // 이벤트 적용대상 : 버튼들 -> btns변수 : 컬렉션 담김(0부터)
+            // 사용할 이벤트속성 : onclick
+            // 셋팅내용 : 이미지 src변경 기능함수 호출! -> chgImg 함수
+            // for(시;한;증;){코드} 
+            for (let i = 0; i < cnt; i++) {
+                
+            }
+        }
 
         /*********************************************** 
             [JS 기능정의]
@@ -108,14 +121,13 @@
             함수명: chgImg
             기능: 이미지 src변경하기
         **************************************/
-        function chgImg(){
-            
+        function chgImg() {
+
             // 1. 호출확인
             console.log('나야나');
 
             // 2. 
         }
-
     </script>
 </head>
 
