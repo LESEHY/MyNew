@@ -11,5 +11,50 @@ html,body{
 /* 전체배경 */
 body{
     background-image: 
-    linear-gradient(to bottom, #777 30%, #ccc 70%);
+    linear-gradient(to bottom, #5c5c5c 30%, #d2d2d2 70%);
+}
+
+/* 큐브 */
+.cube{
+    position: absolute;
+    top: calc(50% - 150px);
+    left: calc(50% - 150px);
+    /* calc()로 정중앙 계산! */
+    width: 300px;
+    height: 300px;
+
+    /* 
+        [ 입체로 설정하기 ]
+        - 입체로 설정할 요소의 부모박스에 아래와 같이 설정해 준다!
+        transform-style: preserve-3d;
+        - 기본값 flat, 즉 2D
+        - preserve-3d 는 3D 전환설정!
+    */
+    transform-style: preserve-3d;
+
+    /* 입체를 잘보이게 하기 위해 약간회전 */
+    transform: 
+    rotateX(10deg) rotateY(30deg);
+
+
+
+    outline: 1px solid red;
+}
+
+/* 큐브각면 공통 */
+.cube span{
+    position: absolute;
+    /* 앱솔루트는 자동 block변경됨! */
+    width: 100%;
+    height: 100%;
+    /* 부모는? .cube */
+
+    /* 투명도 */
+    opacity: 0.8;
+    outline: 2px dashed blue;
+}
+/* 1. 앞면 */
+.cube span:nth-child(1){
+    background: 
+    url(../images/newyorkCity.jpg) no-repeat right/auto 105%;
 }
