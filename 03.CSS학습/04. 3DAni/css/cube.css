@@ -35,8 +35,7 @@ body{
     /* 입체를 잘보이게 하기 위해 약간회전 */
     transform: 
     rotateX(10deg) rotateY(30deg);
-
-
+    
 
     outline: 1px solid red;
 }
@@ -57,4 +56,28 @@ body{
 .cube span:nth-child(1){
     background: 
     url(../images/newyorkCity.jpg) no-repeat right/auto 105%;
+    
+    /* 화면방향(z축) */
+    transform: translateZ(150px);
+}
+
+/* 2. 오른쪽면 */
+.cube span:nth-child(2){
+    background: url(../images/seoulCity.jpg)no-repeat center/cover;
+    /* y축회전하고 화면방향(z)밀고  */
+    transform: rotateY(90deg) translateZ(150px);
+}
+
+/* 3. 뒷면 */
+.cube span:nth-child(3){
+    background: url(../images/parisCity.jpg)no-repeat center/cover;
+    /* y축회전하고 화면방향(z)밀고  */
+    transform: rotateY(180deg) translateZ(150px);
+}
+
+/* 4. 왼쪽면 */
+.cube span:nth-child(4){
+    background: url(../images/cityMain.jpg)no-repeat center/cover;
+    /* y축회전하고 화면방향(z)밀고  */
+    transform: rotateY(270deg) translateZ(150px);
 }
