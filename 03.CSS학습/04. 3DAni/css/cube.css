@@ -95,3 +95,11 @@ body{
     /* y축회전하고 화면방향(z)밀고  */
     transform: rotateX(-90deg) translateZ(150px);
 }
+
+/* 큐브회전 키프레임 */
+@keyframes cubeAni {
+    to{
+        transform: 
+        rotateX(370deg) rotateY(-330deg);
+    }
+}
