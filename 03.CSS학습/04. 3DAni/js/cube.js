@@ -21,14 +21,20 @@ window.addEventListener("DOMContentLoaded", function () {
         // 2. 대상선정: .cube -> cube변수
 
         // 3. 변경내용: 변경대상요소에 클래스 넣기 / 빼기
+        cube.classList.toggle("on");
 
+        // 4. 큐브 클래스 on여부에 따라 버튼 글자 변경하기
+        // 비?집:놀이동산 -> 삼항연산자
+        cube.classList.contains("on") ? 
+        btns.innerText="멈춰!" : btns.innerText="돌아!";
+        // console.log(cube.classList.contains("on"));
         /***************************** 
             [ 클래스 컨트롤 객체 ]
             classList
             -> 하위 메서드
             1. add(클래스명) 
                 -> 클래스추가
-                
+
             2. remove(클래스명) 
                 -> 클래스제거
 
