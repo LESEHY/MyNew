@@ -79,5 +79,19 @@ body{
 .cube span:nth-child(4){
     background: url(../images/cityMain.jpg)no-repeat center/cover;
     /* y축회전하고 화면방향(z)밀고  */
-    transform: rotateY(270deg) translateZ(150px);
+    transform: rotateY(-90deg) translateZ(150px);
+}
+
+/* 5. 윗면 */
+.cube span:nth-child(5){
+    background: url(../images/citys.jpg)no-repeat center/cover;
+    /* y축회전하고 화면방향(z)밀고  */
+    transform: rotateX(90deg) translateZ(150px);
+}
+
+/* 6. 아랫면 */
+.cube span:nth-child(6){
+    background: url(../images/img2.jpg)no-repeat center/cover;
+    /* y축회전하고 화면방향(z)밀고  */
+    transform: rotateX(-90deg) translateZ(150px);
 }
