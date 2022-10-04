@@ -92,7 +92,7 @@
             let btns = document.querySelectorAll(".btns");
             // querySelectorAll()은 가져온 요소를 컬렉션집합에 담는다!
             // 컬렉션 집합은 반드시 개별요소 접근 시 .item(n) / [n] 사용함!
-            
+
             // 버튼개수 변수할당
             let cnt = btns.length;
             console.log('버튼들:', btns, '/개수:', cnt);
@@ -103,7 +103,12 @@
             // 셋팅내용 : 이미지 src변경 기능함수 호출! -> chgImg 함수
             // for(시;한;증;){코드} 
             for (let i = 0; i < cnt; i++) {
-                
+
+                // 개별버튼들 접근하여 셋팅!
+                // 익명함수를 할당하여 이벤트 발생 시 코드실행!
+                btns[i].onclick = function(){chgImg(this)};
+                // 함수호출 시 이벤트가 걸린 나 자신-> this를 보냄!
+
             }
         }
 
@@ -121,12 +126,28 @@
             함수명: chgImg
             기능: 이미지 src변경하기
         **************************************/
-        function chgImg() {
+        function chgImg(ele) { // ele - 버튼자신이 전달됨!
+
+            // 0. 버튼텍스트 읽어오기(버튼구분용도)
+            let btxt = ele.innerText;
 
             // 1. 호출확인
-            console.log('나야나');
+            console.log('나야나',btxt);
 
-            // 2. 
+            // 2. 버튼별 데이터 분기하기(if문사용!)
+            if(btxt==="포스터"){
+
+            }
+
+            else if(btxt==="장면1"){
+                
+            }
+            else if(btxt==="장면2"){
+
+            }
+            else if(btxt==="장면3"){
+
+            }
         }
     </script>
 </head>
