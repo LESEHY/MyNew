@@ -99,13 +99,21 @@ body{
 /* 애니메이션 호출 클래스 */
 .cube-ani{
     animation: cubeAni 4s linear infinite;
+    /* 처음에 멈춰있기 */
+    animation-play-state: paused;
+}
+/* 애니메이션 플레이 클래스 */
+.cube-ani.on{
+    /* 애니메이션 재생 */   
+    animation-play-state: running;
 }
 
 /* 큐브회전 키프레임 */
 @keyframes cubeAni {
     to{
         transform: 
-        rotateX(370deg) rotateY(-330deg);
+        rotateX(370deg) rotateY(-330deg) /* rotateZ(5deg) */;
+
         /* 
             x축 양의 방향으로 10도에서 출발
             양의 방향 360도+10도=370도
