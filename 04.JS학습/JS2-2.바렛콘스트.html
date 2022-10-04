@@ -165,7 +165,9 @@
             // 블록내부에서 전역변수 찍기! 앞
             console.log("블록내부에서 전역변수 찍기! 앞");
             console.log("seoul:", seoul);
-            console.log("jeju:", jeju);
+//-------------------------------------------------------------------//
+            // console.log("jeju:", jeju); -> 에러남!
+
             // 지역 아래에서 let으로 같은 이름의 전역변수를
             // 선언하여 할당하면 이 지역에서 지역변수가 되므로
             // 위에서 미리 호출할 수 없다 -> let의 장점1
@@ -173,7 +175,7 @@
             // Uncaught ReferenceError: 
             // Cannot access 'jeju' before initialization
             // -> 선언하여 초기화 하기 전에는 접근불가 에러남!
-            
+//-------------------------------------------------------------------//         
             console.log("toktok:", toktok);
             console.log("sport:", sport);
 
