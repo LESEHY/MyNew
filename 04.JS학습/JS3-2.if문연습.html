@@ -61,8 +61,23 @@
         // 사용 JS내장함수: addEventListener(이벤트명, 함수)
         // 사용할 이벤트 : DOMContentLoaded
         window.addEventListener("DOMContentLoaded", setFn);
+        // window.addEventListener("click", setFn);
         // 만약 전달값이 없다면 함수 호출시 소괄호 없이 사용함!
-        // 전달값이 있다면 
+        // 전달값이 있다면 .. 익명함수 안에서 전달값과 같이 호출함
+        /* 
+            예)
+            window.addEventListener("DOMContentLoaded", 
+            function(){
+                setFn(전달값);
+            }
+
+            -> 또는 익명함수안에 직접 구현코드를 넣을 수 있음!
+            -> 익명함수의 특성상 코드를 바로 실행않고 보관하다가
+            -> 이벤트가 발생하면 함수안의 코드를 실행함!
+            
+        */
+         
+         
 
         /*************************************** 
             함수명: setFn
