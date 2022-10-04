@@ -37,7 +37,7 @@ body{
     rotateX(10deg) rotateY(30deg);
     
 
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 }
 
 /* 큐브각면 공통 */
@@ -50,7 +50,7 @@ body{
 
     /* 투명도 */
     opacity: 0.8;
-    outline: 2px dashed blue;
+    outline: 1px solid #00000080;
 }
 /* 1. 앞면 */
 .cube span:nth-child(1){
