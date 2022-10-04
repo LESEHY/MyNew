@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* 큐브애니 CSS - cube.css */
+
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /* 보이는 화면기준 채우기! */
+}
+
+/* 전체배경 */
+body{
+    background-image: 
+    linear-gradient(to bottom, #777 30%, #ccc 70%);
+}
