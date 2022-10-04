@@ -106,7 +106,9 @@
 
                 // 개별버튼들 접근하여 셋팅!
                 // 익명함수를 할당하여 이벤트 발생 시 코드실행!
-                btns[i].onclick = function(){chgImg(this)};
+                btns[i].onclick = function () {
+                    chgImg(this)
+                };
                 // 함수호출 시 이벤트가 걸린 나 자신-> this를 보냄!
 
             }
@@ -132,21 +134,23 @@
             let btxt = ele.innerText;
 
             // 1. 호출확인
-            console.log('나야나',btxt);
+            console.log('나야나', btxt);
+
+            // 이미지 경로변수(이것이 버튼별 바뀜!)
+            let isrc;
 
             // 2. 버튼별 데이터 분기하기(if문사용!)
-            if(btxt==="포스터"){
+            if (btxt === "포스터") {
+                isrc = "./images/ala1.jpg";
 
-            }
+            } else if (btxt === "장면1") {
+                isrc = "./images/ala2.jpg";
 
-            else if(btxt==="장면1"){
+            } else if (btxt === "장면2") {
+                isrc = "./images/ala3.jpg";
                 
-            }
-            else if(btxt==="장면2"){
-
-            }
-            else if(btxt==="장면3"){
-
+            } else if (btxt === "장면3") {
+                isrc = "./images/ala4.jpg";
             }
         }
     </script>
