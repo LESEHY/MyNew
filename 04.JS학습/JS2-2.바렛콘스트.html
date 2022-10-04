@@ -166,13 +166,25 @@
             console.log("블록내부에서 전역변수 찍기! 앞");
             console.log("seoul:", seoul);
             console.log("jeju:", jeju);
+            // 지역 아래에서 let으로 같은 이름의 전역변수를
+            // 선언하여 할당하면 이 지역에서 지역변수가 되므로
+            // 위에서 미리 호출할 수 없다 -> let의 장점1
+            // -> 에러 메시지:
+            // Uncaught ReferenceError: 
+            // Cannot access 'jeju' before initialization
+            // -> 선언하여 초기화 하기 전에는 접근불가 에러남!
+            
             console.log("toktok:", toktok);
             console.log("sport:", sport);
 
             // 블록에서 변수 재선언하기! //////////
-            // var seoul = "강남구";
+            var seoul = "강남구";
+            // -> 전역변수가 다시 선언되어 할당된 결과임!
+            // 문제: 전역변수가 중간에 다시 선언되어 변경되므로
+            // 코드 관리상 혼선이 오게 되는 치명적 단점이 된다!
 
-            // let jeju = "마라도";
+
+            let jeju = "마라도";
             // 전역변수 var로 선언된 같은 이름의 변수를
             // let으로 블록영역에서 선언하여 할당하면?
             
