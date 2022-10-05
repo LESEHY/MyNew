@@ -21,7 +21,7 @@
 
                 // 호출확인
                 // console.log("로딩완료!");
-                
+
                 // 대상 선정하기
 
                 // 클릭이벤트 대상: button
@@ -35,7 +35,7 @@
                 let tg = document.querySelectorAll(".forCls");
                 // console.log(tg);
 
-               
+
 
                 // 이벤트 설정하기
                 for (let i = 0; i < cnt; i++) {
@@ -57,19 +57,27 @@
                     // console.log("나야나", btxt);
 
                     // 버튼에 따른 분기하기
-                    if (btxt === "기본호출") {
-                        for (let i = 1; i <= 10; i++) {
-                            tg[0].innerHTML +=
-                            `<img src="./images/num/num_0${i}.png" alt="숫자이미지">`;
-                        } //for
+                    // 출력대상이 버튼별로 다름
+                    // 출력순번 -> tg[순번]
+                    let num;
+                    if (btxt === "기본호출") num = 0;
+                    else if (btxt === "") num = 1;
+                    else if (btxt === "") num = 2;
 
-                    } //if
+                    // 전체 공통 For문
+                    for (let i = 1; i <= 10; i++) {
+
+                        // 화면출력
+                        tg[0].innerHTML +=
+                            `<img src="./images/num/num_0${i}.png" alt="숫자이미지">`;
+                    } //for
+
+
 
                 } ///////////// addNum 함수 /////////////////
                 /////////////////////////////////////////////
 
-            });//로드
-
+            }); //로드
     </script>
 </head>
 
