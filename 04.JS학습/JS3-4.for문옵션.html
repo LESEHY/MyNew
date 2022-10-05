@@ -21,21 +21,23 @@
 
                 // 호출확인
                 // console.log("로딩완료!");
-                // 이벤트 설정하기
+                
+                // 대상 선정하기
 
                 // 클릭이벤트 대상: button
                 let btns = document.querySelectorAll("button");
-
                 // console.log(btns); 
-
-                // 변경대상: .forCls
-                let tg = document.querySelectorAll(".forCls");
-                console.log(tg);
-
 
                 // 버튼 개수
                 let cnt = btns.length;
-                // for(let i=0; i<btns.length; i++){} 비추
+
+                // 변경대상: .forCls
+                let tg = document.querySelectorAll(".forCls");
+                // console.log(tg);
+
+               
+
+                // 이벤트 설정하기
                 for (let i = 0; i < cnt; i++) {
                     btns[i].onclick = addNum;
                 }
@@ -57,14 +59,17 @@
                     // 버튼에 따른 분기하기
                     if (btxt === "기본호출") {
                         for (let i = 0; i < 10; i++) {
-                            cnt[i]
-                        }
-                    }
+                            th[0].innerHTML +=
+                            ``;
+                        } //for
+
+                    } //if
 
                 } ///////////// addNum 함수 /////////////////
                 /////////////////////////////////////////////
-            });
-//-----------------로드구역------------------------//
+
+            });//로드
+
     </script>
 </head>
 
