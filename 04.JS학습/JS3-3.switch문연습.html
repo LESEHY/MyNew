@@ -106,11 +106,11 @@
 
                 // 개별버튼들 접근하여 셋팅!
                 // 익명함수를 할당하여 이벤트 발생 시 코드실행!
-//---------------------------------------------------------------------------//
+                //---------------------------------------------------------------------------//
                 // 방법 1: onclick 속성에 익명함수 할당방식
                 // btns[순번] 또는 btns.item(순번)
                 btns[i].onclick = function () {
-                        chgImg(this)
+                    chgImg(this)
                 };
 
                 // 방법 2: 이벤트 등록 내장함수 사용방식
@@ -121,7 +121,7 @@
                 })
 
                 */
-//---------------------------------------------------------------------------//
+                //---------------------------------------------------------------------------//
                 // 함수호출 시 이벤트가 걸린 나 자신-> this를 보냄!
 
             }
@@ -153,48 +153,35 @@
             let isrc;
 
             // 2. 버튼별 데이터 분기하기(switch문사용!)
-            // if (btxt === "포스터") {
-            //     isrc = "./images/ala1.jpg";
-
-            // } else if (btxt === "장면1") {
-            //     isrc = "./images/ala4.jpg";
-
-            // } else if (btxt === "장면2") {
-            //     isrc = "./images/ala3.jpg";
-
-            // } else if (btxt === "장면3") {
-            //     isrc = "./images/ala2.jpg";
-            // }
-
-            switch(btxt){
+            switch (btxt) {
                 case "포스터":
-                isrc = "./images/ala1.jpg";
-                break;
+                    isrc = "./images/ala1.jpg";
+                    break;
 
                 case "장면1":
-                isrc = "./images/ala4.jpg";
-                break;
+                    isrc = "./images/ala4.jpg";
+                    break;
 
                 case "장면2":
-                isrc = "./images/ala3.jpg";
-                break;
+                    isrc = "./images/ala3.jpg";
+                    break;
 
                 case "장면3":
-                isrc = "./images/ala2.jpg";
-                break;
-                
+                    isrc = "./images/ala2.jpg";
+                    break;
+
             }
 
 
             // 이미지 경로확인!
-            console.log('이미지경로:',isrc);
+            console.log('이미지경로:', isrc);
 
             // 3. 대상 이미지에 src값 변경하기
             // 대상이미지 : #scene
             // 속성변경하기 JS내장함수 : setAttribute(속성값,값)
             document.querySelector('#scene')
-                .setAttribute('src',isrc);
-                // .src = isrc;
+                .setAttribute('src', isrc);
+            // .src = isrc;
         }
     </script>
 </head>
