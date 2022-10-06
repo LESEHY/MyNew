@@ -410,24 +410,76 @@
                 장르: "액션, 코미디",
                 등급: "15세 관람가",
                 예고편: (link) => {
-                    
+                    const mvbx = document.querySelector("#mvbx");
 
-                } //
+                    mvbx.innerHTML = `
+                    <div id="mv">
+                            <!--유튜브 아이프레임-->
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/fzUKUfHeIYA?autoplay=1" allow="autoplay"></iframe>
+                            <!--닫기버튼-->
+                            <button class="cbtn">×</button>
+                        </div>
+                    `;
 
+                    // 삽입된 동영상박스(#mv) CSS설정하기
+                    const mv = document.querySelector("#mv");
+                    let mst = mv.style;
+
+                    mst.position = "fixed";
+                    mst.top = "50%";
+                    mst.left = "50%";
+                    mst.transform = "translate(-50%,-50%)";
+                    mst.width = "1000px";
+                    mst.height = "750px";
+                    mst.backgroundColor = "#000";
+
+                    // 닫기버튼 셋팅
+                    const cbtn = document.querySelector(".cbtn");
+                    let cst = cbtn.style;
+
+                    cst.position = "absolute";
+                    cst.top = "10px";
+                    cst.right = "-120px";
+                    cst.width = "100px";
+                    cst.height = "100px";
+                    cst.backgroundColor = "black";
+                    cst.border = "none";
+                    cst.color = "yellow";
+                    cst.fontSize = "70px";
+                    cst.fontWeight = "bold";
+                    cst.borderRadius = "50%";
+                    cst.cursor = "pointer";
+
+                    // 닫기버튼 클릭시 #mv지우기
+                    cbtn.onclick = () => mv.remove();
+                    // ()=>{실행문}
+                    // 실행문이 하나일때 중괄호 생략가능
+                    // ()=>실행문;
+                    // remove() 메서드는 선택요소를 제거함!
+
+                } // 예고편
 
             } //MV
 
+            // 줄간격
             tg[5].style.lineHeight = "35px";
 
+            // 화면 출력
             tg[5].innerHTML = `
                 ★영화제목: ${MV["title"]} | ★감독: ${MV.감독} <br>
                 ★배우: ${MV.배우} | ★장르: ${MV.장르} | ★등급: ${MV.등급}
             `;
-            tg[5].setAttribute("title", MV.title +"의 예고편을 보세요!");
 
+            // 메서드
+            tg[5].setAttribute("title", MV.title + "의 예고편을 보세요!");
+
+            // 커서 손모양
             tg[5].style.cursor = "pointer";
 
-            tg[5].onclick = ()=>{MV.예고편()}
+            // 클릭
+            tg[5].onclick = MV.예고편;
+
+
         }; ////////////// loadFn 함수 //////////////////
         ////////////////////////////////////////////////
 
