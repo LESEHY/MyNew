@@ -80,13 +80,21 @@ body {
     left: 50%;
     /* 부모는? 싸고있는 li */
 
-    /* 트랜스폼 x축으로 중앙이동! */
+    /* 트랜스폼 x축으로 중앙이동! y축은 5px이동*/
     transform: translateX(-50%);
     width: 140px;
     padding: 3px;
-    background: url(../images/bg_smenu.png) no-repeat center/cover;
+    background: url(../images/bg_smenu.png) 
+    no-repeat center/cover;
     border-radius: 5px;
     box-shadow: 0 0 5px #fff;
+
+    /* 처음에 안보임! */
+    display: none;
+}
+/* 상위메뉴 li에 마우스 오버 시 하위메뉴 보이기 */
+.gnb ul>li:hover .smenu{
+    display: block;
 }
 
 /* 가상요소로 삼각형 모양 만들기 */
@@ -94,11 +102,13 @@ body {
     content: '';
     display: block;
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 
     /* 삼각형 만들기 */
     width: 0;
     height: 0;
-    border-bottom: 1px solid lime;
+    border-bottom: 10px solid lime;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
 
