@@ -43,7 +43,49 @@ window.addEventListener("DOMContentLoaded",()=>{
         // 이벤트가 걸린 요소자신이 함수에 전달된다!
     
         // console.log("진짜도니?", i);
-    }
+    } //for
+
+    // 영화선택 메뉴 li 클릭 시 클래스 적용하기
+
+    // 대상 : .mlist ul>li
+    const mli = document.querySelectorAll(".mlist ul>li");
+    // console.log(mli);
+
+    // 대상을 모두 클릭설정하여 
+    // 클릭 시 클래스 on 넣기!
+    for(let x of mli){ // x는 요소자신
+
+        // console.log(x);
+        // 1. 클릭 이벤트 설정하기
+        x.onclick = ()=>{
+            // 초기화하기(모두 on제거!)
+            // ele는 각각의 요소자신(li)
+            mli.forEach(
+                ele=>ele.classList.remove("on"));
+
+            // 클릭된 자신에게 클래스 on 넣기
+            x.classList.add("on");
+
+        };// click
+
+    }// for of
+    /************************************************************** 
+        [ 클래스 컨트롤 내장객체: classList ]
+        -> 객체하위 메서드
+        1. add(클래스명) -> 클래스 추가
+        2. remove(클래스명) -> 클래스 제거
+        3. toggle(클래스명) -> 클래스 추가/제거
+        4. constain(클래스명) -> 클래스 유/무 판별(true/false)
+    **************************************************************/
+
+
+
+
+
+
+
+
+
 }); // 로드구역
 
 
