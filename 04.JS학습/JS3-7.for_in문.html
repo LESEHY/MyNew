@@ -127,31 +127,34 @@
                                     .innerHTML =
                                     `<img src="${data[z]}" alt="${btxt}의 포스터">`;
                                 break;
-                            // 제목넣기
+                                // 제목넣기
                             case "제목":
                                 document
                                     .querySelector(".tit")
                                     .innerText =
                                     `영화명: ${data[z]}`;
                                 break;
-                            // 개요넣기
+                                // 개요넣기
                             case "개요":
                                 document
-                                .querySelector(".sum")
-                                .innerHTML =
-                                `${data[z]}`;
-                            // 감독넣기
+                                    .querySelector(".sum")
+                                    .innerHTML =
+                                    `${data[z]}`;
+                                break;
+                                // 감독넣기
                             case "감독":
                                 document
-                                .querySelector(".dir")
-                                .innerHTML =
-                                `${data[z]}`;
-                            // 출연넣기
+                                    .querySelector(".dir")
+                                    .innerHTML =
+                                    `${data[z]}`;
+                                break;
+                                // 출연넣기
                             case "출연":
                                 document
-                                .querySelector(".act")
-                                .innerHTML =
-                                `${data[z]}`;
+                                    .querySelector(".act")
+                                    .innerHTML =
+                                    `${data[z]}`;
+                                break;
 
                         } // switch
                     } // for in
