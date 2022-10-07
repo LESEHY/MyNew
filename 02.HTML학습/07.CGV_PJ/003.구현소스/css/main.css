@@ -52,7 +52,7 @@ body {
 /* GNB */
 .gnb {
     position: absolute;
-    bottom: 20px;
+    bottom: 10px;
     right: 20px;
     /* 부모는 .top */
 }
@@ -72,6 +72,8 @@ body {
     position: relative;
     font-size: 2rem;
     padding: 0 10px;
+    /* 하단패딩-서브메뉴 아웃문제해결! */
+    padding-bottom: 5px;
 }
 
 /* GNB 서브메뉴 */
@@ -102,6 +104,7 @@ body {
     content: '';
     display: block;
     position: absolute;
+    top: -10px;
     left: 50%;
     transform: translateX(-50%);
 
@@ -138,7 +141,8 @@ body {
 }
 
 /* 서브메뉴 오버시 이미지 가상요소로 넣기 */
-.smenu a:hover::after {
+/* "영화" 하위메뉴 이모지 */
+.gnb ul>li:nth-child(1) .smenu a:hover::after {
     content: '🎥';
     float: right;
 }
