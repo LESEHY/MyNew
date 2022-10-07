@@ -146,6 +146,21 @@ body {
     content: '🎥';
     float: right;
 }
+/* "예매" 하위메뉴 이모지 */
+.gnb ul>li:nth-child(2) .smenu a:hover::after {
+    content: '🎫';
+    float: right;
+}
+/* "극장" 하위메뉴 이모지 */
+.gnb ul>li:nth-child(3) .smenu a:hover::after {
+    content: '🎦';
+    float: right;
+}
+/* "이벤트&컬처" 하위메뉴 이모지 */
+.gnb ul>li:nth-child(4) .smenu a:hover::after {
+    content: '📅';
+    float: right;
+}
 
 /* 서브메뉴 중 li 보더 상단 class */
 .bdt {
@@ -198,6 +213,9 @@ body {
     display: flex;
     /* 수평방향 정렬 */
     justify-content: center;
+
+    /* 원근설정 - 하위li에 주기위함 */
+    perspective: 480px;
 }
 
 /* 상위 li */
@@ -206,6 +224,20 @@ body {
     position: relative;
     /* 부모자격이 있는 요소가 앱솔루트 숨길 수 있다! */
     overflow: hidden;
+    /* 트랜스폼 축변경 - 하위 */
+    transform-origin: bottom;
+    /* 트랜스폼 x축회전 */
+    transform: rotateX(40deg);
+    /* 트랜지션 */
+    transition: all .4s ease-out ;
+}
+
+/* 상위 li에 마우스 오버시 일어나!! */
+.mlist ul>li:hover{
+    transform: rotateX(0deg);
+    outline: 1px solid aqua;
+    /* 오버시 맨위로 오게 z-index */
+    z-index: 1;
 }
 
 /* 상위 li 2번째 부터 끝까지 선택 */
