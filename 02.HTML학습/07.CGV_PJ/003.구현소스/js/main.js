@@ -56,14 +56,14 @@ window.addEventListener("DOMContentLoaded",()=>{
     for(let x of mli){ // x는 요소자신
 
         // console.log(x);
-        // 1. 클릭 이벤트 설정하기
+        // 클릭 이벤트 설정하기
         x.onclick = ()=>{
-            // 초기화하기(모두 on제거!)
+            // 1. 초기화하기(모두 on제거!)
             // ele는 각각의 요소자신(li)
             mli.forEach(
                 ele=>ele.classList.remove("on"));
 
-            // 클릭된 자신에게 클래스 on 넣기
+            // 2. 클릭된 자신에게 클래스 on 넣기
             x.classList.add("on");
 
         };// click
