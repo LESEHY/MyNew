@@ -96,10 +96,10 @@
 
             // 대상변수 click 이벤트 설정하기
             // for of문 사용!
-            for(let x of btns){ // x - 버튼요소자신
+            for (let x of btns) { // x - 버튼요소자신
 
                 // click이벤트 걸기
-                x.onclick = ()=>{
+                x.onclick = () => {
                     // 1. 클릭된 버튼의 글자
                     let btxt = x.innerText;
                     // console.log(btxt);
@@ -108,17 +108,31 @@
                     // 값을 가져오기(영화정보객체)
                     let data = mvi[btxt];
                     console.log(data);
-                    
+
                     //  3. 해당요소의 데이터 넣어주기
                     //  for in문 사용!
                     // for(변수 in 객체){코드}
-                    for(let z in data){
-                        console.log(z);
+                    for (let z in data) {
+                        // z는 무엇? 속성명
+                        // console.log(z);
+                        // 객체의 값은 객체명[속성명]
+                        // console.log(data[z]);
+
+                        // 각 속성명에 해당하는 데이터 셋팅하기!
+                        switch (z) {
+                            // 1. 포스터 넣기
+                            case "포스터":
+                                document
+                                    .querySelector(".photo")
+                                    .innerHTML =
+                                    `<img src="${data[z]}" alt="${btxt}의 포스터">`;
+
+                        } // switch
                     } // for in
 
                 }; //click
 
-            }// for of
+            } // for of
             /************************************************* 
                 [ 객체를 위한 for in 문 ]
 
