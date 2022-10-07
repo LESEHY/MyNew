@@ -58,7 +58,7 @@ html,body{
     left: 50%;
     transform: translate(-50%, -50%);
 
-    outline: 4px dotted lime;
+    /* outline: 4px dotted lime; */
 }
 /* Click Here! 글자박스 */
 #enter span{

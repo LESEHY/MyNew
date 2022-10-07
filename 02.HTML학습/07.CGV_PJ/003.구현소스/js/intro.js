@@ -23,11 +23,21 @@ window.addEventListener("DOMContentLoaded", () => {
         // console.log(myvid.paused);
         // 멈춤상태가 true일 때 페이지 이동하기
         if (myvid.paused)
-            location.href = "../index.html";
+            location.href = "./main.html";
         // location.hred = 이동주소
         // -> 페이지 이동함!
-        
+
     }; // timeupdate
+
+    // 들어가기 버튼 클릭시 첫페이지 이동하기
+
+    // 대상: #enter a
+    const enter =
+        document.querySelector("#enter a");
+
+    // 페이지 이동하기
+    enter.onclick =
+        () => location.href = "./main.html";
 
 
 }); // 로딩구역
