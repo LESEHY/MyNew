@@ -9,11 +9,12 @@
 </head>
 <body>
     <!-- 1. 배경 비디오 넣기 -->
-    <video src="./images/cgv.mp4" autoplay muted loop></video>
+    <!-- 동영상이 끝나면 첫페이지 자동이동할 것이므로 loop옵션은 주지 않는다! -->
+    <video id="myvid" src="./images/cgv.mp4" autoplay muted playsinline></video>
 
     <!-- 동영상 자동재생루프옵션 -->
     <!-- <video src="./images/cgv.mp4" 
-    controls autoplay muted loop></video> -->
+    controls autoplay muted loop playsinline></video> -->
 
     <!-- 동영상 포스터 옵션 -->
     <!-- <video src="./images/cgv.mp4" poster="./images/poster.png"controls playsinline></video> -->
