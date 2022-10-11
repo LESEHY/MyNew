@@ -21,6 +21,7 @@
 .cont {
     /* 최소높이설정 : 내용넘칠경우 자동auto */
     min-height: 600px;
+    padding: 10px;
 }
 
 /* 1. 타이틀 */
@@ -35,14 +36,14 @@
 .scont {
     position: relative;
     /* 부모자격: .btnbx */
-    max-width: 700px;
+    max-width: 1000px;
     min-height: 275px;
     margin: 0 auto;
 
     background-color: #fff;
     border-radius: 10px;
     border: 2px solid #777;
-    padding: 60px 15px;
+    padding: 60px 15px 0;
     /* 박스크기유지 : 보더, 패딩포함*/
     box-sizing: border-box;
 }
@@ -57,11 +58,11 @@
 
 /* 드라마 리스트 테이블 */
 #drama {
-    font-size: 24px;
+    font-size: 1.8rem;
     /* 블록or테이블 가로중앙정렬 - 마.영.오!*/
     margin: 0 auto;
     /* 가로크기 w */
-    width: 1000px
+    width: 95%;
     /* 테이블 width지정이 없으면 내용만큼 늘어남! 좁으면 아래로 내용이 줄바꿈됨 */
 
 }
