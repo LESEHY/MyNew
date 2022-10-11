@@ -6,3 +6,11 @@
     margin-top: 40px;
     margin-left: 10%;;
 }
+
+.search{
+    position: absolute;
+    width: 100px;
+    height: 25px;
+    top: 40px;
+    margin-left: 25%;
+}
