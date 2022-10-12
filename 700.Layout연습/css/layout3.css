@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* 레이아웃3의 CSS - layout3.css */
+
+/* 속박스 셋팅 */
+.ibx{
+    max-width: 1400px;
+    margin: 0 auto;
+    outline: 1px dashed gray;
+    /* 임시 높이 */
+    min-height: 100px;
+}
