@@ -1,16 +1,21 @@
 @charset "utf-8";
 /* 회전하는 아이폰 + 흐르는 글자 CSS - iPhone.css */
 
+/* 웹폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+/* font-family: 'Anton', sans-serif; */
+
+
 html,body{
     margin: 0;
     padding: 0;
     height: 100%;
     /* 보이는 화면 채우기 */
 }
-
 body{
     background-image: 
-    linear-gradient(to bottom, #fff 20%, skyblue 40%, #fff);
+    linear-gradient(to bottom, #fff 20%,skyblue 40%,#fff);
     /* 넘치는 자식요소 숨기기 */
     overflow: hidden;
 }
@@ -22,7 +27,7 @@ body{
     /* 계산을 통한 정중앙셋팅! */
     width: 200px;
     height: 400px;
-    outline: 2px solid blue;
+    /* outline: 2px solid blue; */
 
     /* 입체설정 */
     transform-style: preserve-3d;
@@ -36,20 +41,19 @@ body{
     height: 400px;
 
     /* 배경공통 */
+    background-color: #fff;
     background-repeat: no-repeat;
     background-size: 100% 100%;
 
-    outline: 1px dashed red;
+    /* outline: 1px dashed red; */
 }
-
-/* 1. 앞면 */
+/* 1.앞면 */
 .iphone span:nth-child(1){
     background-image: url(../images/ip01.png);
     /* z축 밀기 */
     transform: translateZ(10px);
-    /* display: none; */
 }
-/* 2. 오른쪽면 */
+/* 2.오른쪽면 */
 .iphone span:nth-child(2){
     background-image: url(../images/ip03.png);
     width: 20px;
@@ -57,7 +61,7 @@ body{
     /* y축회전 90도 */
     transform: rotateY(90deg);
 }
-/* 3. 왼쪽면 */
+/* 3.왼쪽면 */
 .iphone span:nth-child(3){
     background-image: url(../images/ip04.png);
     width: 20px;
@@ -65,7 +69,7 @@ body{
     /* y축회전 -90도 */
     transform: rotateY(-90deg);
 }
-/* 4. 아래쪽면 */
+/* 4.아래쪽면 */
 .iphone span:nth-child(4){
     background-image: url(../images/ip05.png);
     height: 20px;
@@ -73,7 +77,7 @@ body{
     /* x축회전 90도 */
     transform: rotateX(90deg);
 }
-/* 5. 윗쪽면 */
+/* 5.윗쪽면 */
 .iphone span:nth-child(5){
     background-image: url(../images/ip06.png);
     height: 20px;
@@ -81,9 +85,110 @@ body{
     /* x축회전 -90도 */
     transform: rotateX(-90deg);
 }
-/* 6. 뒷면 */
+/* 6.뒷면 */
 .iphone span:nth-child(6){
     background-image: url(../images/ip02.png);
-    /* z축 밀기 */
-    transform: translateZ(-10px) rotateY(180deg);
+    /* z축 밀기 + Y축 회전 180도 */
+    transform: 
+    translateZ(-10px) rotateY(180deg);
 }
+
+/* 애니호출 클래스 */
+.ip-ani{
+    /* 애니메이션: 이시이지반방마 */
+    animation: ipAni 1.5s ease-in-out 1s 2 alternate;
+}
+
+/* 아이폰 회전 키프레임 */
+@keyframes ipAni {
+    to{
+        transform: 
+        rotateX(370deg) rotateY(-330deg);
+    }
+} /* 키프레임 */
+
+
+/* 흘러가는 글자 부모박스 */
+.fbx{
+    position: absolute;
+    width: 100vw;
+}
+/* 텍스트 박스 (움직일박스) */
+.tbx{
+    position: relative;
+    /* left초기값 */
+    left: 0;
+    /* 가로크기는 화면의 2배 */
+    width: 200vw;    
+    /* 플렉스박스 : 하위 ul옆으로 흐름 */
+    display: flex;
+}
+/* 텍스트박스 하위 ul 2개공통 */
+.tbx ul{
+    /* 플렉스 박스 : 직계하위 li가 옆으로 흐름 */
+    display: flex;
+    /* 상위 .tbx의 플렉스에 대한 등분할 설정 */
+    flex: 1;
+
+    /* 기본없앰 */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/* 하위 li 공통셋팅 */
+.tbx li{
+    /* 상위 ul의 플렉스 등분할 설정 */
+    flex: 1;
+
+    text-align: center;
+    font-family: 'Anton';
+    font-size: 4vw;
+    color: #a0a0a0;
+}
+
+/* 글자애니 호출 클래스1 */
+.txt-ani1{
+    /* 애니메이션: 이시이지반방마 */
+    animation: txtFlow1 10s linear infinite;
+}
+
+/* 글자흐르기 키프레임1 */
+@keyframes txtFlow1 {
+    to{
+        left: -100%;
+        /* 왼쪽방향 화면크기만큼 이동 */
+    }
+} /* 키프레임 */
+
+/* .f1 위치 */
+.f1{
+    bottom: 5vh;
+}
+
+
+/* 여기서 부터 아래쪽은 .f2 글자흐름 셋팅입니다~! */
+
+/* .f2 위치 */
+.f2{
+    top: 5vh;
+}
+
+/* .f2 .tbx 초기셋팅 */
+.f2 .tbx{
+    left: -100%;
+}
+
+
+/* 글자애니 호출 클래스2 */
+.txt-ani2{
+    /* 애니메이션: 이시이지반방마 */
+    animation: txtFlow2 10s linear infinite;
+}
+
+/* 글자흐르기 키프레임2 */
+@keyframes txtFlow2 {
+    to{
+        left: 0;
+        /* 왼쪽방향 화면크기만큼 이동 */
+    }
+} /* 키프레임 */
