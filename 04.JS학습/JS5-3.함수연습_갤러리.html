@@ -303,7 +303,13 @@
                     x.style.display = "none";
                     
                     // "자동넘김 1" / "멈춤 0" 버튼보이기
-                    abtn[isB?1:0].style.display = "inline-block";
+                    abtn[isB?1:0].style.display = 
+                    "inline-block";
+                    // isB?1:0의 해석
+                    // 삼항연산자 -> 비?집:놀이동산
+                    // isB가 true이면 즉, : "자동넘김"이면
+                    // 1 즉 두번째 버튼 출력
+                    // 아니면 0 즉, 첫번째 버튼 출력
 
                     // console.log("autoI변수:", autoI);
 
