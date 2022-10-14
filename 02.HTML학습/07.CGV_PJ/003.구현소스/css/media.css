@@ -1,29 +1,27 @@
 @charset "utf-8";
-/* CGV PJ 미디어 CSS - media.css */
+/* CGV 메인 페이지 미디어쿼리 CSS - media.css */
 
-/* 1310px 이하 미디어쿼리 시작 */
-@media screen and (max-width: 1310px) {
+/* 1310px이하 미디어쿼리 시작 */
+@media screen and (max-width:1310px) {
 
-    /* gnb위치 변경 */
+    /* gnb위치변경 */
     .gnb {
         right: 73px;
-
-
     }
 }
 
-/* 1310px 이하 미디어쿼리 끝 */
+/* 1310px이하 미디어쿼리 끝 */
 
-/* 1024px 이하 미디어쿼리 시작 */
-@media screen and (max-width: 1024px) {
+/* 1024px이하 미디어쿼리 시작 */
+@media screen and (max-width:1024px) {
 
-    /* 네비ul */
+    /* 네비 ul */
     .gnb ul {
         position: absolute;
         top: 12px;
-        padding-top: 12px;
         right: -59px;
         width: 117px;
+        padding-top: 12px;
         flex-direction: column;
         align-items: flex-end;
         /* 처음에 안보임 */
@@ -42,57 +40,87 @@
     }
 }
 
-/* 1024px 이하 미디어쿼리 끝 */
+/* 1024px이하 미디어쿼리 끝 */
 
-/* 700px 이하 미디어쿼리 시작 */
-@media screen and (max-width: 700px) {
+
+/* 700px이하 미디어쿼리 시작 */
+@media screen and (max-width:700px) {
 
     /* 하단영역 */
     .info {
         flex-direction: column;
         /* 세로진행방향 */
-
+        padding: 0 15px 20px;
     }
 
     /* 하단영역 파티션박스 div공통 */
-    .info>div{
-        padding: 10px;
+    .info>div {
+        padding-top: 10px;
     }
 
     /* 하단로고 박스 */
     .info>div:first-child {
-        margin-left: 0;
-        /* 오른쪽 마진 없앰 */
+        margin-right: 0;
+        /* 오른쪽마진 없앰 */
     }
+
     /* 회사주소박스 */
-    .info address{
+    .info address {
         text-align: center;
         /* 글자정렬변경 */
-
     }
+
     /* sns박스 */
     .info>div:last-child {
         margin-left: 0;
-        /* 오른쪽 끝 설정 해제 */
+        /* 오른쪽끝설정 해제 */
     }
+
 }
 
-/* 700px 이하 미디어쿼리 끝 */
+/* 700px이하 미디어쿼리 끝 */
 
 
-
-/* 500px 이하 미디어쿼리 시작 */
-@media screen and (max-width: 500px) {}
+/* 500px이하 미디어쿼리 시작 */
+@media screen and (max-width:500px) {
 
     /* 메인 컨텐츠 박스 */
-    .cont{
+    .cont {
         /* 배경위치,크기변경 */
         background-position: top;
         background-size: 140%;
     }
-    
-    /* 메인 컨텐츠 박스 비율변경*/
-    .cont::before{
+
+    /* 메인 컨텐츠 박스 비율변경 */
+    .cont::before {
         padding-top: 140%;
     }
-/* 500px 이하 미디어쿼리 끝 */
+
+    /* 스크린 위치, 크기변경 */
+    #screen {
+        top: 11.3%;
+        left: 10.1%;
+        width: 81.5%;
+        height: 33.2%;
+    }
+
+    /* 2-2.예고편 선택메뉴 */
+    .mlist {
+        bottom: 2%;
+        width: 90%;
+    }
+
+    /* 선택메뉴 ul */
+    .mlist ul {
+        flex-wrap: wrap;
+    }
+
+    /* 상위 li */
+    .mlist ul>li {
+        flex-basis: 30.43%;
+    }
+
+
+}
+
+/* 500px이하 미디어쿼리 끝 */
