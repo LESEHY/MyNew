@@ -20,7 +20,8 @@
     /* 네비ul */
     .gnb ul {
         position: absolute;
-        top: 17px;
+        top: 12px;
+        padding-top: 12px;
         right: -59px;
         width: 117px;
         flex-direction: column;
@@ -28,8 +29,9 @@
         /* 처음에 안보임 */
         display: none;
     }
+
     /* gnb오버시 상위메뉴 보임 */
-    .gnb:hover ul{
+    .gnb:hover ul {
         display: flex;
         /* 원래 display로 가야함! */
     }
@@ -42,7 +44,55 @@
 
 /* 1024px 이하 미디어쿼리 끝 */
 
-/* 1024px 이하 미디어쿼리 시작 */
-@media screen and (max-width: 1024px) {}
+/* 700px 이하 미디어쿼리 시작 */
+@media screen and (max-width: 700px) {
 
-/* 1024px 이하 미디어쿼리 끝 */
+    /* 하단영역 */
+    .info {
+        flex-direction: column;
+        /* 세로진행방향 */
+
+    }
+
+    /* 하단영역 파티션박스 div공통 */
+    .info>div{
+        padding: 10px;
+    }
+
+    /* 하단로고 박스 */
+    .info>div:first-child {
+        margin-left: 0;
+        /* 오른쪽 마진 없앰 */
+    }
+    /* 회사주소박스 */
+    .info address{
+        text-align: center;
+        /* 글자정렬변경 */
+
+    }
+    /* sns박스 */
+    .info>div:last-child {
+        margin-left: 0;
+        /* 오른쪽 끝 설정 해제 */
+    }
+}
+
+/* 700px 이하 미디어쿼리 끝 */
+
+
+
+/* 500px 이하 미디어쿼리 시작 */
+@media screen and (max-width: 500px) {}
+
+    /* 메인 컨텐츠 박스 */
+    .cont{
+        /* 배경위치,크기변경 */
+        background-position: top;
+        background-size: 140%;
+    }
+    
+    /* 메인 컨텐츠 박스 비율변경*/
+    .cont::before{
+        padding-top: 140%;
+    }
+/* 500px 이하 미디어쿼리 끝 */
