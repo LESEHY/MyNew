@@ -86,16 +86,16 @@ body {
     transform: translateX(-50%);
     width: 140px;
     padding: 3px;
-    background: url(../images/bg_smenu.png) 
-    no-repeat center/cover;
+    background: url(../images/bg_smenu.png) no-repeat center/cover;
     border-radius: 5px;
     box-shadow: 0 0 5px #fff;
 
     /* 처음에 안보임! */
     display: none;
 }
+
 /* 상위메뉴 li에 마우스 오버 시 하위메뉴 보이기 */
-.gnb ul>li:hover .smenu{
+.gnb ul>li:hover .smenu {
     display: block;
 }
 
@@ -146,16 +146,19 @@ body {
     content: '🎥';
     float: right;
 }
+
 /* "예매" 하위메뉴 이모지 */
 .gnb ul>li:nth-child(2) .smenu a:hover::after {
     content: '🎫';
     float: right;
 }
+
 /* "극장" 하위메뉴 이모지 */
 .gnb ul>li:nth-child(3) .smenu a:hover::after {
     content: '🎦';
     float: right;
 }
+
 /* "이벤트&컬처" 하위메뉴 이모지 */
 .gnb ul>li:nth-child(4) .smenu a:hover::after {
     content: '📅';
@@ -165,6 +168,35 @@ body {
 /* 서브메뉴 중 li 보더 상단 class */
 .bdt {
     border-top: 1px solid #ccc;
+}
+
+/*  영사기박스 */
+#cam {
+    position: absolute;
+    bottom: -10px;
+    right: -60px;
+    /* 부모는? .gnb */
+    
+    outline: 1px dashed yellow;
+}
+
+/* 영사기 이미지 */
+#cam img {
+    width: 50px;
+}
+
+/* 빔박스 */
+.beam{
+    position: absolute;
+    top: -16px;
+    right: 12px;
+    /* 부모는? #cam */
+    width: 200px;
+    height: 70px;
+    background: url(../images/bim.png) no-repeat ;
+    background-position: right center;
+    background-size: auto 100%;
+    outline: 1px dotted pink;
 }
 
 /**************************** 2. 메인영역 ****************************/
@@ -229,13 +261,13 @@ body {
     /* 트랜스폼 x축회전 */
     transform: rotateX(40deg);
     /* 트랜지션 */
-    transition: all .4s ease-out ;
+    transition: all .4s ease-out;
 }
 
 /* 상위 li에 마우스 오버시 일어나!! */
 /* + 클래스 on 적용시 같은 변경 적용! */
 .mlist ul>li:hover,
-.mlist ul>li.on{
+.mlist ul>li.on {
     transform: rotateX(0deg);
     outline: 1px solid aqua;
     /* 오버시 맨위로 오게 z-index */
