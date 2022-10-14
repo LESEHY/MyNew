@@ -84,6 +84,16 @@
 /* 500px이하 미디어쿼리 시작 */
 @media screen and (max-width:500px) {
 
+    /* 메인 타이틀 */
+    .tit{
+        font-size: 10vw;
+    }
+
+    /* GNB */
+    .gnb{
+        bottom: -14px;
+    }
+
     /* 메인 컨텐츠 박스 */
     .cont {
         /* 배경위치,크기변경 */
@@ -96,7 +106,7 @@
         padding-top: 140%;
     }
 
-    /* 스크린 위치, 크기변경 */
+    /* 스크린 위치,크기변경 */
     #screen {
         top: 11.3%;
         left: 10.1%;
@@ -117,7 +127,31 @@
 
     /* 상위 li */
     .mlist ul>li {
-        flex-basis: 30.43%;
+        /* 3등분의 적절한 조정 */
+        flex-basis: 29.23%;
+        /* 
+            기존에 flex:1 등분할 설정
+            되어서 flex-basis는
+            기본설정 0으로 되어있음
+            같은 의미인 width를
+            쓰면 적용안되는데
+            flex-basis가 더 우선한다!
+            width말고 flex-basis로 셋팅!
+        */
+    }
+
+    /* 영화선택메뉴 글자 */
+    .movtxt{
+        font-size: 4vw;
+    }
+    .movtxt li:first-child{
+        font-size: 5vw;
+    }
+
+    /* 회사주소 */
+    .info address span{
+        display: none;
+        /* 회사주소의 일부를 숨김 */
     }
 
 
