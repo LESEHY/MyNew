@@ -74,7 +74,7 @@
       width: 100%;
       height: 0;
       /* 65px; */
-      background-color: #f00;
+      background-color: darkblue;
       z-index: -1;
       /* .smenu 보다 아래! */
 
@@ -199,6 +199,9 @@
       font-size: 14px;
       line-height: 35px;
 
+      padding: 0 7px;
+      margin: 0 7px;
+
       /* 트랜지션 */
       transition: .2s;
     }
@@ -231,7 +234,7 @@
       <li>
         <a href="#"><span>Home</span></a>
       </li>
-      <li>
+      <li class="on">
         <a href="#"><span>웹개발</span></a>
         <!-- 서브메뉴 -->
         <div class="smenu">
@@ -251,7 +254,7 @@
           </ol>
         </div>
       </li>
-      <li>
+      <li class="on">
         <a href="#"><span>게시판</span></a>
         <!-- 서브메뉴 -->
         <div class="smenu">
