@@ -27,15 +27,15 @@
     }
 
     /* 메인박스 */
-    .wrap {
+    .wrap{
+      /* 플렉스박스 */
       display: flex;
     }
 
     /* GNB메뉴박스 */
     .gnb {
       position: relative;
-
-      /* 사이드로 가기 위한 크기설정 */
+      /* 사이드로 가기위한 크기설정 */
       width: 200px;
       height: 600px;
 
@@ -47,7 +47,7 @@
 
     /* ul 초기화 */
     .gnb ul {
-      /* 직계 li만 옆으로 흐름! */
+      /* 플렉스박스 : 직계li만 옆으로 흐름! */
       display: flex;
       /* 플렉스 세로방향 */
       flex-direction: column;
@@ -55,34 +55,33 @@
       padding-top: 20px;
 
       /* width: 800px;
-        margin: 0 auto; -> flex에서 중앙정렬설정 안씀
-        outline: 1px solid red; */
-
+      margin: 0 auto; -> flex에서 중앙정렬설정 안씀*/
+      /* outline: 1px solid red; */
     }
 
-    /* 가상요소로 clear설정하기 -> flex는 불필요!
-      .gnb ul::after {
-        content: '';
-        display: block;
-        clear: both;
-      } */
+    /* 가상요소로 clear설정하기 -> flex는 불필요! */
+    /* .gnb ul::after {
+      content: '';
+      display: block;
+      clear: both;
+    } */
 
     /* 상위li 리스트요소 */
     .gnb>ul>li {
-      /* 부모자격 : .smenu */
+      /* 렐러티브 부모자격 : .smenu */
       position: relative;
       width: 200px;
       /* height: 40px; */
       text-align: center;
       /* outline: 1px dashed blue; */
-      /* float: left; -> 사용안함! flex 쓸 것임!*/
+      /* float: left; -> 사용안함! flex쓸것임! */
       /* box-sizing: border-box; */
     }
 
     /* li사이에 구분선 넣기 */
     .gnb>ul>li+li::before {
       content: '';
-      /* 세로일 때 안씀! */
+      /* 세로일때 안씀! */
       display: none;
       position: absolute;
       /* 젠틀앱솔루트:
@@ -153,38 +152,45 @@
 
     /* 서브메뉴 */
     .smenu {
-      position: absolute; 
+      /* 앱솔루트 포지션 */
+      position: absolute;
       top: 0;
       left: 100%;
-      /* 부모는? 싸고 있는 li */
+      /* 부모는? 싸고있는 li */
       width: 200px;
 
-      /* 메뉴 숨기기 높이값 0, overflow:hidden*/
+      /* 메뉴 숨기기 
+      - 높이값0,overflow:hidden */
       height: 0;
       overflow: hidden;
-      /* 주의: 숨기는 박스에 상하패딩이 있으면 완전히 숨길 수 없다! */
+      /* 주의: 숨기는 박스에 상하패딩이
+       있으면 완전히 숨길 수 없다! */
 
-
-      /* 상위메뉴 오버시 배경색과 동일 */
+      /* 배경색 
+      - 상위메뉴 오버시 배경색과 동일 */
       background-color: darkblue;
+      /* 둥근모서리 - 양쪽아래만 */
       border-radius: 0 0 5px 5px;
 
+      /* 트랜지션: 속시이지 */
       transition: height .4s ease-out;
     }
 
-    /* 상위메뉴 li 오버시 서브메뉴 보이기 
-      -두번째 메뉴*/
-
+    /* 상위메뉴 li오버시 서브메뉴 보이기
+    - 두번째 메뉴 */
     .gnb>ul>li:nth-child(2):hover .smenu {
       height: 170px;
     }
 
+    /* 상위메뉴 li오버시 서브메뉴 보이기
+    - 세번째 메뉴 */
     .gnb>ul>li:nth-child(3):hover .smenu {
       height: 100px;
     }
 
     /* 서브메뉴 ol */
     .smenu ol {
+      /* 패딩 */
       padding: 15px;
     }
 
@@ -193,12 +199,13 @@
       /* a요소 확장 */
       display: block;
 
+      /* 글자셋팅 */
       color: lightskyblue;
       text-decoration: none;
       font-size: 14px;
       line-height: 35px;
 
-      /* 트랜지션 */
+      /* 트랜지션: 속시이지 */
       transition: .2s;
     }
 
@@ -206,7 +213,6 @@
     .smenu a:hover {
       background-color: lightskyblue;
       color: darkblue;
-      border-radius: 50px;
     }
 
     /* 본문내용 */
@@ -220,19 +226,19 @@
       line-height: 50;
       width: 100%;
       /* 
-        원래는 calc(100% - 200px)로
-        크기를 맞춰줘야 하지만 
-        플렉스 박스의 자식요소이므로 
-        100%를 줘도 더 이상 커지지않고
+        원래는 calc(100% - 200px)
+        로 크기를 맞춰줘야 하지만
+        플렉스 박스의 자식요소이므로
+        100%를 줘도 더이상 커지지않고
         부모크기만큼 강제로 맞춰진다!
-        이것은 flex-shrink: 1로 기본셋팅
-        되어 있기 때문! 1의 의미는 부모가 
-        줄어들 때 줄어들래? true(응)의 의미
+        이것은 flex-shrink: 1 로 기본셋팅
+        되어 있기 때문! 1의 의미는 부모가
+        줄어들때 줄어들래? true(응)의 의미
       */
 
       /* (비교바람~!)
         width: calc(100% - 200px);
-        flex-shrink: 0;
+        flex-shrink: 0; 
       */
     }
   </style>
@@ -242,7 +248,6 @@
   <h1>유형5. 세로네비 서브별 드롭다운 사이드형</h1>
   <!-- 메인박스 -->
   <main class="wrap">
-
 
     <!-- GNB 네비게이션 -->
     <nav class="gnb">
@@ -292,6 +297,7 @@
 
     <!-- 내용박스 -->
     <div class="cont">본문내용</div>
+
   </main>
 </body>
 
