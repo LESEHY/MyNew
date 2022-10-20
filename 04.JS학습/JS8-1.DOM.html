@@ -268,7 +268,7 @@
                         ximg.alt +
                         (ximg.alt === "아이언맨" ? "을" : "를") +
                         " 클릭하면 삭제됩니다!"
-
+                    
                     // 3. 기존 li를 클릭 시 지우기
                     x.onclick = () => x.remove();
                 } // for of
@@ -285,6 +285,21 @@
                 // -> 기존요소를 선택하면 이동이 됨!
                 //////////////////////////////////////////////
 
+                const mv1 = document.querySelector(".mvl");
+                // 클릭이벤트 설정하기
+                mv1.onclick = () => {
+                    // 1. 호출확인 
+                    console.log("맨 뒤");
+
+                    // 2. 이동대상: 변수 ctg 아래 li중 첫번째 요소
+                    let fele = ctg.querySelectorAll("li")[0];
+                    // fele -> first element (첫번째 요소)
+
+                    // 3. 맨뒤로 이동 : appendChild(요소)
+                    ctg.appendChild(fele);
+
+                }; // onclick
+
                 /// 맨뒤요소 맨앞으로 이동하기 ///////////////////////
                 // 이벤트 종류: click
                 // 이벤트 대상: .mvf
@@ -294,9 +309,29 @@
                 // 사용 메서드: insertBefore(넣을놈,넣을놈전놈)
                 // 넣을놈 - 마지막 li요소
                 // 넣을놈전놈 - 맨처음 li요소
-                //////////////////////////////////////////////////
+                //////////////////////////////////////////////
 
-                /************************************************* 
+                const mvf = document.querySelector(".mvf");
+
+                mvf.onclick = () => {
+                    // 호출하기
+                    console.log("맨 앞");
+                    // 2. 이동대상: 변수 ctg 아래 li요소들
+                    let eles = ctg.querySelectorAll("li");
+
+                    // 3. 맨 앞으로 이동
+                    // -> insertBefore(넣을 놈, 넣을 놈 전 놈)
+                    // insertBefore(맨뒤 li, 맨 앞 li)
+                    ctg.insertBefore(eles[eles.length-1],eles[0])
+                    // 맨 뒤 li -> eles[마지막번호]
+                    // 마지막번호 -> 개수-1
+                    // eles.[eles.length-1]
+                    // ※ 배열과 컬렉션의 마지막 순번은 항상 [개수-1]이다.
+
+
+                };// onclick
+
+                /*************************************************
                     ※ appendChild() 와 insertBefore()는 대상을
                     정하는 것에 따라 중간에 적용할 수 있다!
                 *************************************************/
