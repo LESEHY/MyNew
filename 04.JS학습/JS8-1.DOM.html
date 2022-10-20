@@ -200,7 +200,7 @@
 
                 // 변경대상: #div02 ul
                 const ctg =
-                document.querySelector("#div02 ul");
+                    document.querySelector("#div02 ul");
                 // ctg -> current target! 현재 타겟!
                 // console.log(ctg);
 
@@ -226,17 +226,17 @@
                     // createElement()는 메모리상에 생성
 
                     // 3. 이미지번호 랜덤
-                    let rnum = Math.ceil(Math.random()*5);
-                    console.log("랜덤수:",rnum);
+                    let rnum = Math.ceil(Math.random() * 5);
+                    console.log("랜덤수:", rnum);
 
                     // 4. 메모리상에 생성된 li에 이미지 넣기
-                    ne.innerHTML = 
-                    `<img src="images/ab${rnum}.jpg" alt="${ialt[rnum-1]}">`;
+                    ne.innerHTML =
+                        `<img src="images/ab${rnum}.jpg" alt="${ialt[rnum-1]}">`;
 
                     // 5. 새로운 li요소 title 속성으로 툴팁넣기
                     ne.querySelector("img").title =
-                    ialt[rnum-1] + (rnum===1?"을":"를") +  
-                    " 클릭하면 삭제됩니다!";
+                        ialt[rnum - 1] + (rnum === 1 ? "을" : "를") +
+                        " 클릭하면 삭제됩니다!";
 
                     // 6. 새로운 li클릭 시 지우기 셋팅
                     ne.onclick = () => ne.remove();
@@ -254,6 +254,24 @@
                 // 변경대상: 이벤트대상
                 // 변경내용: 삭제 셋팅하기
                 /////////////////////////////////////////////
+
+                // 기존 li 삭제 셋팅 대상 -> #div02 ul li
+                let del = ctg.querySelectorAll("li");
+
+                // 대상에 클릭 시 삭제 셋팅하기
+                for (let x of del) {
+                    // 1. 대상 내부의 img 요소
+                    let ximg = x.querySelector("img");
+
+                    // 2. 기존 img에 title 속성 변경하기
+                    ximg.title =
+                        ximg.alt +
+                        (ximg.alt === "아이언맨" ? "을" : "를") +
+                        " 클릭하면 삭제됩니다!"
+
+                    // 3. 기존 li를 클릭 시 지우기
+                    x.onclick = () => x.remove();
+                } // for of
 
                 ///// 맨앞요소를 맨뒤로 이동하기 ////////////////////
                 // 이벤트 종류: click
