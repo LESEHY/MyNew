@@ -108,15 +108,16 @@
                     // exp변수에 h2담김
                     exp.innerHTML = isrc + '번 맨 뒤로 가';
 
-                    // 이때 h2에 클래스 action을 준다!
+                    // 이때 h2에 클래스 "action"/"action2"을  번갈아준다!
                     console.log("상태값:", sts)
+
                     exp.classList
-                    .add(sts?"action2":"action");
+                        .add(sts ? "action2" : "action");
                     exp.classList
-                    .remove(sts?"action":"action2");
-                    
+                        .remove(sts ? "action" : "action2");
+
                     // 상태업데이트(1이면 0, 0이면 1)
-                    sts? sts = 0: sts = 1;
+                    sts ? sts = 0 : sts = 1;
                 } // click
 
             } // for of
