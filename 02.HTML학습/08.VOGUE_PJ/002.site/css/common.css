@@ -23,8 +23,39 @@
 }
 
 /* 1-1-1. sns박스 */
-.sns{
+.sns a{
+    width: 16px;
+    height: 16px;
+    /* .fi에 이미 inline-block 되어있음 */
+    font-size: 16px;
+    text-align: center;
+    vertical-align: top;
+    line-height: 16px;
 
+    /* 마진으로 위치 조정 */
+    margin-top: 14px;
+    margin-right: 17px;
+    transition: opacity .2s;
+}
+
+/* a요소 오버시 */
+.sns a:hover{
+    opacity: .8;
+}
+
+/* 트위터 아이콘 조정 */
+.sns a.fi-twitter{
+    font-size: 13px;
+}
+
+/* 유튜브 아이콘 조정 */
+.sns a.fi-youtube-play{
+    font-size: 11px;
+}
+
+/* 카카오 스토리 배경이미지 넣기 */
+.sns a:last-child{
+    background: url(../images/sns_kakao.png) no-repeat center/auto 100%;
 }
 
 /* 1-1-2. 사이드메뉴 */
