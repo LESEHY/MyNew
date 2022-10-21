@@ -102,6 +102,9 @@ body * {
 
 /* 2-6. 컨텐츠 박스 */
 .cbx{
+  /* 부모자격 - .cbx h2 */
+  position: relative;
+
   /* 크기유지박스 설정 - 보더,패딩 포함 */
   box-sizing: border-box;
   padding: 15px;
@@ -115,6 +118,13 @@ body * {
 .cbx h2{
   position: absolute;
   bottom: 0;
+  left: 0;
+  width: 100%;
+  /* 부모: .cbx */
+  
+  padding: 50px;
+  /* 보더, 패딩포함 크기유지박스 */
+  box-sizing: border-box;
 
   /* 글자설정 - 영문체,한글체*/
   font-family: pist,nbg;
