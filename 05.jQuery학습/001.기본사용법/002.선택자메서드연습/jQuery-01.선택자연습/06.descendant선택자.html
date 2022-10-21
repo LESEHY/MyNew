@@ -28,14 +28,19 @@
       $(".list img").css({width:"100px"});
       // for문 없이 한번에 셋팅
 
+      // 각도 변수
+      let dg = 10;
       $(".list img").click(function(){
         
         $(this).css({
           width: "+=10px",
-          transform: "rotate(10deg)" ,
+          transform: `rotate(${dg}deg)` ,
           transition: ".3s",
           
-        });
+        }); // CSS
+
+        // 각도 양수/음수 전환
+        dg = -dg;
 
       }); // click
 
