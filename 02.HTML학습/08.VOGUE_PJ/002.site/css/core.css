@@ -62,6 +62,21 @@ body * {
   right: 0;
   /* 부모는? .rbx */
 }
+/* 가상요소 비율밀기  */
+.rbx::before{
+  content: '';
+  display: block;
+}
+/* .pt1 비율: 55.7% */
+.pt1.rbx::before{
+  padding-top: 55.7%;
+}
+/* .pt2 비율: 50% */
+.pt2.rbx::before{
+  padding-top: 50%;
+}
+
+
 
 /* 2-4. 플렉스 박스 */
 .fbx{
@@ -77,13 +92,13 @@ body * {
 
 /* 2-5. 유형별 박스 */
 /* 1개 컨텐츠박스형 */
-.pt1{
+/* .pt1{
   height: 724px;
-}
+} */
 /* 3개 컨텐츠박스형 */
-.pt2{
+/* .pt2{
   height: 650px;
-}
+} */
 
 /* 2-6. 컨텐츠 박스 */
 .cbx{
