@@ -127,7 +127,23 @@ body * {
   /* 그라데이션: 아래쪽에서 위쪽으로 검정색에서 투명으로 변화 */
   background-image:
   linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
 
+/* 컨텐츠박스 가상요소로 보더애니 구현 */
+.cbx::after{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: 0px solid red;
+  transition: border .2s ease-in;
+}
+
+.cbx:hover::after{
+  border-width: 20px;
 }
 
 
