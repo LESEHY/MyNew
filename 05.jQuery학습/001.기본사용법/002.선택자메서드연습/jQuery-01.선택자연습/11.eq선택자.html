@@ -20,7 +20,7 @@
 			//무지개색 순서로 차례로 변경되게 하시오.
 
 			// 무지개색 배열
-			const rcolor = ["red", "orange", "yellow", "green", "blue", "navy", "purple"]
+			const rcolor = ["red", "orange", "yellow", "green", "blue", "navy", "purple", "pink", "white"]
 			// 배열순번변수
 			let cseq = 0;
 
@@ -48,6 +48,15 @@
 				// 선택값 읽어오기
 				let opt = $(this).val();
 				// val() 선택요소의 값을 읽어오는 메서드
+				// JS에서는 this.value임
+
+				// 첫번째 option값인 "tt"이면 나가라!
+				if(opt==="tt") {
+					alert("값을 선택하세요!");
+					return;
+				}
+				// return은 중간에 코드를 중지하거나
+				// 어떤 값을 함수호출한 곳으로 가져갈 때 사용
 
 				// 초기화
 				$(".nav1 li").css({
@@ -57,13 +66,14 @@
 				// 순번을 사용하여 .nav1 li의 같은 순번배경색 변경
 				// eq(순번)-> 제이쿼리 전용!
 				$(`.nav1 li:eq(${opt})`).css({
-					backgroundColor: "red"
+					backgroundColor: rcolor[opt]
 				});
 
 				// 배경이미지
 				$("body").css({
 					background: `url(./img/${opt}.jpg)no-repeat center/cover`
 				}); // css
+
 			}); //change
 
 		}); // JQB
