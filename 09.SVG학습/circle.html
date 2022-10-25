@@ -44,6 +44,55 @@
             width: 100%;
             height: 100%;
         }
+
+        /* 1. 아이언맨 */
+        .svg1 {
+            background: url(./images/man.jpg) no-repeat top/cover;
+        }
+
+        /* circle 설정 */
+        .c1{
+            /* 채우기색 - 기본색 검정
+            투명(transparent), 없음(none)-뚫린 상태*/
+            fill: none;
+            /* 선색(안쓰면 안나옴) */
+            stroke: red;
+            /* 선두께 (안쓰면 1px)
+            -> 단이를 안쓰면 기본px
+            -> 중심선을 기준으로 생김 */
+            stroke-width: 20;
+            /* 데쉬선 속성 
+            - 선, 공백 순으로 셋팅 */
+            stroke-dasharray: 300%;
+            /* 
+                선, 공백에서 선으로 모두 채우기 
+                방법 : 50%를 줘본다
+                    몇조각인 센다
+                    50% X 조각 수(선,공백 포함)    
+                    ex) 50% X 6조각 = 300%
+            */
+            /* 데쉬선 시작위치 속성 */
+            stroke-dashoffset: 300%;
+            /* 
+                [ 데쉬셋팅을 이용한 svg 애니 ]
+                1. stroke-dasharray값을 50% 준 후 조각 수만큼 곱하여
+                전체 선부터 채워지게 함
+
+                2. 선만큼 채워진 %를
+                stroke-dashoffset에 값을 설정하여 공백부터 시작하게 함!
+
+                (오버시 선애니할 경우)
+                3. 여기에 트랜지션 준다
+                4. 오버시에 
+                stroke-dashoffset: 0;
+                으로 셋팅하면 도형이 그려지는 애니!
+            */
+            transition: stroke-dashoffset .8s ease-in-out;
+        }
+        /* 컨텐츠 박스에 마우스 오버시 라인애니 */
+        .svg1:hover .c1{
+            stroke-dashoffset: 0;
+        }
     </style>
 </head>
 
