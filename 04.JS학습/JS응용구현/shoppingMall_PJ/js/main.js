@@ -37,29 +37,68 @@ window.addEventListener("DOMContentLoaded", loadFn);
     기능: 로딩 후 버튼 이벤트 및 기능구현
 ******************************************/
 function loadFn() {
+  // 1. 호출확인
+  console.log("로딩완료!");
+  
+  // 광클금지 상태변수
+  let prot = 0; // 0 - 허용 | 1 - 불허용
 
-    // 1. 호출확인
-    console.log("로딩완료!");
+  // 2. 대상선정
+  // 2-1. 이벤트 대상: .abtn
+  const abtn = document.querySelectorAll(".abtn");
+  // 2-2. 변경 대상: #slide
+  const slide = document.querySelector("#slide");
 
-    // 2. 대상선정
-    // 2-1. 이벤트 대상: .abtn 
-    const abtn = document.querySelectorAll('.abtn');
-    // 2-2. 변경 대상: #slide
-    const slide = document.querySelector('#slide');
-    abtn[1].onclick = ()=>{
-        slide.style.left = "-100%";
-        slide.style.transition = ".8s";
-        // 0.8초 후 맨 앞 div 잘라서 맨 뒤로 이동
-        setTimeout(() => {
-            slide.appendChild(
-                slide.querySelectorAll("li")[0])
-            // left값 0으로 초기화
-            slide.style.left = "0";
-            // 3. 트랜지션 없애기
-            slide.style.transition = "none";
-        }, 800);
-    }
+  // 3. 이벤트 설정하기 및 기능 구현
+  // 3-1. 오른쪽 버튼 클릭 시
+  abtn[1].onclick = () => {
+    // 광클금지
+    if (prot) return; // 나가
+    prot = 1; // 잠금
+    setTimeout(() => (prot = 0), 800);
+    //////////////////////////////////////
 
-    
+    slide.style.left = "-100%";
+    slide.style.transition = ".8s ease-in-out";
+    // 0.8초 후 맨 앞 div 잘라서 맨 뒤로 이동
+    setTimeout(() => {
+      slide.appendChild(slide.querySelectorAll("li")[0]);
+      // left값 0으로 초기화
+      slide.style.left = "0";
+      // 3. 트랜지션 없애기
+      slide.style.transition = "none";
+    }, 800);
+  }; //click
+
+  // 3-2. 왼쪽 버튼 클릭시 : 왼쪽버튼 abtn변수 0번째
+  abtn[0].onclick = () => {
+    // 광클금지
+    if (prot) return; // 나가
+    prot = 1; // 잠금
+    setTimeout(() => (prot = 0), 800);
+    //////////////////////////////////////
+
+    // 1. 맨 뒤 요소를 잘라서 맨 앞으로 이동한다!
+    // 대상: slide변수 -> ul#slide
+    // 사용메서드: insertBefore(넣을 놈, 넣을 놈 전 놈)
+    // 현재 li자식요소 수집하기!
+    let cli = slide.querySelectorAll("li");
+    slide.insertBefore(cli[cli.length - 1], cli[0]);
+
+    // 2. 왼쪽 바깥에 -100% left값 주기!
+    slide.style.left = "-100%";
+    // 첫 번째 실행 후 생긴 트랜지션 없애기!
+    slide.style.transition = "none";
+
+    // 2번과 3번 코드 사이에 시차필요
+    // setTimeout()사용!
+    // -> 시간을 0으로 해도 코드 실행구역을 분리하므로
+    // 코드가 별도로 실행됨!(순서를 지킴)
+    setTimeout(() => {
+      // 3. left값을 0으로 트랜지션 애니메이션하기
+      slide.style.left = "0";
+      slide.style.transition = ".8s ease-in-out";
+    }, 0);
+  }; //click
 } //////////////// loadFn 함수 ///////////////
 /////////////////////////////////////////////
