@@ -41,7 +41,7 @@
             transform: translate(-50%, -50%);
             width: 300px;
             height: 300px;
-            outline: 2px dotted blue;
+            /* outline: 2px dotted blue; */
         }
 
         /* svg요소 공통 */
@@ -140,10 +140,38 @@
             stroke-dashoffset: 102%;
             transition: .8s;
         }
-        .svg2:hover .rt1{
+
+        .svg2:hover .rt1 {
             stroke-dashoffset: 0;
         }
-        
+
+        /* 3, 닥스박스 : 다각형(육각) */
+        .svg3 svg {
+            background: url(./images/doc.jpg) no-repeat top/cover;
+            /* 다각형 클리핑 적용하기! 
+            polygon(x1 y1,x2 y2, ...)*/
+            clip-path: polygon(50% 0, 100% 33%, 100% 66%, 50% 100%, 0% 66%, 0% 33%);
+        }
+
+        .pg1 {
+            /* 채우기 (색)*/
+            fill: none;
+            /* 선색 */
+            stroke: lightgreen;
+            /* 선두께 */
+            stroke-width: 20;
+            /* 선끝처리 */
+            stroke-linecap: square;
+            /* 데쉬설정: 50% X 6조각 = 300% */
+            stroke-dasharray: 300%;
+            /* 데쉬 시작위치 밀기 */
+            stroke-dashoffset: 300%;
+            transition: .6s;
+        }
+
+        .svg3:hover .pg1{
+            stroke-dashoffset: 0;
+        }
     </style>
 </head>
 
@@ -165,10 +193,24 @@
                     <rect class="rt1" width="280" height="280" x="10" y="10"></rect>
                 </svg>
             </div>
-
         </section>
-        <section></section>
-        <section></section>
+        <!-- 3. 닥터스트레인지 : 다각형(육각)-->
+        <section>
+            <div class="cbx svg3">
+                <svg>
+                    <polygon class="pg1" points="150,10 290,100 290,200 150,290 10,200 10, 100">
+                    </polygon>
+                </svg>
+            </div>
+        </section>
+        <!-- 4. 스칼렛위치 -->
+        <section>
+            <div class="cbx svg4">
+                <svg>
+
+                </svg>
+            </div>
+        </section>
     </div>
     <!-- 
         [ SVG란? ] 
@@ -204,6 +246,12 @@
         - width : 가로크기
         - height : 세로크기
         - x, y : x축, y축
+
+        [ polygon 요소 : 다각형 ]
+        - points 속성
+        - 표현법: <polygon points="x1,y1 x2,y2 ...">
+            -> x,y 좌표를 콤마로 구분하고 
+            다른 좌표는 띄어쓰기로 구분함
     -->
 
 </body>
