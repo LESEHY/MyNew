@@ -34,6 +34,7 @@
 
         // 이벤트 버블링 막기
         e.stopPropagation()
+        // 위에 있는 p가 클릭되는 이벤트 전달형상을 막음!
         $(this).parents("p").animate({
           backgroundColor: "yellow"
         },500); // animate
