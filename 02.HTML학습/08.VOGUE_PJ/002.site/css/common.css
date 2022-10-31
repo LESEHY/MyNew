@@ -236,6 +236,9 @@
 #top.on .gnb{
     font-size: 14px;
 }
+#top.on .gnb li{
+    padding-right: 35px;
+}
 /* GNB a요소 */
 #top.on .gnb a{
     color: #333;
