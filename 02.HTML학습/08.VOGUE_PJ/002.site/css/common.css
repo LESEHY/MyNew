@@ -260,6 +260,13 @@
         margin-left: 92px;
     }
 }
+/* 860px이하 수치조정 */
+@media screen and (max-width:860px) {
+    #top.on .gnb{
+        /* 왼쪽 공간 보정값 */
+        margin-left: 120px;
+    }
+}
 
 
 
