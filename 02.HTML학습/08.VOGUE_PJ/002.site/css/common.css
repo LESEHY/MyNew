@@ -207,6 +207,7 @@
     left: 0;
     width: 100%;
     background-color: #fff;
+    padding-top: 5px;
 }
 
 /* 2. 상단영역 속박스(.top) 최소높이 해제 */
@@ -222,7 +223,9 @@
 /* 4. 로고박스 */
 #top.on .logo{
     position: absolute;
+    top: 0;
     left: 0;
+    /* 부모자격 : #top */
     height: auto;
     margin-top: 0;
     padding: 10px;
@@ -235,14 +238,29 @@
 /* 5. GNB메뉴 */
 #top.on .gnb{
     font-size: 14px;
+    min-height: 45px;
 }
 #top.on .gnb li{
     padding-right: 35px;
+}
+/* 마지막 li 패딩제외 */
+#top.on .gnb li:last-child{
+    padding-right: 0;
 }
 /* GNB a요소 */
 #top.on .gnb a{
     color: #333;
 }
+
+/* 미디어쿼리 (GNB마진left 수치적용) 
+1300px+120px=1420px부터 적용*/
+@media screen and (max-width:1420px) {
+    #top.on .gnb{
+        /* 왼쪽 공간 보정값 */
+        margin-left: 92px;
+    }
+}
+
 
 
 /*************** 2. 하단영역 ***************/
