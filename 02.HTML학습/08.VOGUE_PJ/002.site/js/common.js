@@ -29,12 +29,19 @@ $(() => {
             topA.addClass("on");
             // addClass(클래스명) - 클래스 넣기
 
-            // 스크롤 방향에 따라 .up 추가/제거
-            if (scTop > lastSc) { // 스크롤 아랫방향
-                topA.removeClass("up");
+            // 스크롤 방향에 따라 숨겼다보이는 .top값 변경
+            if (scTop > lastSc) { // 숨기기
+                // #top의 높이값(동적으로 높이값 설정)
+                let temp = topA.innerHeight()
+                // 스크롤 아랫방향
+                topA.css({top:-tmep+"px"});
+                // console.log(temp);
+                // height() - 패딩이 빠진 순수높이값
+                // innerHeight() - 패딩포함 내부높이값
             } //if
-            else { // 스크롤 윗방향
-                topA.addClass("up");
+            else { // 보이기
+                // 스크롤 윗방향
+                topA.css({top:"0"});
             } //else
         } // if 
 
