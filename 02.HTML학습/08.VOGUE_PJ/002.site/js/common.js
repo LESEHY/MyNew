@@ -18,6 +18,18 @@ $(() => {
     // 마지막 스크롤위치값
     let lastSc = 0;
 
+    // 스크롤 액션 대상 위치값 배열변수
+    const svpos = [];
+    // 각 등장액션 요소변수
+    const scAct = $(".scAct");
+    // console.log("등장액션요소 개수: ",scAct.length);
+    // length는 제이쿼리에도 동일한 이름으로 개수를 가져옴!
+
+    // 제이쿼리에서 for문 대신 쓰는 each() 메서드!
+    // 요소.each((순번,요소)=>{구현부})
+
+    // 등장액션 클래스 요소의 위치를 배열에 담기
+    scAct.each(()=>{})
     //////////////////////////////////////
     ///////// 스크롤 이벤트 함수 //////////
     $(window).scroll(() => {
@@ -84,7 +96,7 @@ $(() => {
         // 브라우저에서 공통으로 작동함!
         $("html,body").animate({
             scrollTop:"0"
-        },800,"easeOutBounce"); // animate
+        },800,"easeOutQuart"); // animate
         // scrollTop 속성은 제이쿼리 전용
         // 세로 스크롤 위치값을 셋팅할 수 있다!
         // 참고) 가로스크롤은 scrollLeft임!
