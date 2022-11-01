@@ -11,11 +11,15 @@ $(() => {
     // 이벤트 대상 : window
     // 변경대상 : #top
     const topA = $("#top");
+    // 변경대상 : .tbtn
+    const tbtn = $(".tbtn");
     // 스크롤위치변수
     let scTop;
     // 마지막 스크롤위치값
     let lastSc = 0;
 
+    //////////////////////////////////////
+    ///////// 스크롤 이벤트 함수 //////////
     $(window).scroll(() => {
         // 스크롤 위치값 (this는 window)
         scTop = $(this).scrollTop()
@@ -34,7 +38,7 @@ $(() => {
                 // #top의 높이값(동적으로 높이값 설정)
                 let temp = topA.innerHeight()
                 // 스크롤 아랫방향
-                topA.css({top:-tmep+"px"});
+                topA.css({top:-temp+"px"});
                 // console.log(temp);
                 // height() - 패딩이 빠진 순수높이값
                 // innerHeight() - 패딩포함 내부높이값
@@ -60,6 +64,14 @@ $(() => {
         // }
         // 마지막위치 업데이트 필수!
         lastSc = scTop;
+
+        // 2. TOP버튼 보이기/숨기기
+        if(scTop >= 300){ // 300이상
+            tbtn.addClass("on")
+        } // if
+        else{ // 300미만
+            tbtn.removeClass("on")
+        } // else
     }); // scroll 
 
 }); //jQB
