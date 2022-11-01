@@ -326,10 +326,10 @@
     width: 48px;
     height: 35px;
     text-align: center;
-    line-height: 35;
+    line-height: 35px;
     background-color: #333;
     border-radius: 4px 4px 0 0;
-    color: white;
+    color: #fff;
     z-index: 9999;
     font-size: 12px;
     opacity: 0;/* 처음에 투명 */

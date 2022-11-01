@@ -74,4 +74,20 @@ $(() => {
         } // else
     }); // scroll 
 
+    //// TOP 버튼 클릭 설정 ////
+    tbtn.click(()=>{
+        // 스크롤 최상단으로
+        // 애니메이션 스크롤 이동
+        // 전체 스크롤 이동의 대상은?
+        // -> html,body 두 최상위 요소를
+        // 대상으로 한다! 왜? 그래야 모든
+        // 브라우저에서 공통으로 작동함!
+        $("html,body").animate({
+            scrollTop:"0"
+        },800,"easeOutBounce"); // animate
+        // scrollTop 속성은 제이쿼리 전용
+        // 세로 스크롤 위치값을 셋팅할 수 있다!
+        // 참고) 가로스크롤은 scrollLeft임!
+    }); //click
+
 }); //jQB
