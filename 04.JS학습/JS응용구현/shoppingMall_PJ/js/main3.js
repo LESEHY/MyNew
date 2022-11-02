@@ -23,9 +23,12 @@ $(() => {
     console.log("로딩완료!");
 
     // 2. 변경대상: #slide
-    const slide = $("#slide");
+    const slide = $("#slide li");
 
-    // 3. 이벤트 대상: .abtn (버튼 2개)
+    // 3. 순번변수 : 슬라이드순번 + 블릿순번
+    let sno = 0; // 첫 순번이 0번 
+
+    // 4. 이벤트 대상: .abtn (버튼 2개)
     $(".abtn").click(function () {
 
         // 1. 오른쪽 버튼 여부
@@ -36,8 +39,14 @@ $(() => {
         // 2. 분기하기
         // 2-1. 오른쪽일 떄
         if(isR){
-            
-        }
+            // 순번 증가
+            sno++;
+            // 한계값 체크(처음으로 돌림!)
+            if(sno===slide.length) sno=0;
+            // 클래스 넣기 + 나머지 다른형제 li는 on 제거
+            slide.addClass("on")
+            .siblings().removeClass("on");
+        } // if
 
     }); // click
 }); //JQB
