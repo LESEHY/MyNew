@@ -22,14 +22,30 @@ $(() => {
     // 1. 호출확인
     console.log("로딩완료!");
 
-    // 2. 변경대상: #slide
+    // 2. 변경대상: 
+    // 2-1. 슬라이드 li : #slide
     const slide = $("#slide li");
+    // 2-2. 블릿 li : .indic li
+    const indic = $(".indic li");
 
-    // 3. 순번변수 : 슬라이드순번 + 블릿순번
+
+    // 3. 변수셋팅:
+    // 3-1. 순번변수 : 슬라이드순번 + 블릿순번
     let sno = 0; // 첫 순번이 0번 
+    // 3-2. 광클금지변수: 0-허용 | 1-불허용
+    let prot = 0;
 
     // 4. 이벤트 대상: .abtn (버튼 2개)
     $(".abtn").click(function () {
+        // 0. 광클금지
+        if (prot) return;
+        prot = 1; // 잠금!
+        setTimeout(() => {
+            prot = 0; // 해제 
+        }, 600); // setTimeout
+
+        // 자동넘기기 지우기 함수
+        clearAuto();
 
         // 1. 오른쪽 버튼 여부
         // is(선택자) -> 선택자인지 여부(true|false)
@@ -38,15 +54,79 @@ $(() => {
 
         // 2. 분기하기
         // 2-1. 오른쪽일 떄
-        if(isR){
+        if (isR) {
             // 순번 증가
             sno++;
             // 한계값 체크(처음으로 돌림!)
-            if(sno===slide.length) sno=0;
-            // 클래스 넣기 + 나머지 다른형제 li는 on 제거
-            slide.addClass("on")
-            .siblings().removeClass("on");
+            if (sno === slide.length) sno = 0;
+
         } // if
 
+        // 2-1. 왼쪽일 때
+        else {
+            // 순번 감소
+            sno--;
+            // 한계값 체크(마지막으로 돌림!)
+            if (sno === -1) sno = slide.length - 1;
+        } // else
+
+        // 3. 해당순번(sno)의 클래스(on) 넣기 
+        // + 나머지 다른형제 li는 on 제거
+        slide.eq(sno).addClass("on")
+            .siblings().removeClass("on");
+
+        // 4. 블릿 해당순번(sno) 클래스(on)넣기
+        // + 나머지 다른 형제 li는 on제거
+        indic.eq(sno).addClass("on").siblings().removeClass("on");
     }); // click
+
+    /***************************************** 
+        자동넘기기 기능구현
+    *****************************************/
+    // 인터발용변수
+    let autoI;
+    // 타임아웃용 변수
+    let autoT;
+
+    // 자동넘기기 /////
+    // 인터발함수를 지우려면 변수에 넣고
+    // clearInterval(변수) 해야함!!!
+
+    /******************************* 
+          함수명: slideAuto
+          기능: 슬라이드 인터발 호출
+      *******************************/
+    function slideAuto() {
+        autoI = setInterval(() => {
+            // 순번 증가
+            sno++;
+            // 한계값 체크(처음으로 돌림!)
+            if (sno === slide.length) sno = 0;
+            // 3. 해당순번(sno)의 클래스(on) 넣기 
+            // + 나머지 다른형제 li는 on 제거
+            slide.eq(sno).addClass("on")
+                .siblings().removeClass("on");
+
+            // 4. 블릿 해당순번(sno) 클래스(on)넣기
+            // + 나머지 다른 형제 li는 on제거
+            indic.eq(sno).addClass("on").siblings().removeClass("on");
+        }, 2000);
+    } //////// slideAuto 함수 //////////
+
+    // 인터발함수 최초호출!
+    slideAuto();
+
+    /*********************************** 
+          함수명: clearAuto
+          기능: 인터발지우기,타임아웃셋팅
+      ***********************************/
+    function clearAuto() {
+        console.log("인터발지워!!!");
+        // 1. 인터발 지우기
+        clearInterval(autoI);
+        // 2. 타임아웃 지우기(실행쓰나미 방지!)
+        clearTimeout(autoT);
+        // 3. 일정시간 후 다시 인터발 호출!
+        autoT = setTimeout(slideAuto, 5000);
+    } /////// clearAuto함수 ////////
 }); //JQB
