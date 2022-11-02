@@ -91,6 +91,8 @@ function loadFn() {
     let cli = slide.querySelectorAll("li");
     slide.insertBefore(cli[cli.length - 1], cli[0]);
 
+    console.log(cli);
+
     // 2. 왼쪽 바깥에 -100% left값 주기!
     slide.style.left = "-100%";
     // 첫번째 실행후 생긴 트랜지션 없애기!
