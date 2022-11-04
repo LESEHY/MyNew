@@ -4,10 +4,12 @@
 
 // 모듈화 JS파일 import하기!
 // import {mTitle, sTitle, personInfo} from "./textData.js";
-import {mTitle as mTit, sTitle as sTit, personInfo as pInfo} from "./textData.js";
+import {mTitle as mTit, sTitle as sTit, personInfo as pInfo, mv} from "./textData.js";
 // import message from "./msgFormat.js";
 // 별칭사용
 import {message as msg} from "./msgFormat.js";
+// 영화정보 클래스 가져오기
+import MovieInfo from "./mvinfo.js";
 /******************************************************* 
     import 형식:
 
@@ -41,6 +43,7 @@ const tpart = document.querySelector(".tpart");
 // 2. 내용 출력박스
 const demo = document.querySelector("#demo");
 
+
 // 3. 제목넣기
 tpart.innerHTML = `
     <h2>${mTit}</h2>
@@ -56,3 +59,22 @@ demo.innerHTML = msg("줄리",48);
 pInfo.forEach((val)=>{
     demo.innerHTML += msg(val[0],val[1]);
 })
+
+const mvpart = document.querySelector(".mvpart");
+// 6. ol>li형식으로 .mvpart 박스에 영화정보로 
+// 클래스를 생성하여 화면에 뿌려준다!
+
+// 하나의 객체를 클래스로 부터 만들기
+// 영화정보는 textData.js에서 mv 변수에 배열로 담아서 가져옴!
+console.log(mv[0]);
+console.log(mv[1]);
+console.log(mv[2]);
+
+// 영화정보 클래스를 이용하여 생성한 객체를 담는 배열 변수
+let mi = [];
+mv.forEach((v,i)=>{
+    mi[i] = new MovieInfo(
+        mv[i][0],mv[i][1],mv[i][2],mv[i][3],mv[i][4])
+        console.log(mi[i]);
+}) // forEach
+
