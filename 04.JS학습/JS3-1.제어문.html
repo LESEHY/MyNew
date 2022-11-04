@@ -288,16 +288,16 @@
 
             // 4. 메시지 만들기
             // msg 변수에 최종 출력내용을 다시 담아서 변경함!
-            if(msg==="esc") 
+            if (msg === "esc")
                 msg = "등록되지 않은 지역입니다!";
-            else 
+            else
                 msg = `${txt}의 지역번호는 ${msg}입니다!`;
             //if문의 실행문이 1개이면 중괄호 생략가능
 
             // 5. 화면출력
             // 출력대상: #info - info변수
             info.innerText = msg;
-            
+
 
         }
 
@@ -342,10 +342,10 @@
                       변경될때 발생하는 이벤트
                       -> onchange 이벤트속성을 사용함!
           *************************************************/
-           function gugu(U){ 
+        function gugu(U) {
             // U - 전달변수(함수호출 시 보내는 값을 받는 
             // 함수내에서만 사용되는 지역변수)
-            
+
             // 0. 전달값의 선택option 값 읽기
             var optval = U.value;
 
@@ -354,7 +354,7 @@
 
             // 2. 대상선정 : 출력대상 -> .g1
             var tg = document.querySelector(".g1");
-            
+
             // 3. 구구단 만들기 : code변수에 모두 넣기
             var code = `<h2>${optval}단</h2>`;
 
@@ -363,7 +363,7 @@
             code += `${optval} × 2 ＝ ${optval*2} <br>`;
             code += `${optval} × 3 ＝ ${optval*3} <br>`;
             //for(시;한;증){실행코드}
-            for(var i=1;i<=9;i++){
+            for (var i = 1; i <= 9; i++) {
                 code += `
                 ${optval} × ${i} ＝
                 ${optval*i} <br> `
@@ -372,7 +372,7 @@
             // 4. 화면출력 : html코드를 innerHTML로 출력!
             // 주의: innerText로 출력하면 태그가 그대로 보임!
             tg.innerHTML = code;
-           }
+        }
         /*************************************************** 
                [ for문 ]
 
@@ -409,11 +409,11 @@
                       변경될때 발생하는 이벤트
                       -> onchange 이벤트속성을 사용함!
           *************************************************/
-          
-          function gugu2(U){ 
+
+        function gugu2(U) {
             // U - 전달변수(함수호출 시 보내는 값을 받는 
             // 함수내에서만 사용되는 지역변수)
-            
+
             // 0. 전달값의 선택option 값 읽기
             var optval = U.value;
 
@@ -422,12 +422,12 @@
 
             // 2. 대상선정 : 출력대상 -> .g2
             var tg = document.querySelector(".g2");
-            
+
             // 3. 구구단 만들기 : code변수에 모두 넣기
             var code = `<h2>${optval}단</h2>`;
 
             // 앞의 데이터를 살리기위해 +=(대입연산자)사용!
-            
+
             /* 
                 시작값;
                 while(한계값){
@@ -435,9 +435,9 @@
                     증감;
                 }
             */
-            var i=1;
+            var i = 1;
 
-            while(i<=9){ // 소괄호 안 : 한계값
+            while (i <= 9) { // 소괄호 안 : 한계값
 
                 // 실행코드
                 code += `
@@ -451,7 +451,7 @@
             // 4. 화면출력 : html코드를 innerHTML로 출력!
             // 주의: innerText로 출력하면 태그가 그대로 보임!
             tg.innerHTML = code;
-           }
+        }
 
         /**************************************************** 
               [ while문 ]
