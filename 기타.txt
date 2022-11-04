@@ -1,0 +1,7 @@
+    "editor.tokenColorCustomizations":{
+        "textMateRules":[{
+                "scope":["comment","keyword.control"],
+                "settings":{"fontStyle":" "} //주석과 키워드에 적용된 이탤릭 폰트스타일 해제
+            }],
+            "comments":"#1bf3d6" //주석 색상변경
+        }
