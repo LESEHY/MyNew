@@ -67,9 +67,9 @@
 
             // CGV만의 메서드 만들기
             // this.메서드()는 부모클래스의 메서드임!(접근가능)
-            show(){
+            show() {
                 return this.메서드() +
-                ", CGV안내 : " + this.극장안내
+                    ", CGV안내 : " + this.극장안내
             } // show 메서드
         } // class 
 
@@ -89,7 +89,16 @@
         // cgv 객체확인
         console.log("CGV 객체확인: ", cgv);
 
-        
+        // 만들어진 객체 화면출력 : 객체니까 for in문 사용
+        for (let x in cgv) {
+            document.write(`<h2>★${x} : ${cgv[x]}</h2>`)
+        } // for in
+
+        // 객체 메서드 호출!
+        document.write(`<h2>※메시지 : ${cgv.메서드("아주 훌륭해요")}</h2>`)
+
+        // 극장평균수용인원 출력하기
+        document.write(`<h2>CGV의 극장평균 수용인원은 ${cgv.수용인원}명입니다!(2021년)</h2>`)
     </script>
 </head>
 
