@@ -346,5 +346,6 @@
 /* 위로가기 버튼 오버시 */
 .tbtn:hover{
     background-color: red;
+    color: #b5d692
 }
 
