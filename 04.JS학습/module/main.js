@@ -3,8 +3,11 @@
 // 로딩구역없이... => script 태그에 defer 속성사용!
 
 // 모듈화 JS파일 import하기!
-import {mTitle,sTitle,personInfo} from "./textData.js";
-import message from "./msgFormat.js";
+// import {mTitle, sTitle, personInfo} from "./textData.js";
+import {mTitle as mTit, sTitle as sTit, personInfo as pInfo} from "./textData.js";
+// import message from "./msgFormat.js";
+// 별칭사용
+import {message as msg} from "./msgFormat.js";
 /******************************************************* 
     import 형식:
 
@@ -12,8 +15,15 @@ import message from "./msgFormat.js";
     -> 반드시 가져올 모듈화 JS에서 export를 해줘야 함!
     -> from 뒤에 경로는 반드시 상대경로일 경우
     같은 위치일 지라도 ./ 표시를 꼭 해야함!(없으면 안나옴)
+    (/, ./, ../ 표시 필수)
     -> 모듈구성은 반드시 서버형식으로 열어야 작동한다!
-    (http:// ......)
+    (http:// ......) Live Server로 열기 떄문에 볼 수 있음!
+
+    [ import 시 변수명 변경하기 ]
+    import {전달변수 as 별칭} from 파일경로;
+    예) import {mymymy as m} from 파일경로;
+    -> 별칭 사용이유: 단순변경요구, 같은이름변수 피하기
+
 *******************************************************/
 
 /* 
@@ -33,9 +43,16 @@ const demo = document.querySelector("#demo");
 
 // 3. 제목넣기
 tpart.innerHTML = `
-    <h2>${mTitle}</h2>
-    <h3>${sTitle}</h3>
+    <h2>${mTit}</h2>
+    <h3>${sTit}</h3>
 `;
 
 // 4. 내용넣기
-demo.innerHTML = message("현석",40);
+demo.innerHTML = msg("현석",40);
+demo.innerHTML = msg("톰행크스",55);
+demo.innerHTML = msg("줄리",48);
+
+// 5. 다중 데이터(배열) 이용하기
+pInfo.forEach((val)=>{
+    demo.innerHTML += msg(val[0],val[1]);
+})
