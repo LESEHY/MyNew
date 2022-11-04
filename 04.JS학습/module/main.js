@@ -106,7 +106,7 @@ for (let z of mi) { // z는 각 배열값 -> 객체가 담김!
         `;
     } // for in
 
-    temp += "</ol> <hr>";
+    temp += "</ol>";
 
     // 코드확인
     console.log(temp);
