@@ -34,7 +34,7 @@ window.addEventListener("DOMContentLoaded", loadFn);
 ******************************************/
 function loadFn() {
   // 1. 호출확인
-  console.log("로딩완료!");
+  // console.log("로딩완료!");
 
   // 광클금지 상태변수
   let prot = 0; // 0-허용, 1-불허용
@@ -142,7 +142,7 @@ function loadFn() {
       .getAttribute("data-seq"); // "data-seq"속성값
     // getAttribute(속성명) -> 속성값 읽어오는 JS내장함수
 
-    console.log("순번:", cseq);
+    // console.log("순번:", cseq);
 
     // 2. 슬라이드 li 클래스 초기화!
     for (let x of indic) x.classList.remove("on");
