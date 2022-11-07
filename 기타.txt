@@ -1,11 +1,11 @@
-    "editor.tokenColorCustomizations":{
+"editor.tokenColorCustomizations":{
         "textMateRules":[{
-                "scope":["comment","keyword.control","strings"],
+                "scope":["keyword.control","variable.parameter.url.css"],	
                 "settings":{"fontStyle":" "} //주석과 키워드에 적용된 이탤릭 폰트스타일 해제
             }],
-            "comments":"#3CB371", //주석 색상변경
-            "strings": "#e4b547" // 괄호 안 색상변경
-        }
+            "comments":"#7aff8c", // 주석 색상변경
+            "strings": "#CE9178", // 괄호 안 색상변경  
+        },
 
         #7aff8c
         Developer: Inspect Editor Tokens and Scopes
