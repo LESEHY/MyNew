@@ -1,11 +1,61 @@
-"editor.tokenColorCustomizations":{
-        "textMateRules":[{
+{
+    "files.autoSave": "afterDelay",
+    "editor.mouseWheelZoom": true,
+    "editor.renderWhitespace": "none",
+    "tabnine.experimentalAutoImports": true,
+    "editor.inlayHints.enabled": "off",
+    "window.zoomLevel": 1,
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.tokenColorCustomizations":{
+        "textMateRules":[
+            {   //주석과 키워드에 적용된 이탤릭 폰트스타일 해제
                 "scope":["keyword.control","variable.parameter.url.css"],	
-                "settings":{"fontStyle":" "} //주석과 키워드에 적용된 이탤릭 폰트스타일 해제
-            }],
+                "settings":{"fontStyle":" "}
+            }, 
+            {   // width, margin 등
+                "scope": "support.type.property-name.css",
+                "settings": {"foreground": "#00ddff"}
+            },
+            { // CSS 단위
+                "scope":["constant.numeric.css","keyword.other.unit.px.css","keyword.other.unit.percentage.css"],
+                "settings": {"foreground": "#d6e84a"}
+            },
+            { // 타이틀 제목
+                "scope": "text.html.derivative",
+                "settings": {"foreground": "#fff"}
+            },
+            { // CSS 가상요소
+                "scope": "entity.other.attribute-name.pseudo-element.css",
+                "settings":{"foreground": "#ff8364"}
+            },
+            { // JS 괄호 안 "" 색상
+                "scope": ["punctuation.definition.string.begin.js", "punctuation.definition.string.end.js", "punctuation.definition.string.begin.json.comments", "punctuation.definition.string.end.json.comments"],
+                "settings": {"foreground": "#CE9178"}
+            }
+                        ],
             "comments":"#7aff8c", // 주석 색상변경
-            "strings": "#CE9178", // 괄호 안 색상변경  
+            "strings": "#CE9178", // 괄호 안 문자 색상변경  
         },
-
+        "workbench.colorTheme": "One Dark Modern"
+}
         #7aff8c
-        Developer: Inspect Editor Tokens and Scopes
+        Developer: Inspect Editor Tokens and Scopes 
+        ( F1 키 누른 후 변경 속성 값 확인)
+
+        _________________________________________
+
+        Beautify
+        자바팩
+        HTML to CSS autocompletion
+        Image preview
+        IntelliCode
+        IntelliCode API Usage Examples
+        jQuery Code Snippets
+        Live Preview
+        Live Server
+        Material Icon Theme
+        Office Viewer(Markdown Editor)
+        Prettier - Code formatter
+        Sublime Material Theme
+        One DArk Modern
+
