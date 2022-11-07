@@ -99,7 +99,8 @@
                     // 호출페이지 뒤에 물음표(?)뒤에 (키=값) 쌍으로 전달
                     // 페이지이동 :
                     // location.href = 이동페이지 주소
-                    location.href = "Get02.html?shop="+escape(atxt);
+                    location.href = 
+                    "Get02.html?shop="+encodeURIComponent(atxt);
                     // 예) Get02.html?shop=레드샵
                 };
             }// for of
