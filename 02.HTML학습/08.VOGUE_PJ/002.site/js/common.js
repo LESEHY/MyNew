@@ -61,7 +61,7 @@ $(() => {
         scTop = $(this).scrollTop()
         // scrollTop() 메서드 
         // - 세로스크롤 위치값을 리턴하는 메서드
-        console.log(scTop);
+        // console.log(scTop);
 
         // 1. 슬림메뉴 클래스 on적용!
         // 기준위치는 스크롤위치 100px이상
