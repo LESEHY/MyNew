@@ -1,0 +1,97 @@
+@charset "utf-8";
+/* 보그 PJ 카테고리 서브페이지 CSS - category.css */
+
+/* 공통 외부CSS 합치기 */
+@import url(reset.css);
+@import url(core.css);
+@import url(common.css);
+
+/* 2-1-1. 서브타이틀 */
+.stit{
+    font-family: pist;
+    font-weight: normal;
+    font-size: 50px;
+    text-align: center;
+    padding: 40px 0 20px;
+}
+/* 2-1-2. 서브메뉴(LNB) */
+.lnb{
+    padding: 5px 0 50px;
+}
+
+.lnb ul{
+    display: flex;
+    justify-content: center;
+}
+.lnb li{
+    margin: 0 10px;
+}
+.lnb a{
+    font-family: nbg;
+    font-size: 18px;
+    color: #333;
+    transition: color .5s;
+}
+/* 첫번째 메뉴 + 오버시 빨간색글자 */
+.lnb li:first-child a,
+.lnb a:hover{
+    color: red;
+}
+
+/************************** fashion  **************************/
+.fashion .bg1-1{
+    background-image: url(../images/fashion/cont1-1a.jpg);
+}
+.fashion .bg1-2{
+    background-image: url(../images/fashion/cont1-2a.jpg);
+}
+.fashion .bg1-3{
+    background-image: url(../images/fashion/cont1-3a.jpg);
+}
+.fashion .bg2-1{
+    background-image: url(../images/fashion/cont2-1a.jpg);
+}
+.fashion .bg2-2{
+    background-image: url(../images/fashion/cont2-2a.jpg);
+}
+.fashion .bg2-3{
+    background-image: url(../images/fashion/cont2-3a.jpg);
+}
+/************************** beauty  **************************/
+.beauty .bg1-1{
+    background-image: url(../images/beauty/cont1-1a.jpg);
+}
+.beauty .bg1-2{
+    background-image: url(../images/beauty/cont1-2a.jpg);
+}
+.beauty .bg1-3{
+    background-image: url(../images/beauty/cont1-3a.jpg);
+}
+.beauty .bg2-1{
+    background-image: url(../images/beauty/cont2-1a.jpg);
+}
+.beauty .bg2-2{
+    background-image: url(../images/beauty/cont2-2a.jpg);
+}
+.beauty .bg2-3{
+    background-image: url(../images/beauty/cont2-3a.jpg);
+}
+/************************** living  **************************/
+.living .bg1-1{
+    background-image: url(../images/living/cont1-1a.jpg);
+}
+.living .bg1-2{
+    background-image: url(../images/living/cont1-2a.jpg);
+}
+.living .bg1-3{
+    background-image: url(../images/living/cont1-3a.jpg);
+}
+.living .bg2-1{
+    background-image: url(../images/living/cont2-1a.jpg);
+}
+.living .bg2-2{
+    background-image: url(../images/living/cont2-2a.jpg);
+}
+.living .bg2-3{
+    background-image: url(../images/living/cont2-3a.jpg);
+}
