@@ -37,21 +37,17 @@
 
                         ],
             "comments":"#7aff8c", // 주석 색상변경
-            "strings": "#53cdeb", // 괄호 안 문자 색상변경  
+            "strings": "#CE9178", // 괄호 안 문자 색상변경  
         },
         // jsp 확장자 사용가능 설정(JSP구문 색상구분 변경지원)        
         "files.associations": { "*.jsp": "jsp" } ,
         // 에밋 자동완성을 jsp에서도 html자동완성 사용설정
         "emmet.includeLanguages": { "jsp": "html" },
         "emmet.triggerExpansionOnTab": true,
-        "workbench.colorTheme": "GitHub Dark"
+        "workbench.colorTheme": "GitHub Dark Colorblind (Beta)"
 }
 
-  Developer: Inspect Editor Tokens and Scopes 
-        ( F1 키 누른 후 변경 속성 값 확인)
-
-        _________________________________________
-
+ 
         Beautify
         자바팩
         HTML to CSS autocompletion
