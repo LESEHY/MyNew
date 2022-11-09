@@ -47,4 +47,22 @@
         "workbench.colorTheme": "GitHub Dark"
 }
 
- 
+  Developer: Inspect Editor Tokens and Scopes 
+        ( F1 키 누른 후 변경 속성 값 확인)
+
+        _________________________________________
+
+        Beautify
+        자바팩
+        HTML to CSS autocompletion
+        Image preview
+        IntelliCode
+        IntelliCode API Usage Examples
+        jQuery Code Snippets
+        Live Preview
+        Live Server
+        Material Icon Theme
+        Office Viewer(Markdown Editor)
+        Prettier - Code formatter
+        Sublime Material Theme
+        One DArk Modern
