@@ -9,7 +9,7 @@
     "editor.tokenColorCustomizations":{
         "textMateRules":[
             {   //주석과 키워드에 적용된 이탤릭 폰트스타일 해제
-                "scope":["keyword.control","variable.parameter.url.css"],	
+                "scope":["comment","keyword.control","variable.parameter.url.css"],	
                 "settings":{"fontStyle":" "}
             }, 
             {   // width, margin 등
@@ -21,27 +21,40 @@
                 "settings": {"foreground": "#d6e84a"}
             },
             { // 타이틀 제목
-                "scope": "text.html.derivative",
+                "scope": ["text.html.derivative","text.html.jsp", "meta.method-call.java"],
                 "settings": {"foreground": "#fff"}
             },
             { // CSS 가상요소
-                "scope": "entity.other.attribute-name.pseudo-element.css",
+                "scope": "entity.other.attribute-name.pseudo-element",
                 "settings":{"foreground": "#ff8364"}
             },
             { // JS 괄호 안 "" 색상
-                "scope": ["punctuation.definition.string.begin.js", "punctuation.definition.string.end.js", "punctuation.definition.string.begin.json.comments", "punctuation.definition.string.end.json.comments"],
+                "scope": ["punctuation.definition.string.begin", "punctuation.definition.string.end", "punctuation.definition.string.begin.json.comments", "punctuation.definition.string.end.json.comments"],
                 "settings": {"foreground": "#CE9178"}
+            },
+            { 
+                "scope": "entity.name.tag",
+                "settings": { "foreground": "#DE7C84" }
+            },
+            {
+                "scope": "entity.other.attribute-name",
+                "settings": { "foreground": "#EBB07A" }
+            },
+            {
+                "scope": "source.java",
+                "settings": { "foreground": "#C792EA" }
             }
+
                         ],
             "comments":"#7aff8c", // 주석 색상변경
             "strings": "#CE9178", // 괄호 안 문자 색상변경  
         },
-        "workbench.colorTheme": "One Dark Modern",
         // jsp 확장자 사용가능 설정(JSP구문 색상구분 변경지원)        
         "files.associations": { "*.jsp": "jsp" } ,
         // 에밋 자동완성을 jsp에서도 html자동완성 사용설정
         "emmet.includeLanguages": { "jsp": "html" },
-        "emmet.triggerExpansionOnTab": true
+        "emmet.triggerExpansionOnTab": true,
+        "workbench.colorTheme": "One Dark Modern"
 }
 
  
