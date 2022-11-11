@@ -141,56 +141,124 @@ $(() => {
 
         // 5. 옆방으로! 버튼 클릭시 //
 
-        .next().click(function () {
+        .next().click(
+            function () { // 일반익명함수로 해야 this가 버튼임!
+                // () => { 화살표함수는 내부의 this가 바깥으로 나가 window가 잡힌다!
 
-            // 이동 후 함수
-            let fn = () => {
-                // 좀비 나타나기(2초 후)
-                bd.eq(9).find(".mz")
-                    .delay(2000).fadeIn(400,
-                        () => { // 좀비가 나타기 후 메시지 보이기
+                // 이동 후 함수
+                let fn = () => {
+                    // 좀비 나타나기(2초 후)
+                    bd.eq(9).find(".mz")
+                        .delay(2000).fadeIn(400,
+                            // function () { // 내부의 this의미가 달라짐!
+                            () => {
+                                // 화살표함수는 바깥싸고 있는 function 익명함수의
+                                // 주인인 버튼이 this임!
 
-                            msg.html("악!;; 좀비!<br>어서피하자!") // 텍스트 변경
-                                .fadeIn(300); // 나타나기
-                            // 다음 버튼 보이기
-                            $(this).next().delay(500).slideDown(300);
-                        }); // fadeIn
-            }; // fn 함수
-            actMini(this, 9, fn)
-        }) // 5. click
+                                // 좀비가 나타기 후 메시지 보이기
+                                msg.html("악!;; 좀비!<br>어서피하자!") // 텍스트 변경
+                                    .css({
+                                        left: "-87%"
+                                    }) // 위치변경
+                                    .fadeIn(300); // 나타나기
+                                // 다음 버튼 보이기
+                                $(this).next().delay(500).slideDown(300);
+
+                                // this는 누구인가? 확인!
+                                console.log(this);
+                                // this는 이벤트걸린 버튼임!(화살표함수라 나감!)
+                            }); // fadeIn
+                }; // fn 함수
+                actMini(this, 9, fn);
+            }) // 5. click
 
         // 6. 윗층으로 도망가! 버튼 클릭시 //
         .next().click(function () {
+            // 이동 후 함수
+            let fn = () => {
+                // 메시지 보이기
+                msg.html(`여긴 없겠지`).fadeIn(200);
 
+                // 좀비보이기
+                bd.eq(7).find(".mz").delay(1000).fadeIn(400, () => {
+                    // 메시지 변경하기
+                    msg.html(`악, 여기도!!`);
+                    // 다음버튼 보이기
+                    $(this).next().slideDown(300);
+                });
+            };
+            // 액션함수 호출
+            actMini(this, 7, fn);
         }) // 6. click
 
         // 7. 다시옆방으로! 버튼 클릭시 //
         .next().click(function () {
+            // 이동 후 함수
+            let fn = () => {
+                // 첫 번째 메시지
+                msg.html(`여기 없겠지?`)
+                    .fadeIn(200)
+                    .delay(1000) // 1초 지연 (지연시간은 애니메이션 메서드 앞)
+                    .fadeIn(200, () => {
+                        // 두 번째 메시지
+                        msg.html(`그래도 무서우니<br>윗층으로 가자!`);
+                        // 다음버트 보이기
+                        $(this).next().slideDown(300);
+                    }); // fadeIn
+            };
+
+            // 액션함수 호출
+            actMini(this, 6, fn);
 
         }) // 7. click
 
         // 8. 무서우니 윗층으로! 버튼 클릭시 //
         .next().click(function () {
+            // 이동 후 함수
+            let fn = () => {};
+
+            // 액션함수 호출
+            actMini(this, 4, fn);
 
         }) // 8. click
 
         // 9. 치료주사방으로! 버튼 클릭시 //
         .next().click(function () {
+            // 이동 후 함수
+            let fn = () => {};
+
+            // 액션함수 호출
+            actMini(this, 2, fn);
 
         }) // 9. click
 
         // 10. 3 번방으로! 버튼 클릭시 //
         .next().click(function () {
+            // 이동 후 함수
+            let fn = () => {};
+
+            // 액션함수 호출
+            actMini(this, 3, fn);
 
         }) // 10. click
 
         // 11. 1 번방으로! 버튼 클릭시 //
         .next().click(function () {
+            // 이동 후 함수
+            let fn = () => {};
+
+            // 액션함수 호출
+            actMini(this, 1, fn);
 
         }) // 11. click
 
         // 12. 헬기를 호출! 버튼 클릭시 //
         .next().click(function () {
+            // 이동 후 함수
+            let fn = () => {};
+
+            // 액션함수 호출
+            actMini(this, 0, fn);
 
         }) // 12. click
 
