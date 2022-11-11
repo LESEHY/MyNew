@@ -149,7 +149,7 @@ $(() => {
                 let fn = () => {
                     // 좀비 나타나기(2초 후)
                     bd.eq(9).find(".mz")
-                        .delay(2000).fadeIn(400,
+                        .delay(1000).fadeIn(400,
                             // function () { // 내부의 this의미가 달라짐!
                             () => {
                                 // 화살표함수는 바깥싸고 있는 function 익명함수의
@@ -215,7 +215,41 @@ $(() => {
         // 8. 무서우니 윗층으로! 버튼 클릭시 //
         .next().click(function () {
             // 이동 후 함수
-            let fn = () => {};
+            let fn = () => {
+                // 무.서.워... 메시지
+                msg.text(`무`)
+                .fadeIn(200)
+                .delay(500)
+                .fadeIn(200,()=>msg.text(`무.`))
+                .delay(500)
+                .fadeIn(200,()=>msg.text(`무.서`))
+                .delay(500)
+                .fadeIn(200,()=>msg.text(`무.서.`))
+                .delay(500)
+                .fadeIn(200,()=>msg.text(`무.서.워`))
+                .delay(500)
+                .fadeIn(200,()=>msg.text(`무.서.워.`))
+                .delay(500)
+                .fadeIn(200,()=>msg.text(`무.서.워..`))
+                .delay(500)
+                .fadeIn(200,()=>msg.text(`무.서.워...`))
+                .delay(500)
+                .fadeIn(200,
+                    ()=>{
+                        // 7번방 좀비가 올라와서
+                        // 달려든다!
+                        bd.eq(7).find(".mz")
+                        .animate({ // 윗층으로 올라옴
+                            bottom:bd.eq(7).height()+"px"
+                            // li 높이값만큼 bottom을 올려준다!
+                        },500,"easeOutElastic")
+                        .delay(500) // 기다림
+                        .animate({ // 달겨들기
+                            right:(bd.eq(7).width()*1.2)+"px"
+                            // li 가로크기만큼 rigth값 변경(보정*1.2)
+                        },1000,"easeOutBounce")
+                    })
+            };
 
             // 액션함수 호출
             actMini(this, 4, fn);
