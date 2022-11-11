@@ -44,8 +44,10 @@
         // 에밋 자동완성을 jsp에서도 html자동완성 사용설정
         "emmet.includeLanguages": { "jsp": "html" },
         "emmet.triggerExpansionOnTab": true,
-        "workbench.colorTheme": "GitHub Dark Colorblind (Beta)"
+        "workbench.colorTheme": "Default High Contrast"
 }
+
+ 
 
  
         Beautify
