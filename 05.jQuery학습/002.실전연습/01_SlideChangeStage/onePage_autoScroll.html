@@ -14,7 +14,8 @@
             height: 100%;
             /* 보이는 화면기준 채우기 */
             /* body하위 요소의 높이값 %의 기준이됨! */
-            overflow: hidden; /* 스크롤바 없앰 */
+            overflow: hidden;
+            /* 스크롤바 없앰 */
         }
 
         /* 공통셋팅 */
@@ -178,15 +179,26 @@
     <script src="./js/jquery-ui.min.js"></script>
     <script>
         $(() => {
+
+            // 페이지 이동을 위한 변수
+            let pno = 0;
+            // 전체 페이지 수(페이지 요소 개수를 할당)
+            let totnum = $(".page").length;
+            // console.log(totnum);
+
+            // 스크롤 금지 변수
+            let prot = 0; // 0 - 허용 | 1 - 불허용
+
+
             ///////////////////////////////////////
             // a클릭시 스크롤 이동 애니메이션 구현 // 
             //////////////////////////////////////
 
             // 대상: .gnb a
-            $(".gnb a").click(function(e){ // e- 이벤트 전달변수
+            $(".gnb a").click(function (e) { // e- 이벤트 전달변수
                 // a 기본이동막기
                 e.preventDefault();
-                
+
                 // 수정본: 스크롤바가 없어지면
                 // 위치값에 오작동이 나타나므로
                 // 한페이지 단위로 이동한다!
@@ -197,13 +209,16 @@
                 let idx = $(this).parent().index();
                 console.log(idx);
 
-               
+                // pno와 씽크 맞추기!
+                pno = idx;
+
+
                 // 2. 위치이동 스크롤 애니메이션
                 // 전체 스크롤 대상: html,body(최상위 부모2개 동시에!)
                 $("html,body").animate({
                     scrollTop: ($(window).height() * idx) + "px"
                     // 윈도우 높이값 * 순번
-                },800,"easeInOutQuint")
+                }, 800, "easeInOutQuint")
 
             }); // click
 
@@ -213,11 +228,66 @@
                 -> whell 이벤트가 최신 이벤트임!
                 *대상: document
                 *메서드: $(선택자).on(이벤트명,함수)
+                -> 이벤트명에 띄어쓰기로 쓰면 다중이벤트적용
             ******************************************************/
-            $(document).on('mousewheel wheel',()=>{
+            $(document).on('mousewheel wheel', (e) => { // e - 이벤트전달변수
 
+                // 광스크롤 금지
+                if(prot) return;
+                prot = 1; // 잠금!
+                setTimeout(() => {
+                    prot = 0; // 해제!
+                }, 800);
+
+                //e.preventDefault()
+                // 기본기능막기는 window,docyment,body
+                // 세가지 최상위객체에는 사용할 수 없다!(에러남!)
+
+                // 호출확인
+                // console.log("휠");
+
+                // 이벤트 전달변수 처리
+                e = window.event || e;
+                // 오리지널 이벤트와 전달이벤트 중 유효한 값을 할당!
+                // 변수 = 값 || 값 -> 두 값중 true인 값이 할당됨!
+
+                // 1. 휠 방향 알아내기
+                // 방향은 델타값 사용!
+                let delta = e.wheelDelta || e.detail;
+                // e.wheelDelta = 일반 브라우저용 방향정보
+                // e.detail - 파이어폭스용 방향정보
+
+                // console.log(delta);
+
+                // 2. 음수면 아랫방향 : 다음페이지
+                if (delta < 0) {
+                    // 페이지 수 증가
+                    pno++;
+                    if (pno === totnum) pno = totnum - 1;
+                    // 페이지 수와 같아지면 끝번호 다음번호니까 
+                    // 끝번호에 고정
+                    // console.log("아랫방향");
+                } else {
+                    // 페이지 수 감소
+                    pno--;
+                    if (pno === -1) pno = 0;
+                    // 첫 페이지 이전으로 가면 첫 번호에 고정!
+                    // console.log("윗방향");
+                }
+
+                // 페이지 수 확인
+                console.log("페이지 번호: ", pno);
+
+                // 3. 위치이동 스크롤 애니메이션
+                // 전체 스크롤 대상: html,body(최상위 부모2개 동시에!)
+                $("html,body").animate({
+                    scrollTop: ($(window).height() * pno) + "px"
+                    // 윈도우 높이값 * 순번
+                }, 800, "easeInOutQuint")
             }); // wheel
 
+            // 스크롤 이벤트와 비교
+            // $(window).scroll(()=>{console.log("스크롤이벤트")})
         }); // JQB
     </script>
 </head>
