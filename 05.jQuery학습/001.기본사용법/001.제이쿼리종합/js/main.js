@@ -344,7 +344,7 @@ $(() => {
             let fn = () => {
                 // 메시지 보이기
                 msg.html("어서윗층으로 가자!")
-                .fadeIn(200);
+                    .fadeIn(200);
 
                 // 다음버튼 보이기
                 $(this).next().slideDown(300);
@@ -361,7 +361,7 @@ $(() => {
             let fn = () => {
                 // 메시지 보이기
                 msg.html("이제 곧 탈출이다!")
-                .fadeIn(200);
+                    .fadeIn(200);
 
                 // 다음버튼 보이기
                 $(this).next().slideDown(300);
@@ -378,26 +378,41 @@ $(() => {
             let fn = () => {
                 // 메시지 보이기
                 msg.html("도와줘요!")
-                .fadeIn(200);
+                    .fadeIn(200);
 
                 // 1번방 단체좀비들 달겨듬!
                 bd.eq(1).find(".mz")
-                .fadeIn(300)
-                .animate({
-                    right: bd.eq(1).width() + "px"  
-                },3000,"easeInExpo");
+                    .fadeIn(300)
+                    .animate({
+                        right: bd.eq(1).width() + "px"
+                    }, 3000, "easeInExpo");
 
                 // 헬기 등장
                 $(".heli")
-                .animate({
-                    left: "20%"
-                }, 4000, "easeOutBack",function(){ // 여기서 this는 .heli
-                    // 헬기도착 후 탑승이미지 변경
-                    $(this).attr("src","images/heli2.png");
-                    // 원본 미니언즈는 사라짐
-                    mi.hide()
+                    .animate({
+                        left: "20%"
+                    }, 4000, "easeOutBack", function () { // 여기서 this는 .heli
+                        // 헬기도착 후 탑승이미지 변경
+                        $(this).attr("src", "images/heli2.png");
+                        // 원본 미니언즈는 사라짐
+                        mi.hide();
 
-                })
+                    })
+                    .delay(500) // .5초 쉬었다가
+                    .animate({ // 다시 오른쪽 끝으로 이동
+                            left: "70%"
+                        }, 4000, "easeInOutCirc",
+                        function () { // 끝쪽에서 조종사 좀비로!
+                            $(this).attr("src", "images/heli3.png");
+                        })
+                    .delay(300)
+                    .animate({ // 아주 천천히 오른쪽 바깥으로 나감!
+                            left: "100%"
+                        }, 10000, "linear", // 10초동안 등속도
+                        () => {
+                            // 최종마무리구역
+                            
+                        });
             };
 
             // 액션함수 호출
