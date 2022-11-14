@@ -76,7 +76,10 @@ $(() => {
     // 2. 버튼 셋팅하기
     // 모든 버튼은 숨기고 첫 번째 버튼만 보여!
     // 버튼.숨겨().첫번째().보여()
-    btns.hide().first().show();
+    // btns.hide().first().show();
+
+    // 테스트시 중간버튼부터
+    btns.hide().eq(5).show();
 
     // 3. 공통함수 : actMini()
     // 전달값 (ele-버튼요소, seq-방순번, fn-콜백함수)
@@ -297,7 +300,38 @@ $(() => {
         .next()
         .click(function () {
             // 이동 후 함수
-            let fn = () => {};
+            let fn = () => {
+                // 주사기 돌기(animate는 트랜스폼 적용안됨)
+                $(".inj").css({
+                    // 반시계방향회전
+                    transform: "rotate(-150deg)",
+                    // .5초 후 .5초간 애니
+                    transition: ".5s .5s",
+                    // 미니언즈 보다 위
+                    zIndex: "9999"
+                }); // CSS
+
+                // 미니언즈로 다시 태어나다! (1초 후)
+                setTimeout(() => {
+                    // 이미지 변경
+                    mi.find("img").attr("src", "images/m2.png")
+                        .css({
+                            // 다시 컬러!
+                            filter: "grayscale(0)"
+                        }); // CSS
+                    // 대사
+                    msg.html("이제 조금만 더<br>가면 탈출이다! ")
+                        .css({
+                            left: "-150%"
+                        }) // CSS
+                        .fadeIn(200);
+                    // 주사기 없애기
+                    $(".inj").hide();
+
+                    // 다음버튼 보이기
+                    $(this).next().slideDown(300);
+                }, 1000);
+            };
 
             // 액션함수 호출
             actMini(this, 2, fn);
@@ -307,7 +341,14 @@ $(() => {
         .next()
         .click(function () {
             // 이동 후 함수
-            let fn = () => {};
+            let fn = () => {
+                // 메시지 보이기
+                msg.html("어서윗층으로 가자!")
+                .fadeIn(200);
+
+                // 다음버튼 보이기
+                $(this).next().slideDown(300);
+            };
 
             // 액션함수 호출
             actMini(this, 3, fn);
@@ -317,7 +358,14 @@ $(() => {
         .next()
         .click(function () {
             // 이동 후 함수
-            let fn = () => {};
+            let fn = () => {
+                // 메시지 보이기
+                msg.html("이제 곧 탈출이다!")
+                .fadeIn(200);
+
+                // 다음버튼 보이기
+                $(this).next().slideDown(300);
+            };
 
             // 액션함수 호출
             actMini(this, 1, fn);
@@ -327,7 +375,30 @@ $(() => {
         .next()
         .click(function () {
             // 이동 후 함수
-            let fn = () => {};
+            let fn = () => {
+                // 메시지 보이기
+                msg.html("도와줘요!")
+                .fadeIn(200);
+
+                // 1번방 단체좀비들 달겨듬!
+                bd.eq(1).find(".mz")
+                .fadeIn(300)
+                .animate({
+                    right: bd.eq(1).width() + "px"  
+                },3000,"easeInExpo");
+
+                // 헬기 등장
+                $(".heli")
+                .animate({
+                    left: "20%"
+                }, 4000, "easeOutBack",function(){ // 여기서 this는 .heli
+                    // 헬기도착 후 탑승이미지 변경
+                    $(this).attr("src","images/heli2.png");
+                    // 원본 미니언즈는 사라짐
+                    mi.hide()
+
+                })
+            };
 
             // 액션함수 호출
             actMini(this, 0, fn);
