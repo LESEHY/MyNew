@@ -397,14 +397,14 @@ $(() => {
                         // 원본 미니언즈는 사라짐
                         mi.hide();
 
-                    })
+                    }) // animate 
                     .delay(500) // .5초 쉬었다가
                     .animate({ // 다시 오른쪽 끝으로 이동
                             left: "70%"
                         }, 4000, "easeInOutCirc",
                         function () { // 끝쪽에서 조종사 좀비로!
                             $(this).attr("src", "images/heli3.png");
-                        })
+                        }) // animate
                     .delay(300)
                     .animate({ // 아주 천천히 오른쪽 바깥으로 나감!
                             left: "100%"
@@ -419,20 +419,42 @@ $(() => {
                             tit.addClass("on");
                             setTimeout(
                                 // -> 간판에 class "on2"주기
-                                () => tit.addClass("on2")
-                            , 3000);
+                                () => tit.addClass("on2"), 3000); // setTime
+
                             // 빌딩 무너뜨리기
                             // 간판 떨어진 후 실행(6초)
                             setTimeout(() => {
                                 bd.parent().addClass("on")
                                 // parent() 부모요소인 .building
 
-                            }, 6000);
-                       
-                    }); //
-            };
+                            }, 6000); // setTIme
 
+                        }); // animate
+            };
             // 액션함수 호출
             actMini(this, 0, fn);
-        }); // 12. click
+        }); // "헬기를 호출!" 버튼 클릭 마무리 //
+
+    // 간판에 마우스 오버시/아웃시 색상변경하기
+    // hover(함수1, 함수2)
+    // -함수 1은 오버시, 함수2는 아웃시 실행!
+    $(".tit").hover(
+        function () { // over
+            $(this).css({
+                backgroundColor: "blue",
+                color: "cyan",
+            }); // css
+        },
+        function () { // out
+            $(this).css({
+                backgroundColor: "pink",
+                color: "yellow"
+            }); // css
+        }); // hover
+
+
+
+
+
+
 }); // JQB
