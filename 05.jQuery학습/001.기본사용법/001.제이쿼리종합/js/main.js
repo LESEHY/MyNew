@@ -411,8 +411,25 @@ $(() => {
                         }, 10000, "linear", // 10초동안 등속도
                         () => {
                             // 최종마무리구역
-                            
-                        });
+
+                            // 간판 떨어뜨리기
+                            // 1단계 : 중간까지 떨어짐
+                            // -> 간판에 class "on"주기
+                            let tit = $(".tit");
+                            tit.addClass("on");
+                            setTimeout(
+                                // -> 간판에 class "on2"주기
+                                () => tit.addClass("on2")
+                            , 3000);
+                            // 빌딩 무너뜨리기
+                            // 간판 떨어진 후 실행(6초)
+                            setTimeout(() => {
+                                bd.parent().addClass("on")
+                                // parent() 부모요소인 .building
+
+                            }, 6000);
+                       
+                    }); //
             };
 
             // 액션함수 호출
