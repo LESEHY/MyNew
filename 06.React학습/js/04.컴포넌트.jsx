@@ -83,13 +83,14 @@ root2.render(<IronMan />)
 function Favorite(props){ // props는 속성셋팅 변수집합
     return <h2>
         내가 좋아하는 색은 {props.color}이야! <br />
-        그리고 좋아하는 음식은 {props.food}야!
+        그리고 좋아하는 음식은 {props.food}야! <br />
+        취미는 {props.hobby}이야! 알겠니?
         </h2>;
 }// Favorite 컴포넌트 함수
 
 // 내가 좋아하는 색을 props로 전달할 수 있다!
 const root3 = ReactDOM.createRoot(document.getElementById("root3"));
 // 랜더링시 속성셋팅 형식으로 함수컴포넌트에 값을 전달함!
-root3.render(<Favorite color="빨간색" food="피자" />);
+root3.render(<Favorite color="빨간색" food="피자" hobby="게임" />);
 // 함수 컴포넌트에서는 표현식안에서 {props.호출시사용한속성명}
 // 여기서는 {props.color}를 사용한다!
