@@ -1,5 +1,7 @@
 // 04.리액트 컴포넌트 JSX
 
+import Avengers from "./Avengers";
+
 /************************************************
     [ 리액트 컴포넌트 ]
     - 컴포넌트는 HTML 요소를 반환하는 함수!
@@ -34,24 +36,23 @@
 
 // 클래스로 컴포넌트 작성
 class Gogh extends React.Component {
-    // render() 메서드 사용함!
-    render(){
-        // HTML태그를 리턴해준다!
-        return(
-            <React.Fragment>
-                <h2>안녕! 나는 고흐그림이야!</h2>
-                <img src="./images/01.png" alt="고흐1" />
-                {/* 홀로태그는 반드시 끝에 닫아준다! */}
-            </React.Fragment>
-        );
-    }
+  // render() 메서드 사용함!
+  render() {
+    // HTML태그를 리턴해준다!
+    return (
+      <React.Fragment>
+        <h2>안녕! 나는 고흐그림이야!</h2>
+        <img src="./images/01.png" alt="고흐1" />
+        {/* 홀로태그는 반드시 끝에 닫아준다! */}
+      </React.Fragment>
+    );
+  }
 } /////// Gogh 클래스 컴포넌트 ///////
 
 // 랜더링하기
 // ReactDOM 은 가상돔을 만드는 객체
-// createRoot(요소) 출력요소를 설정함 
-const root1 = ReactDOM.createRoot(
-    document.getElementById("root1"));
+// createRoot(요소) 출력요소를 설정함
+const root1 = ReactDOM.createRoot(document.getElementById("root1"));
 root1.render(<Gogh />);
 // render(출력할 요소)
 // 출력할 요소 -> 클래스를 호출하면 구성된 태그가 들어옴
@@ -59,18 +60,17 @@ root1.render(<Gogh />);
 
 // [ 함수로 컴포넌트 작성 ]
 // 컴포넌트 이므로 반드시 첫 글자 대문자!
-function IronMan(){
-    return(
-        <React.Fragment>
-            <h2>안녕! 나는 아이언맨이야!</h2>
-            <img src="./images/ab1.jpg" alt="아이언맨" />
-        </React.Fragment>
-    );
+function IronMan() {
+  return (
+    <React.Fragment>
+      <h2>안녕! 나는 아이언맨이야!</h2>
+      <img src="./images/ab1.jpg" alt="아이언맨" />
+    </React.Fragment>
+  );
 }
 // 랜더링 하기
-const root2 = ReactDOM.createRoot(
-    document.getElementById("root2"));
-root2.render(<IronMan />)
+const root2 = ReactDOM.createRoot(document.getElementById("root2"));
+root2.render(<IronMan />);
 
 /************************************************************************************* 
     [ Props 사용하기 ]
@@ -80,13 +80,16 @@ root2.render(<IronMan />)
     -> props는 05번 다음번에 자세히 다룬다!
 *************************************************************************************/
 // 내가 좋아하는 색 표시하기
-function Favorite(props){ // props는 속성셋팅 변수집합
-    return <h2>
-        내가 좋아하는 색은 {props.color}이야! <br />
-        그리고 좋아하는 음식은 {props.food}야! <br />
-        취미는 {props.hobby}이야! 알겠니?
-        </h2>;
-}// Favorite 컴포넌트 함수
+function Favorite(props) {
+  // props는 속성셋팅 변수집합
+  return (
+    <h2>
+      내가 좋아하는 색은 {props.color}이야! <br />
+      그리고 좋아하는 음식은 {props.food}야! <br />
+      취미는 {props.hobby}이야! 알겠니?
+    </h2>
+  );
+} // Favorite 컴포넌트 함수
 
 // 내가 좋아하는 색을 props로 전달할 수 있다!
 const root3 = ReactDOM.createRoot(document.getElementById("root3"));
@@ -102,19 +105,18 @@ root4.render(<Favorite color="검정색" food="치킨" hobby="코딩" />);
 /********************************************************* 
     컴포넌트 내부에서 다른 컴포넌트를 호출할 수 있다!
 *********************************************************/
-function Ans(){
-    return <h2>김씨가 똑하고 팔이 부러졌대!</h2>;
+function Ans() {
+  return <h2>김씨가 똑하고 팔이 부러졌대!</h2>;
+} // Ans 컴포넌트
 
-}// Ans 컴포넌트
-
-function Who(){
-    return (
-        <React.Fragment>
-            <h1>김똑팔이가 누구야?</h1>
-            <Ans />
-        </React.Fragment>
-    );
-}// Who 컴포넌트
+function Who() {
+  return (
+    <React.Fragment>
+      <h1>김똑팔이가 누구야?</h1>
+      <Ans />
+    </React.Fragment>
+  );
+} // Who 컴포넌트
 
 const root5 = ReactDOM.createRoot(document.getElementById("root5"));
 root5.render(<Who />);
@@ -130,7 +132,11 @@ root5.render(<Who />);
 
     -> 일반적으로 js파일 상단에 import 키워드로 불러오면
     되는데 지금 사용하는 CDN방식의 바벨모듈에서는 
+    주의 사항이 있으니 참고 바란다! (아래참고)
 **************************************************/
+
+const root6 = ReactDOM.createRoot(document.getElementById("root6"));
+root6.render(<Avengers />);
 
 /************************************************* 
   [ 바벨을 사용할때 모듈로 파일 호출시 주의사항! ]
