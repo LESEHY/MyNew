@@ -9,6 +9,7 @@ pname = pname.split("/"); //배열에 담는다
 pname = pname[pname.length-1]; // 마지막 배열
 pname = pname.split(".")[0]; // 페이지 이름만 가져옴
 console.log("페이지이름: ", pname);
+console.log(pname);
 
 
 
