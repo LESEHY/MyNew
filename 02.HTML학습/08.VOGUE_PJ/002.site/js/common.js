@@ -13,9 +13,9 @@ $(window).resize(() => {
     if ($(window).width() <= 500) mobsts = 1;
     else mobsts = 0;
     console.log("모바일적용여부(resize):", mobsts);
-    
+
     // 탑영역 스타일 날리기!
-    $("#top").attr("style","");
+    $("#top").attr("style", "");
 }); /////// resize //////////////
 
 // [현재 페이지명을 알아내어 제어에 활용한다!]
@@ -87,9 +87,9 @@ $(() => {
     //////// 스크롤 이벤트 함수 /////////////
     $(window).scroll(() => {
         // 슬림메뉴와 상단이동버튼 보이기 작동안할 페이지셋팅
-        if (pname === "login" || 
-        pname === "member" || 
-        pname === "gallery") {
+        if (pname === "login" ||
+            pname === "member" ||
+            pname === "gallery") {
             return; // 여기서 나감!
         } ////////// if /////////////
 
@@ -113,7 +113,9 @@ $(() => {
                 // #top의 높이값(동적으로 높이값 설정!)
                 let temp = topA.innerHeight();
                 // 스크롤 아랫방향
-                topA.css({ top: -temp + "px" });
+                topA.css({
+                    top: -temp + "px"
+                });
                 // console.log(temp);
                 // height() - 패딩이 빠진 순수높이값
                 // innerHeight() - 패딩포함 내부높이값
@@ -121,7 +123,9 @@ $(() => {
             else {
                 // 보이기
                 // 스크롤 윗방향
-                topA.css({ top: "0" });
+                topA.css({
+                    top: "0"
+                });
             } //// else /////
         } ///////// if /////////
         else {
@@ -180,8 +184,7 @@ $(() => {
         // -> html,body 두 최상위 요소를
         // 대상으로 한다! 왜? 그래야 모든
         // 브라우저에서 공통으로 작동함!
-        $("html,body").animate(
-            {
+        $("html,body").animate({
                 scrollTop: "0",
             },
             800,
@@ -198,4 +201,61 @@ $(() => {
         // pos 전역변수에 값넣기
         pos = 0; // 최상단 위치인 0을 넣는다!
     }); /////// click ///////////
+
+    /************************************** 
+        모바일 버튼 클릭시 검색 / GNB 보이기
+    **************************************/
+    // 1. 햄버거버튼
+    $('.hbtn').click(() => {
+        // GNB 박스 슬라이딩 보임/숨김
+        // slideToggle() -> slideUp/slideDown
+        // 대상: 모바일 GNB
+        $('#mobx').slideToggle(400, resetH);
+        // 애니후 높이값 재설정 호출!
+    }); ////////// click /////////
+
+    // 2. 검색버튼
+    $('.sbtn').click(() => {
+        // GNB 박스 슬라이딩 보임/숨김
+        // slideToggle() -> slideUp/slideDown
+        // 대상: 모바일 GNB
+        $('.mos').slideToggle(200, resetH);
+        // 애니후 높이값 재설정 호출!
+    }); ////////// click /////////
+
+    /* 모바일 GNB 높이값 재설정 함수 */
+    const resetH = () => {
+        // #mobx의 높이값을 동적으로 생성함
+        console.log(
+            '.top의 높이값:',
+            $('.top').innerHeight(),
+            '\n.mos의 높이값:',
+            $('.mos').css('display')
+        );
+
+        // 검색박스 높이는 block일때 넣어줌!
+        let temp = $('.mos').css('display') === 'none' ?
+            0 : $('.mos').innerHeight();
+
+        // 변경할 높이
+        let Hval =
+            $('.top').innerHeight() + temp;
+        // innerHeight()는 패딩포함높이
+        // height()는 순수높이(컨텐츠만)
+        // 017문서참조
+
+        console.log('.top높이:',
+            $('.top').innerHeight());
+
+        console.log('.mos높이:',
+            $('.mos').css('display') === 'none' ?
+            0 : $('.mos').innerHeight());
+
+        console.log('보정높이:', Hval);
+
+        // 동적으로 변경하기
+        $("#mobx").css({
+            height: `calc(100vh - ${Hval}px)`
+        })
+    }; /////// resetH 함수 ///////////
 }); //////////////// jQB ///////////////////
