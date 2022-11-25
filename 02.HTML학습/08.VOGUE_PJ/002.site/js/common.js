@@ -13,9 +13,9 @@ $(window).resize(() => {
     if ($(window).width() <= 500) mobsts = 1;
     else mobsts = 0;
     console.log("모바일적용여부(resize):", mobsts);
-
+    
     // 탑영역 스타일 날리기!
-    $("#top").attr("style", "");
+    $("#top").attr("style","");
 }); /////// resize //////////////
 
 // [현재 페이지명을 알아내어 제어에 활용한다!]
@@ -87,9 +87,9 @@ $(() => {
     //////// 스크롤 이벤트 함수 /////////////
     $(window).scroll(() => {
         // 슬림메뉴와 상단이동버튼 보이기 작동안할 페이지셋팅
-        if (pname === "login" ||
-            pname === "member" ||
-            pname === "gallery") {
+        if (pname === "login" || 
+        pname === "member" || 
+        pname === "gallery") {
             return; // 여기서 나감!
         } ////////// if /////////////
 
@@ -113,9 +113,7 @@ $(() => {
                 // #top의 높이값(동적으로 높이값 설정!)
                 let temp = topA.innerHeight();
                 // 스크롤 아랫방향
-                topA.css({
-                    top: -temp + "px"
-                });
+                topA.css({ top: -temp + "px" });
                 // console.log(temp);
                 // height() - 패딩이 빠진 순수높이값
                 // innerHeight() - 패딩포함 내부높이값
@@ -123,9 +121,7 @@ $(() => {
             else {
                 // 보이기
                 // 스크롤 윗방향
-                topA.css({
-                    top: "0"
-                });
+                topA.css({ top: "0" });
             } //// else /////
         } ///////// if /////////
         else {
@@ -184,7 +180,8 @@ $(() => {
         // -> html,body 두 최상위 요소를
         // 대상으로 한다! 왜? 그래야 모든
         // 브라우저에서 공통으로 작동함!
-        $("html,body").animate({
+        $("html,body").animate(
+            {
                 scrollTop: "0",
             },
             800,
@@ -258,4 +255,5 @@ $(() => {
             height: `calc(100vh - ${Hval}px)`
         })
     }; /////// resetH 함수 ///////////
+
 }); //////////////// jQB ///////////////////
