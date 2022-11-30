@@ -1,4 +1,5 @@
 import {Outlet, Link} from "react-router-dom";
+import Logo from "./Logo";
 import "./Layout.css";
 /* 
     [ 리액트 스타일링 기법 3가지 ]
@@ -19,11 +20,13 @@ import "./Layout.css";
 const Layout = () => {
     return(
         <>
+        {/* 1. 상단영역 */}
+        <header className="top">
         {/* 네비게이션 */}
             <nav className="gnb">
                 <ul>
                     <li>
-                        로고
+                        <Logo />
                     </li>
                     <li>
                         <Link to="/">Home</Link>
@@ -48,8 +51,20 @@ const Layout = () => {
                     </li>
                 </ul>
             </nav>
+        </header>
+        {/* 2. 메인영역 */}
+        <main className="cont">
             {/* 출력파트 : 각 페이지가 표시됨 */}
             <Outlet />
+        </main>
+        {/* 3. 하단영역 */}
+        <footer className="info">
+            All Site Content © &amp; TM DC, unless otherwise noted here. 
+            <br />
+            All rights reserved. 
+        </footer>
+            
+          
         </>
     );
 };
