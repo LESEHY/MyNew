@@ -14,7 +14,7 @@ $(() => {
         // Responsive breakpoints
         breakpoints: {
             // when window width is >= 200px
-            200: { // 200픽셀보다 작을 경우
+            200: { // 200픽셀보다 클 경우
                 slidesPerView: 1, // 나오는 이미지 수
                 spaceBetween: 0, // 간격 
             },
