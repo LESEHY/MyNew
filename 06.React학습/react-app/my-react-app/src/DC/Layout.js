@@ -1,14 +1,15 @@
 import {Outlet, Link} from "react-router-dom";
 import Logo from "./Logo";
 import "./Layout.css";
+import "https://kit.fontawesome.com/a076d05399.js";
 /* 
-    [ 리액트 스타일링 기법 3가지 ]
+    [ 리엑트 스타일링 기법 3가지 ]
     1. 일반 CSS파일을 컴포넌트 JS파일에 import하여 사용
     예) import "CSS경로";
 
     2. 객체를 만들어서 적용하는 방법
     예)
-    const mystyle = {color:"red", fontSize:"30px"};
+    const mystyle = {color:"red",fontSize:"30px"};
     <h1 style={mystyle}>하하하</h1>
 
     3. 직접 중괄호 표현식에 중괄호를 하나 더 하여 표현
@@ -20,9 +21,9 @@ import "./Layout.css";
 const Layout = () => {
     return(
         <>
-        {/* 1. 상단영역 */}
+        {/* 1.상단영역 */}
         <header className="top">
-        {/* 네비게이션 */}
+        {/* 네비게이션 파트 */}
             <nav className="gnb">
                 <ul>
                     <li>
@@ -38,33 +39,37 @@ const Layout = () => {
                         <Link to="/co">COMICS</Link>
                     </li>
                     <li>
+                        <Link to="/mv">MOVIES</Link>
+                    </li>
+                    <li>
                         <Link to="/gm">GAMES</Link>
                     </li>
                     <li>
-                        <Link to="/mv">MOVIES</Link>
+                        <Link to="/vd">VIDEO</Link>
                     </li>
                     <li>
                         <Link to="/nw">NEWS</Link>
                     </li>
                     <li>
-                        <Link to="/vd">VIDEO</Link>
+                        <Link to="/mem">
+                            <i className='fas fa-users' style={{fontSize:"36px",color:"lime"}}></i>
+                        </Link>
                     </li>
                 </ul>
             </nav>
         </header>
-        {/* 2. 메인영역 */}
-        <main className="cont">
+        {/* 2.메인영역 */}
+        <main className="cont">         
             {/* 출력파트 : 각 페이지가 표시됨 */}
             <Outlet />
         </main>
-        {/* 3. 하단영역 */}
+        {/* 3.하단영역 */}
         <footer className="info">
-            All Site Content © &amp; TM DC, unless otherwise noted here. 
-            <br />
+            All Site Content © &amp; TM DC, unless otherwise noted here.
+            <br /> 
             All rights reserved. 
         </footer>
-            
-          
+           
         </>
     );
 };
